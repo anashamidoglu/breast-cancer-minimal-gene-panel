@@ -67,3 +67,26 @@ Prepared local files:
 - `data/processed/expression_exclusions.csv`: patients without expression data (currently empty).
 
 The aggregate audit is `expression_matching.json`. Original and processed patient-level files remain excluded from Git. No log transformation, scaling, variance filtering, feature selection, or model fitting has been performed. Source batch normalization was performed before we obtained the data and cannot be refitted within our training folds.
+
+## Frozen split and training-only baseline
+
+```powershell
+.\.venv\Scripts\python.exe src/create_split.py
+.\.venv\Scripts\python.exe src/evaluate_baseline.py
+```
+
+The split uses `train_test_split(test_size=0.20, stratify=labels['subtype'], random_state=42)` on sample labels sorted by sample ID. It does not load expression values. Each patient has one sample; uniqueness, class coverage, and patient disjointness are checked. The resulting membership lists are saved locally and the script refuses to overwrite a changed split.
+
+| Subtype | Training | Test |
+| --- | ---: | ---: |
+| Luminal A | 399 | 100 |
+| Luminal B | 158 | 39 |
+| Basal-like | 137 | 34 |
+| HER2-enriched | 62 | 16 |
+| Total | 756 | 189 |
+
+`data/processed/train_labels.csv` and `test_labels.csv` contain frozen membership and labels. `split_report.json` records aggregate counts, seed, and membership checksums. Test label counts are checked for stratification; no test predictions or performance have been inspected.
+
+The dummy baseline always predicts the most frequent subtype in its fitting data. It uses five training-only folds from `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)`. Each training sample receives one prediction from a model fitted without it. The baseline script does not open test labels or any expression matrix. The fold assignments are saved locally in `training_cv_folds.csv` for subsequent model comparisons.
+
+Training cross-validation balanced accuracy is 0.25, macro F1 is approximately 0.173, and each one-vs-rest AUROC is 0.50. Recall is 1.0 for Luminal A and 0.0 for the other subtypes. These are baseline results, not final test results. Reports are `baseline_report.json` and `baseline_cv_folds.csv`.

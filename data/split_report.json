@@ -1,0 +1,24 @@
+{
+  "random_seed": 42,
+  "test_fraction": 0.2,
+  "training_samples": 756,
+  "test_samples": 189,
+  "training_subtype_counts": {
+    "Luminal A": 399,
+    "Luminal B": 158,
+    "Basal-like": 137,
+    "HER2-enriched": 62
+  },
+  "test_subtype_counts": {
+    "Luminal A": 100,
+    "Luminal B": 39,
+    "Basal-like": 34,
+    "HER2-enriched": 16
+  },
+  "patient_overlap": 0,
+  "membership_sha256": {
+    "train_labels.csv": "de359045f50ba27163023e815ab0c4ad0327a073b26650582032b092d621902d",
+    "test_labels.csv": "1d4fc725a4934fc7984b2592a78bca26ad3982f8bb8d992807442e1c51fbcb13"
+  },
+  "policy": "Test membership and aggregate label counts may be checked; test expression and prediction performance remain unused until final evaluation."
+}

@@ -1,0 +1,6 @@
+fold,fit_samples,validation_samples,predicted_subtype,balanced_accuracy,macro_f1
+1,604,152,Luminal A,0.25,0.1724137931034483
+2,605,151,Luminal A,0.25,0.17316017316017315
+3,605,151,Luminal A,0.25,0.17316017316017315
+4,605,151,Luminal A,0.25,0.17316017316017315
+5,605,151,Luminal A,0.25,0.17173913043478262

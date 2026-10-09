@@ -4,7 +4,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. Study metadata, subtype labels, and expression availability have been checked; see [data/README.md](data/README.md). With user approval, Normal-like and missing labels were excluded. All 945 retained patients have expression data. Identifier cleanup leaves 20,481 unique gene features. Explore the counts in `notebooks/01_inspect_subtype_labels.ipynb`. No train/test split or model fitting has been performed.
+Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. With user approval, Normal-like and missing labels were excluded. All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. The majority-class dummy baseline reaches 25% balanced accuracy in five-fold training cross-validation. No test performance has been evaluated. See [data/README.md](data/README.md) for preparation and split details.
 
 ## Planned approach
 
