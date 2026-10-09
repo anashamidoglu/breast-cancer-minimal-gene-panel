@@ -1,0 +1,33 @@
+{
+  "outer_folds": "Five saved training folds; final test set not used",
+  "inner_folds": 3,
+  "inner_seed": "42 + outer fold number; final all-training search uses 42",
+  "selection_metric": "balanced_accuracy",
+  "logistic": "L1 one-vs-rest logistic; C in [0.01, 0.1, 1.0]",
+  "random_forest": "200 trees; minimum leaf size in [1, 3]",
+  "xgboost": "100 trees, learning rate 0.05, 32 histogram bins, half candidate features per tree; depth in [2, 3]",
+  "preprocessing": "Fold-local log1p and variance threshold 1e-8; logistic also standardizes within each fold",
+  "imbalance": "Balanced class weights for logistic/forest; XGBoost recomputes sample weights at every fit",
+  "grid": {
+    "logistic": {
+      "model__estimator__C": [
+        0.01,
+        0.1,
+        1.0
+      ]
+    },
+    "random_forest": {
+      "model__min_samples_leaf": [
+        1,
+        3
+      ]
+    },
+    "xgboost": {
+      "model__max_depth": [
+        2,
+        3
+      ]
+    }
+  },
+  "limitations": "Small bounded grids; logistic formulation and tree compute budgets differ from initial pilots. Initial-to-tuned differences cannot be attributed solely to tuning."
+}

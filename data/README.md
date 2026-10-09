@@ -116,4 +116,25 @@ XGBoost's initial 300-tree, default-bin pilot was stopped because of runtime aft
 
 All source gene features remain candidate inputs after fold-local variance filtering. A random feature subset per tree is not a fixed gene panel: different trees may use different genes. No test labels or test expression rows are used. Random forest and XGBoost aggregate reports and fold tables are saved alongside the logistic report. Sample-level predictions remain local and excluded from Git.
 
-`notebooks/04_initial_model_comparison.ipynb` explains the models and displays the aggregate comparison. `figures/initial_model_comparison.png` shows mean balanced accuracy with fold standard deviations. No hyperparameter search or panel-size selection has yet been performed.
+`notebooks/04_initial_model_comparison.ipynb` explains the models and displays the aggregate comparison. `figures/initial_model_comparison.png` shows mean balanced accuracy with fold standard deviations. These initial runs do not include hyperparameter search or panel-size selection; subsequent tuning is documented below.
+
+## Nested training-only tuning
+
+```powershell
+.\.venv\Scripts\python.exe src/tune_models.py --model logistic
+.\.venv\Scripts\python.exe src/tune_models.py --model random_forest
+.\.venv\Scripts\python.exe src/tune_models.py --model xgboost
+.\.venv\Scripts\python.exe src/plot_initial_comparison.py --stage tuned
+```
+
+The predefined bounded grids and fixed settings are recorded in `tuning_protocol.json`. For each saved outer training fold, three inner stratified folds choose the best setting by mean balanced accuracy. The selected Pipeline is then refitted on the outer fitting samples and scored on the held-aside outer samples. All preprocessing and class-balancing weights are recomputed within each fitting set, including inner folds. XGBoost's reusable balanced estimator is defined in `src/estimators.py`.
+
+Logistic regression now uses four L1 one-versus-rest classifiers and C in [0.01, 0.1, 1.0]. Random forest uses 200 trees and minimum leaf size in [1, 3]. XGBoost uses 100 trees, learning rate 0.05, 32 histogram bins, half the features per tree, and depth in [2, 3]. Seed is 42, with inner seeds 42 plus outer fold number. This is not exhaustive optimization. Because logistic formulation and tree compute budgets differ from initial pilots, changes in scores cannot be attributed solely to tuning.
+
+Nested scores evaluate the tuning procedure: selected settings may differ across outer folds. A separate three-fold search on all 756 training samples selects final full-feature settings and fits a local model. Its inner search score is not presented as an independent performance estimate. Fitted models and patient-level predictions stay in ignored `data/processed/`; tracked aggregate reports use the `_tuned_report.json`, `_tuned_cv_folds.csv`, and `_tuning_search.json` suffixes.
+
+The test set remains unused. The nested tuning explanation is in `notebooks/05_nested_model_tuning.ipynb`. Model comparisons use mean balanced accuracy and fold standard deviations, not confidence intervals or claims of statistical superiority.
+
+Completed nested results: L1 logistic regression 0.9013, random forest 0.8947, XGBoost 0.9122 mean balanced accuracy. The final training-only searches select logistic C=0.1, random-forest minimum leaf size 3, and XGBoost depth 2. Final settings are for full-feature refits and do not yet establish a gene panel. All saved outer-fold scores were verified against sample-level predictions; fitted local models reload successfully.
+
+Before panel-size results were generated, the user approved the 2 percentage-point tolerance recorded in `panel_protocol.json`. This criterion does not establish clinical equivalence or statistical noninferiority. Gene selection must still be fitted within training folds.

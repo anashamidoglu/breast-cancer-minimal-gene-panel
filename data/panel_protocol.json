@@ -1,0 +1,16 @@
+{
+  "decision_date": "2026-10-09",
+  "decision": "User approved a tolerance of 2 absolute percentage points before panel-size results were generated.",
+  "primary_metric": "balanced_accuracy",
+  "maximum_absolute_drop": 0.02,
+  "selection_rule": "Select the smallest evaluated panel with mean training cross-validation balanced accuracy at least the corresponding full-gene reference mean minus 0.02.",
+  "constraints": [
+    "Gene selection and preprocessing must occur within each fitting fold.",
+    "Use identical validation folds for panels and full-gene references.",
+    "Account for hyperparameter selection within the evaluation procedure.",
+    "The final test set must not select the model, panel size, or tolerance.",
+    "Report fold variation and per-class recall alongside the mean.",
+    "This is a practical selection criterion, not proof of clinical equivalence or statistical noninferiority."
+  ],
+  "panel_size_results_generated": false
+}

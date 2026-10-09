@@ -1,0 +1,164 @@
+[
+  {
+    "stage": "outer_fold_1",
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8349593494676645,
+    "sd_inner_balanced_accuracy": 0.02087541262668779,
+    "rank": 3
+  },
+  {
+    "stage": "outer_fold_1",
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8892894554323769,
+    "sd_inner_balanced_accuracy": 0.040637218196664715,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_1",
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8730969322133281,
+    "sd_inner_balanced_accuracy": 0.023185385198070976,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_2",
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8506605022223702,
+    "sd_inner_balanced_accuracy": 0.01311939850456327,
+    "rank": 3
+  },
+  {
+    "stage": "outer_fold_2",
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.9115242951474047,
+    "sd_inner_balanced_accuracy": 0.010834859913543859,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_2",
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8869855675744381,
+    "sd_inner_balanced_accuracy": 0.02893095331204425,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_3",
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8660711955758765,
+    "sd_inner_balanced_accuracy": 0.005737404777497221,
+    "rank": 3
+  },
+  {
+    "stage": "outer_fold_3",
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.9207882874950912,
+    "sd_inner_balanced_accuracy": 0.030935763816158895,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_3",
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8968196378247019,
+    "sd_inner_balanced_accuracy": 0.033222524152369225,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_4",
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8445965868425782,
+    "sd_inner_balanced_accuracy": 0.024766961874688118,
+    "rank": 3
+  },
+  {
+    "stage": "outer_fold_4",
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8794549688189113,
+    "sd_inner_balanced_accuracy": 0.026695189837545683,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_4",
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8700673333121408,
+    "sd_inner_balanced_accuracy": 0.01976929187616411,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_5",
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8410703447361185,
+    "sd_inner_balanced_accuracy": 0.018166697219226997,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_5",
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8768013949197305,
+    "sd_inner_balanced_accuracy": 0.03767572573438167,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_5",
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8384199673301476,
+    "sd_inner_balanced_accuracy": 0.029427566337120816,
+    "rank": 3
+  },
+  {
+    "stage": "all_training_setting_selection",
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8625202129535924,
+    "sd_inner_balanced_accuracy": 0.016043974620261022,
+    "rank": 3
+  },
+  {
+    "stage": "all_training_setting_selection",
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.9023869413635616,
+    "sd_inner_balanced_accuracy": 0.027777863573942713,
+    "rank": 1
+  },
+  {
+    "stage": "all_training_setting_selection",
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8837711438872874,
+    "sd_inner_balanced_accuracy": 0.044778335045713616,
+    "rank": 2
+  }
+]

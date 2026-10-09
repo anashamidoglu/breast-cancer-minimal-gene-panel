@@ -1,0 +1,110 @@
+[
+  {
+    "stage": "outer_fold_1",
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8590647059169507,
+    "sd_inner_balanced_accuracy": 0.018674057584671826,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_1",
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8577613150637542,
+    "sd_inner_balanced_accuracy": 0.02016091988009974,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_2",
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8950811800332582,
+    "sd_inner_balanced_accuracy": 0.03804655318369525,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_2",
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8773144946545868,
+    "sd_inner_balanced_accuracy": 0.031344639393044,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_3",
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9027180028215321,
+    "sd_inner_balanced_accuracy": 0.006475506528531208,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_3",
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8890813935477793,
+    "sd_inner_balanced_accuracy": 0.016274441688667707,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_4",
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8868436712194545,
+    "sd_inner_balanced_accuracy": 0.017344351244407436,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_4",
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8611242081746197,
+    "sd_inner_balanced_accuracy": 0.02993863505489536,
+    "rank": 2
+  },
+  {
+    "stage": "outer_fold_5",
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8901729155411137,
+    "sd_inner_balanced_accuracy": 0.021463385649331507,
+    "rank": 1
+  },
+  {
+    "stage": "outer_fold_5",
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8674846553807948,
+    "sd_inner_balanced_accuracy": 0.01577625275520205,
+    "rank": 2
+  },
+  {
+    "stage": "all_training_setting_selection",
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8966678025634893,
+    "sd_inner_balanced_accuracy": 0.03023045484000745,
+    "rank": 1
+  },
+  {
+    "stage": "all_training_setting_selection",
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8679295169607548,
+    "sd_inner_balanced_accuracy": 0.023730620499661584,
+    "rank": 2
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "model": "logistic",
+  "evaluation": "Five saved outer training folds; three inner stratified folds select settings separately within each outer fit set",
+  "search_grid": {
+    "model__estimator__C": [
+      0.01,
+      0.1,
+      1.0
+    ]
+  },
+  "fixed_parameters": {
+    "estimator": "LogisticRegression(class_weight='balanced', l1_ratio=1.0, max_iter=3000,\n                   random_state=42, solver='liblinear')",
+    "n_jobs": null,
+    "verbose": 0
+  },
+  "final_training_selected_parameters": {
+    "model__estimator__C": 0.1
+  },
+  "training_samples": 756,
+  "input_gene_features": 20481,
+  "classes": [
+    "Basal-like",
+    "HER2-enriched",
+    "Luminal A",
+    "Luminal B"
+  ],
+  "balanced_accuracy_cv_mean": 0.9012807050874884,
+  "balanced_accuracy_cv_sd": 0.027792297496745503,
+  "macro_f1_cv_mean": 0.8916292788634095,
+  "macro_f1_cv_sd": 0.02161325940031658,
+  "out_of_fold_per_class_recall": {
+    "Basal-like": 0.9708029197080292,
+    "HER2-enriched": 0.9032258064516129,
+    "Luminal A": 0.9122807017543859,
+    "Luminal B": 0.8227848101265823
+  },
+  "out_of_fold_confusion_matrix": [
+    [
+      133,
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      56,
+      0,
+      6
+    ],
+    [
+      1,
+      4,
+      364,
+      30
+    ],
+    [
+      0,
+      4,
+      24,
+      130
+    ]
+  ],
+  "confusion_matrix_orientation": "Recorded labels in rows; predictions in columns; class order as listed",
+  "out_of_fold_one_vs_rest_auroc": {
+    "Basal-like": 0.9994811504309989,
+    "HER2-enriched": 0.9922376127173004,
+    "Luminal A": 0.9819927971188476,
+    "Luminal B": 0.9662376698700309
+  },
+  "test_evaluated": false,
+  "notes": [
+    "Bounded search, not exhaustive optimization.",
+    "Logistic is L1 one-vs-rest, differing from the initial multinomial L2 model.",
+    "Tree count/bin settings are smaller than initial pilots for nested-CV runtime.",
+    "Preprocessing and class-balancing weights are fitted within every inner/outer fit.",
+    "Nested CV assesses the tuning procedure; final settings are selected separately on all training data.",
+    "Fold SD is not a confidence interval; final test and small-panel analysis remain pending."
+  ]
+}

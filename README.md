@@ -4,7 +4,11 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Python setup is verified. With user approval, Normal-like and missing labels were excluded. All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Initial full-feature models reach **87.7% balanced accuracy for logistic regression, 90.0% for random forest, and 87.2% for XGBoost**, versus 25% for the dummy, on five identical training folds. These are preliminary starting settings, not tuned models or small gene panels. No test performance has been evaluated. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/04_initial_model_comparison.ipynb`.
+All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Bounded nested tuning reaches **90.1% balanced accuracy for L1 logistic regression, 89.5% for random forest, and 91.2% for XGBoost**, versus 25% for the dummy, using five saved outer training folds and three inner folds. No small gene panel or test performance has been evaluated. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/05_nested_model_tuning.ipynb`.
+
+![Bounded tuned model comparison on nested training cross-validation](figures/tuned_model_comparison.png)
+
+Settings are selected within three inner folds and evaluated on five saved outer training folds; error bars show fold SD, not confidence intervals. These small searches do not establish statistical superiority. Logistic formulation and tree compute budgets differ from the initial models below.
 
 ![Initial model comparison on training cross-validation](figures/initial_model_comparison.png)
 
@@ -17,7 +21,7 @@ Initial models are compared on five identical training folds; error bars show fo
 - Choose the panel using training data only, then evaluate it on a separate test set.
 - Compare a majority-class baseline, logistic regression, random forest, and XGBoost.
 
-The proposed panel-selection tolerance is 2 percentage points below the full-gene reference in cross-validation. This is a practical project choice, not a biological standard, and will be settled before analysis.
+The user approved the panel-selection tolerance on October 9, 2026, before panel-size results were generated: select the smallest evaluated panel whose mean training cross-validation balanced accuracy is within 2 absolute percentage points of the corresponding full-gene reference. This is a practical project criterion, not proof of clinical equivalence or statistical noninferiority. See `data/panel_protocol.json`.
 
 ## Folders
 

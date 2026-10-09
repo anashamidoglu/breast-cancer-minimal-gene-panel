@@ -1,0 +1,115 @@
+{
+  "model": "xgboost",
+  "evaluation": "Five saved outer training folds; three inner stratified folds select settings separately within each outer fit set",
+  "search_grid": {
+    "model__max_depth": [
+      2,
+      3
+    ]
+  },
+  "fixed_parameters": {
+    "objective": "multi:softprob",
+    "base_score": null,
+    "booster": null,
+    "callbacks": null,
+    "colsample_bylevel": null,
+    "colsample_bynode": null,
+    "colsample_bytree": 0.5,
+    "device": null,
+    "early_stopping_rounds": null,
+    "enable_categorical": true,
+    "eval_metric": "mlogloss",
+    "feature_types": null,
+    "feature_weights": null,
+    "gamma": null,
+    "grow_policy": null,
+    "importance_type": null,
+    "interaction_constraints": null,
+    "learning_rate": 0.05,
+    "max_bin": 32,
+    "max_cat_threshold": null,
+    "max_cat_to_onehot": null,
+    "max_delta_step": null,
+    "max_depth": null,
+    "max_leaves": null,
+    "min_child_weight": null,
+    "missing": NaN,
+    "monotone_constraints": null,
+    "multi_strategy": null,
+    "n_estimators": 100,
+    "n_jobs": 2,
+    "num_parallel_tree": null,
+    "random_state": 42,
+    "reg_alpha": null,
+    "reg_lambda": null,
+    "sampling_method": null,
+    "scale_pos_weight": null,
+    "subsample": null,
+    "tree_method": "hist",
+    "validate_parameters": null,
+    "verbosity": null
+  },
+  "final_training_selected_parameters": {
+    "model__max_depth": 2
+  },
+  "training_samples": 756,
+  "input_gene_features": 20481,
+  "classes": [
+    "Basal-like",
+    "HER2-enriched",
+    "Luminal A",
+    "Luminal B"
+  ],
+  "balanced_accuracy_cv_mean": 0.9121885393654484,
+  "balanced_accuracy_cv_sd": 0.03322400447582403,
+  "macro_f1_cv_mean": 0.90898731421295,
+  "macro_f1_cv_sd": 0.03078279775329643,
+  "out_of_fold_per_class_recall": {
+    "Basal-like": 0.9781021897810219,
+    "HER2-enriched": 0.8709677419354839,
+    "Luminal A": 0.9097744360902256,
+    "Luminal B": 0.8924050632911392
+  },
+  "out_of_fold_confusion_matrix": [
+    [
+      134,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      54,
+      3,
+      4
+    ],
+    [
+      0,
+      3,
+      363,
+      33
+    ],
+    [
+      0,
+      1,
+      16,
+      141
+    ]
+  ],
+  "confusion_matrix_orientation": "Recorded labels in rows; predictions in columns; class order as listed",
+  "out_of_fold_one_vs_rest_auroc": {
+    "Basal-like": 0.9994811504309989,
+    "HER2-enriched": 0.9942827926001674,
+    "Luminal A": 0.985861011071095,
+    "Luminal B": 0.9769802294568392
+  },
+  "test_evaluated": false,
+  "notes": [
+    "Bounded search, not exhaustive optimization.",
+    "Logistic is L1 one-vs-rest, differing from the initial multinomial L2 model.",
+    "Tree count/bin settings are smaller than initial pilots for nested-CV runtime.",
+    "Preprocessing and class-balancing weights are fitted within every inner/outer fit.",
+    "Nested CV assesses the tuning procedure; final settings are selected separately on all training data.",
+    "Fold SD is not a confidence interval; final test and small-panel analysis remain pending."
+  ]
+}

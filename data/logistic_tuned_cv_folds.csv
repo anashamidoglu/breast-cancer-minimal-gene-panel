@@ -1,0 +1,6 @@
+fold,fit_samples,validation_samples,balanced_accuracy,macro_f1,best_parameters,features_after_variance_filter
+1,604,152,0.9235532407407407,0.8999457452803563,"{""model__estimator__C"": 0.1}",20164
+2,605,151,0.8998263888888889,0.8815774118176769,"{""model__estimator__C"": 0.1}",20168
+3,605,151,0.8641129032258064,0.8688527920844382,"{""model__estimator__C"": 0.1}",20156
+4,605,151,0.8862567204301075,0.882919254658385,"{""model__estimator__C"": 0.1}",20170
+5,605,151,0.9326542721518987,0.9248511904761906,"{""model__estimator__C"": 0.1}",20161
