@@ -133,7 +133,7 @@ Logistic regression now uses four L1 one-versus-rest classifiers and C in [0.01,
 
 Nested scores evaluate the tuning procedure: selected settings may differ across outer folds. A separate three-fold search on all 756 training samples selects final full-feature settings and fits a local model. Its inner search score is not presented as an independent performance estimate. Fitted models and patient-level predictions stay in ignored `data/processed/`; tracked aggregate reports use the `_tuned_report.json`, `_tuned_cv_folds.csv`, and `_tuning_search.json` suffixes.
 
-The test set remains unused. The nested tuning explanation is in `notebooks/05_nested_model_tuning.ipynb`. Model comparisons use mean balanced accuracy and fold standard deviations, not confidence intervals or claims of statistical superiority.
+At the nested tuning stage, the test set remained unused. The nested tuning explanation is in `notebooks/05_nested_model_tuning.ipynb`. Model comparisons use mean balanced accuracy and fold standard deviations, not confidence intervals or claims of statistical superiority.
 
 Completed nested results: L1 logistic regression 0.9013, random forest 0.8947, XGBoost 0.9122 mean balanced accuracy. The final training-only searches select logistic C=0.1, random-forest minimum leaf size 3, and XGBoost depth 2. Final settings are for full-feature refits and do not yet establish a gene panel. All saved outer-fold scores were verified against sample-level predictions; fitted local models reload successfully.
 
@@ -171,3 +171,12 @@ The panels vary across fitting folds: 83 of the 100 genes are shared by all five
 The headline figure is `figures/panel_size_curve.png`, with a vector copy at `figures/panel_size_curve.svg`. It uses a log gene-count axis, 0–1 accuracy axis, three model curves, descriptive ±1 fold-SD bands, model-colored dashed full-gene references, a dotted dummy baseline, and practical threshold stars. Lines connect evaluated sizes; intermediate sizes have not been measured. Stars are operational plateau markers rather than geometric knees. Fixed PAM50 gene-set benchmarks are squares. Reports include `panel_size_summary.csv`, `panel_selection_report.json`, and `panel_selection_stability.csv`; per-model panel reports, tuning records, and fold gene selections are also saved. Sample-level predictions remain local in ignored storage. No test evaluation has occurred.
 
 See `notebooks/06_gene_panel_curves.ipynb` for the plain-language explanation. Validation checked every outer-fold score, selected gene count, label alignment, probability sum, per-class recall, and AUROC, plus fixed PAM50 membership and the 2-point selection rule.
+
+
+## Final testing
+
+`final_model_freeze.json` records the primary model, supporting comparisons, artifact hashes, and split hashes before test evaluation. `final_panel_genes.csv` contains the fixed gene lists selected using all training patients; `final_training_search.json` records the training-only setting searches. Compact predictors were checked against their fitted selection pipelines on training data before testing.
+
+`final_test_report.json` and `final_test_comparison.csv` report the one-time evaluation of all frozen candidates on 189 held-out patients. Primary random forest on PAM50 genes: balanced accuracy 92.7%, macro F1 91.0%. No predictor was refitted or chosen from test performance. Local `processed/final_test_*_predictions.csv` files permit verification; they are excluded from Git. The frozen primary remains unchanged despite higher supporting XGBoost test performance.
+
+Run `python src/freeze_final_models.py` before `python src/evaluate_final_test.py` in a fresh reproduction. Both scripts refuse to overwrite completed stages. Existing saved results should be inspected rather than regenerated or used for further tuning.

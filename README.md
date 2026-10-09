@@ -6,7 +6,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 Training-only analysis finds that **100 automatically ranked genes retain performance within 2 percentage points of the full-gene reference for logistic regression and random forest; XGBoost requires 500 among the sizes tested**. The fixed published PAM50 gene set, with 50 genes, performs better than these qualifying automatic panels in all three models. This is agreement with PAM50-derived subtype labels, not independent clinical validation.
 
-All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique candidate gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Panel evaluation uses five saved outer training folds with three inner tuning folds; gene selection and preprocessing are fitted within every fitting fold. **The final test set remains unused.** A fixed final panel has not yet been chosen. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/06_gene_panel_curves.ipynb`.
+All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique candidate gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Panel evaluation uses five saved outer training folds with three inner tuning folds; gene selection and preprocessing are fitted within every fitting fold. **Final held-out testing is complete.** Random forest on the fixed PAM50 gene list was selected as the primary model before opening the test set. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/06_gene_panel_curves.ipynb`.
 
 ![Gene-panel performance and fixed PAM50 gene-list benchmarks](figures/panel_size_curve.png)
 
@@ -27,6 +27,30 @@ Settings are selected within three inner folds and evaluated on five saved outer
 ![Initial model comparison on training cross-validation](figures/initial_model_comparison.png)
 
 Initial models are compared on five identical training folds; error bars show fold standard deviation, not confidence intervals.
+
+
+## Final held-out test
+
+Before opening the 189 test patients, all predictors, settings, and final gene lists were frozen. The primary model was random forest on the fixed 50 PAM50 genes, selected for its highest nested training balanced accuracy and compact panel. It scored **92.7% balanced accuracy**, **91.0% macro F1**, and correctly classified **173/189 patients** (91.5% ordinary accuracy).
+
+| Subtype | Correct / total | Recall |
+| --- | ---: | ---: |
+| Basal-like | 34 / 34 | 100.0% |
+| HER2-enriched | 15 / 16 | 93.8% |
+| Luminal A | 90 / 100 | 90.0% |
+| Luminal B | 34 / 39 | 87.2% |
+
+| Model | All 20,481 input genes | Automatic panel | Fixed PAM50 genes |
+| --- | ---: | ---: | ---: |
+| L1 logistic | 93.7% | 92.4% (100 genes) | 92.3% (50 genes) |
+| Random forest | 88.7% | 90.6% (100 genes) | 92.7% (50 genes) |
+| XGBoost | 94.4% | 95.4% (500 genes) | 92.1% (50 genes) |
+
+All entries are held-out balanced accuracy; dummy baseline is 25.0%. Full-gene pipelines apply their fitted variance filters. The strongest test comparison was the automatic 500-gene XGBoost model; test comparisons do not change the prespecified primary model. The automatic panels retain performance within the practical 2-point margin on this holdout, but this is not statistical equivalence. Panel-size choices were made from training CV, and the curve remains a training-CV figure.
+
+![Primary model held-out confusion matrix](figures/final_test_confusion.png)
+
+These results measure agreement with PAM50-derived labels in one TCGA cohort. The test has only 16 HER2-enriched patients, so subtype estimates are imprecise; there is no external validation. See `data/final_model_freeze.json`, `data/final_panel_genes.csv`, `data/final_test_report.json`, and `notebooks/07_final_test.ipynb`. Patient-level predictions and model binaries stay local. Historical training reports retain `test_evaluated: false` because those reports describe the earlier training-only stage.
 
 ## Planned approach
 

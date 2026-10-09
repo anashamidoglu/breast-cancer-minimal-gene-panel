@@ -1,0 +1,128 @@
+{
+  "frozen_at_utc": "2026-10-09T17:14:12.656361+00:00",
+  "primary_case": "random_forest_pam50",
+  "primary_reason": "Highest nested training balanced accuracy, with a fixed 50-gene panel.",
+  "comparison_policy": "All comparisons are descriptive; test results cannot change the primary model or settings.",
+  "training_samples": 756,
+  "membership_sha256": {
+    "train_labels.csv": "de359045f50ba27163023e815ab0c4ad0327a073b26650582032b092d621902d",
+    "test_labels.csv": "1d4fc725a4934fc7984b2592a78bca26ad3982f8bb8d992807442e1c51fbcb13"
+  },
+  "classes": [
+    "Basal-like",
+    "HER2-enriched",
+    "Luminal A",
+    "Luminal B"
+  ],
+  "cases": [
+    {
+      "case_id": "logistic_pam50",
+      "model": "logistic",
+      "family": "pam50",
+      "genes": 50,
+      "artifact": "data\\processed\\logistic_pam50_final_model.joblib",
+      "artifact_sha256": "4a196f38c078a7cd0f328005bf2a2065ca20aa47472ae9a4f29cb12c3be3debd",
+      "parameters": {
+        "model__estimator__C": 1.0
+      },
+      "training_cv_balanced_accuracy": 0.9237440568218437
+    },
+    {
+      "case_id": "logistic_automatic",
+      "model": "logistic",
+      "family": "automatic",
+      "genes": 100,
+      "artifact": "data\\processed\\logistic_automatic_final_model.joblib",
+      "artifact_sha256": "08aee28d0e5ce8708ba4c33c987d395e450a33307fb8e4875026a5b242266104",
+      "parameters": {
+        "model__estimator__C": 0.1
+      },
+      "training_cv_balanced_accuracy": 0.8870406073791383
+    },
+    {
+      "case_id": "logistic_full",
+      "model": "logistic",
+      "family": "full",
+      "genes": 20481,
+      "artifact": "data\\processed\\logistic_tuned_full_feature_model.joblib",
+      "artifact_sha256": "da06b87706281149a3abf8dd42e05b3197ab1dd4332796caa19c3ceb3ed19430",
+      "training_cv_balanced_accuracy": 0.9012807050874884
+    },
+    {
+      "case_id": "random_forest_pam50",
+      "model": "random_forest",
+      "family": "pam50",
+      "genes": 50,
+      "artifact": "data\\processed\\random_forest_pam50_final_model.joblib",
+      "artifact_sha256": "8d2fb1b39677d3c0a8b5848ee189c00038b00af6b937bdefcac1c948247c333c",
+      "parameters": {
+        "model__min_samples_leaf": 3
+      },
+      "training_cv_balanced_accuracy": 0.9316800671737635
+    },
+    {
+      "case_id": "random_forest_automatic",
+      "model": "random_forest",
+      "family": "automatic",
+      "genes": 100,
+      "artifact": "data\\processed\\random_forest_automatic_final_model.joblib",
+      "artifact_sha256": "21bdb920c28f345497cfafa4c5125bbe4f344ad04942cfea0dbd18d038d435a1",
+      "parameters": {
+        "model__min_samples_leaf": 3
+      },
+      "training_cv_balanced_accuracy": 0.8857601338676522
+    },
+    {
+      "case_id": "random_forest_full",
+      "model": "random_forest",
+      "family": "full",
+      "genes": 20481,
+      "artifact": "data\\processed\\random_forest_tuned_full_feature_model.joblib",
+      "artifact_sha256": "3b0310d9f94034c61a6d3a2f2bbcc684c89740bed5c31d1c44614cb654736c7b",
+      "training_cv_balanced_accuracy": 0.8947390440193626
+    },
+    {
+      "case_id": "xgboost_pam50",
+      "model": "xgboost",
+      "family": "pam50",
+      "genes": 50,
+      "artifact": "data\\processed\\xgboost_pam50_final_model.joblib",
+      "artifact_sha256": "45852c9786f6a71bfc68a939399b0454c75ae7dcb56f376656f08c144cfe72eb",
+      "parameters": {
+        "model__max_depth": 2
+      },
+      "training_cv_balanced_accuracy": 0.9214628935992248
+    },
+    {
+      "case_id": "xgboost_automatic",
+      "model": "xgboost",
+      "family": "automatic",
+      "genes": 500,
+      "artifact": "data\\processed\\xgboost_automatic_final_model.joblib",
+      "artifact_sha256": "a32a71d91530337d9fdd2712f26c3f772abe9a337de40bcf8bc1c1ff4efd99f4",
+      "parameters": {
+        "model__max_depth": 2
+      },
+      "training_cv_balanced_accuracy": 0.8990934672009857
+    },
+    {
+      "case_id": "xgboost_full",
+      "model": "xgboost",
+      "family": "full",
+      "genes": 20481,
+      "artifact": "data\\processed\\xgboost_tuned_full_feature_model.joblib",
+      "artifact_sha256": "538454dcabf7fe5c7ffd7278116f52717f606ac5987a11f9a35aa8a58f79ab37",
+      "training_cv_balanced_accuracy": 0.9121885393654484
+    },
+    {
+      "case_id": "dummy",
+      "model": "dummy",
+      "family": "dummy",
+      "genes": 0,
+      "artifact": "data\\processed\\dummy_final_model.joblib",
+      "artifact_sha256": "d5d279f6ea3b94b622f8d42b16e20a965617c0a61c103acf73b2e2fec3e4c00d",
+      "training_cv_balanced_accuracy": 0.25
+    }
+  ],
+  "test_opened": false
+}

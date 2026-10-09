@@ -1,0 +1,611 @@
+{
+  "evaluated_at_utc": "2026-10-09T17:14:31.751101+00:00",
+  "frozen_plan_sha256": "62f0ae86b0bd261ea4f892664d6fb3108eb3c0e806be97a42812024915c8262b",
+  "primary_case": "random_forest_pam50",
+  "test_samples": 189,
+  "classes": [
+    "Basal-like",
+    "HER2-enriched",
+    "Luminal A",
+    "Luminal B"
+  ],
+  "confusion_matrix_orientation": "Recorded labels in rows; predictions in columns.",
+  "cases": [
+    {
+      "case_id": "logistic_pam50",
+      "genes": 50,
+      "balanced_accuracy": 0.9232560331825038,
+      "macro_f1": 0.9186023235160855,
+      "accuracy": 0.9365079365079365,
+      "confusion_matrix": [
+        [
+          33,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          95,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          35
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 33,
+          "total": 34,
+          "recall": 0.9705882352941176,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 14,
+          "total": 16,
+          "recall": 0.875,
+          "one_vs_rest_auroc": 0.9956647398843931
+        },
+        "Luminal A": {
+          "correct": 95,
+          "total": 100,
+          "recall": 0.95,
+          "one_vs_rest_auroc": 0.9950561797752808
+        },
+        "Luminal B": {
+          "correct": 35,
+          "total": 39,
+          "recall": 0.8974358974358975,
+          "one_vs_rest_auroc": 0.9907692307692307
+        }
+      }
+    },
+    {
+      "case_id": "logistic_automatic",
+      "genes": 100,
+      "balanced_accuracy": 0.9238810331825038,
+      "macro_f1": 0.8994210171370258,
+      "accuracy": 0.91005291005291,
+      "confusion_matrix": [
+        [
+          33,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          89,
+          10
+        ],
+        [
+          0,
+          2,
+          2,
+          35
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 33,
+          "total": 34,
+          "recall": 0.9705882352941176,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 15,
+          "total": 16,
+          "recall": 0.9375,
+          "one_vs_rest_auroc": 0.9953034682080925
+        },
+        "Luminal A": {
+          "correct": 89,
+          "total": 100,
+          "recall": 0.89,
+          "one_vs_rest_auroc": 0.9940449438202247
+        },
+        "Luminal B": {
+          "correct": 35,
+          "total": 39,
+          "recall": 0.8974358974358975,
+          "one_vs_rest_auroc": 0.9680341880341881
+        }
+      }
+    },
+    {
+      "case_id": "logistic_full",
+      "genes": 20481,
+      "balanced_accuracy": 0.9370192307692309,
+      "macro_f1": 0.93643539800389,
+      "accuracy": 0.9470899470899471,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          95,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          36
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 14,
+          "total": 16,
+          "recall": 0.875,
+          "one_vs_rest_auroc": 0.9971098265895953
+        },
+        "Luminal A": {
+          "correct": 95,
+          "total": 100,
+          "recall": 0.95,
+          "one_vs_rest_auroc": 0.994943820224719
+        },
+        "Luminal B": {
+          "correct": 36,
+          "total": 39,
+          "recall": 0.9230769230769231,
+          "one_vs_rest_auroc": 0.9835897435897436
+        }
+      }
+    },
+    {
+      "case_id": "random_forest_pam50",
+      "genes": 50,
+      "balanced_accuracy": 0.9273237179487179,
+      "macro_f1": 0.9098640713514472,
+      "accuracy": 0.9153439153439153,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          90,
+          8
+        ],
+        [
+          0,
+          1,
+          4,
+          34
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 15,
+          "total": 16,
+          "recall": 0.9375,
+          "one_vs_rest_auroc": 0.9989161849710982
+        },
+        "Luminal A": {
+          "correct": 90,
+          "total": 100,
+          "recall": 0.9,
+          "one_vs_rest_auroc": 0.9924719101123595
+        },
+        "Luminal B": {
+          "correct": 34,
+          "total": 39,
+          "recall": 0.8717948717948718,
+          "one_vs_rest_auroc": 0.9801709401709401
+        }
+      }
+    },
+    {
+      "case_id": "random_forest_automatic",
+      "genes": 100,
+      "balanced_accuracy": 0.9059134615384615,
+      "macro_f1": 0.8869949494949495,
+      "accuracy": 0.8783068783068783,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          84,
+          15
+        ],
+        [
+          0,
+          1,
+          5,
+          33
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 15,
+          "total": 16,
+          "recall": 0.9375,
+          "one_vs_rest_auroc": 0.9963872832369942
+        },
+        "Luminal A": {
+          "correct": 84,
+          "total": 100,
+          "recall": 0.84,
+          "one_vs_rest_auroc": 0.9785393258426967
+        },
+        "Luminal B": {
+          "correct": 33,
+          "total": 39,
+          "recall": 0.8461538461538461,
+          "one_vs_rest_auroc": 0.9550427350427351
+        }
+      }
+    },
+    {
+      "case_id": "random_forest_full",
+      "genes": 20481,
+      "balanced_accuracy": 0.8868589743589743,
+      "macro_f1": 0.8875834103673552,
+      "accuracy": 0.9047619047619048,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          12,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          90,
+          10
+        ],
+        [
+          0,
+          1,
+          3,
+          35
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 12,
+          "total": 16,
+          "recall": 0.75,
+          "one_vs_rest_auroc": 0.9960260115606937
+        },
+        "Luminal A": {
+          "correct": 90,
+          "total": 100,
+          "recall": 0.9,
+          "one_vs_rest_auroc": 0.9859550561797753
+        },
+        "Luminal B": {
+          "correct": 35,
+          "total": 39,
+          "recall": 0.8974358974358975,
+          "one_vs_rest_auroc": 0.9576068376068376
+        }
+      }
+    },
+    {
+      "case_id": "xgboost_pam50",
+      "genes": 50,
+      "balanced_accuracy": 0.9209134615384615,
+      "macro_f1": 0.8999481808760159,
+      "accuracy": 0.91005291005291,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          90,
+          8
+        ],
+        [
+          0,
+          2,
+          4,
+          33
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 15,
+          "total": 16,
+          "recall": 0.9375,
+          "one_vs_rest_auroc": 0.997471098265896
+        },
+        "Luminal A": {
+          "correct": 90,
+          "total": 100,
+          "recall": 0.9,
+          "one_vs_rest_auroc": 0.9868539325842696
+        },
+        "Luminal B": {
+          "correct": 33,
+          "total": 39,
+          "recall": 0.8461538461538461,
+          "one_vs_rest_auroc": 0.9716239316239317
+        }
+      }
+    },
+    {
+      "case_id": "xgboost_automatic",
+      "genes": 500,
+      "balanced_accuracy": 0.9540544871794872,
+      "macro_f1": 0.9457281047265987,
+      "accuracy": 0.9470899470899471,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          93,
+          6
+        ],
+        [
+          0,
+          0,
+          2,
+          37
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 15,
+          "total": 16,
+          "recall": 0.9375,
+          "one_vs_rest_auroc": 0.9960260115606937
+        },
+        "Luminal A": {
+          "correct": 93,
+          "total": 100,
+          "recall": 0.93,
+          "one_vs_rest_auroc": 0.9923595505617978
+        },
+        "Luminal B": {
+          "correct": 37,
+          "total": 39,
+          "recall": 0.9487179487179487,
+          "one_vs_rest_auroc": 0.9834188034188034
+        }
+      }
+    },
+    {
+      "case_id": "xgboost_full",
+      "genes": 20481,
+      "balanced_accuracy": 0.9437339743589743,
+      "macro_f1": 0.939003062919095,
+      "accuracy": 0.9417989417989417,
+      "confusion_matrix": [
+        [
+          34,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          15,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          94,
+          6
+        ],
+        [
+          0,
+          1,
+          3,
+          35
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 34,
+          "total": 34,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 1.0
+        },
+        "HER2-enriched": {
+          "correct": 15,
+          "total": 16,
+          "recall": 0.9375,
+          "one_vs_rest_auroc": 0.9992774566473989
+        },
+        "Luminal A": {
+          "correct": 94,
+          "total": 100,
+          "recall": 0.94,
+          "one_vs_rest_auroc": 0.9895505617977527
+        },
+        "Luminal B": {
+          "correct": 35,
+          "total": 39,
+          "recall": 0.8974358974358975,
+          "one_vs_rest_auroc": 0.9813675213675214
+        }
+      }
+    },
+    {
+      "case_id": "dummy",
+      "genes": 0,
+      "balanced_accuracy": 0.25,
+      "macro_f1": 0.17301038062283736,
+      "accuracy": 0.5291005291005291,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          34,
+          0
+        ],
+        [
+          0,
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          100,
+          0
+        ],
+        [
+          0,
+          0,
+          39,
+          0
+        ]
+      ],
+      "per_class": {
+        "Basal-like": {
+          "correct": 0,
+          "total": 34,
+          "recall": 0.0,
+          "one_vs_rest_auroc": 0.5
+        },
+        "HER2-enriched": {
+          "correct": 0,
+          "total": 16,
+          "recall": 0.0,
+          "one_vs_rest_auroc": 0.5
+        },
+        "Luminal A": {
+          "correct": 100,
+          "total": 100,
+          "recall": 1.0,
+          "one_vs_rest_auroc": 0.5
+        },
+        "Luminal B": {
+          "correct": 0,
+          "total": 39,
+          "recall": 0.0,
+          "one_vs_rest_auroc": 0.5
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "PAM50-derived labels: agreement with those labels, not independent clinical diagnosis.",
+    "Single-cohort holdout; external validation remains necessary.",
+    "Training CV selected the candidates; supporting test comparisons do not select a new winner.",
+    "The 2 percentage-point panel rule was a training selection rule, not statistical equivalence."
+  ]
+}
