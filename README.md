@@ -4,7 +4,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Step 1: prepare the Python environment and learn the notebook format. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. No clinical data have been downloaded and no models have been trained.
+Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. Initial study metadata and subtype labels have been inspected; see [data/README.md](data/README.md). The expression matrix has not been downloaded and no models have been trained. Decisions about Normal-like and missing labels are pending.
 
 ## Planned approach
 

@@ -1,0 +1,61 @@
+{
+  "retrieved_at_utc": "2026-10-09T14:44:17.272331+00:00",
+  "study_id": "brca_tcga_pan_can_atlas_2018",
+  "study_name": "Breast Invasive Carcinoma (TCGA, PanCancer Atlas)",
+  "study_sample_count": 1084,
+  "patient_count": 1084,
+  "label_column": "SUBTYPE",
+  "label_level": "patient",
+  "subtype_counts_before_expression_matching": {
+    "BRCA_Basal": 171,
+    "BRCA_Her2": 78,
+    "BRCA_LumA": 499,
+    "BRCA_LumB": 197,
+    "BRCA_Normal": 36
+  },
+  "patients_without_subtype_record": 103,
+  "expression_profiles": [
+    {
+      "molecularProfileId": "brca_tcga_pan_can_atlas_2018_rna_seq_v2_mrna",
+      "studyId": "brca_tcga_pan_can_atlas_2018",
+      "molecularAlterationType": "MRNA_EXPRESSION",
+      "datatype": "CONTINUOUS",
+      "name": "mRNA Expression, RSEM (Batch normalized from Illumina HiSeq_RNASeqV2)",
+      "description": "mRNA Expression, RSEM (Batch normalized from Illumina HiSeq_RNASeqV2)",
+      "showProfileInAnalysisTab": false,
+      "patientLevel": false
+    },
+    {
+      "molecularProfileId": "brca_tcga_pan_can_atlas_2018_rna_seq_v2_mrna_median_Zscores",
+      "studyId": "brca_tcga_pan_can_atlas_2018",
+      "molecularAlterationType": "MRNA_EXPRESSION",
+      "datatype": "Z-SCORE",
+      "name": "mRNA expression z-scores relative to diploid samples (RNA Seq V2 RSEM)",
+      "description": "mRNA expression z-scores (RNA Seq V2 RSEM) compared to the expression distribution of each gene tumors that are diploid for this gene.",
+      "showProfileInAnalysisTab": true,
+      "patientLevel": false
+    },
+    {
+      "molecularProfileId": "brca_tcga_pan_can_atlas_2018_rna_seq_v2_mrna_median_all_sample_Zscores",
+      "studyId": "brca_tcga_pan_can_atlas_2018",
+      "molecularAlterationType": "MRNA_EXPRESSION",
+      "datatype": "Z-SCORE",
+      "name": "mRNA expression z-scores relative to all samples (log RNA Seq V2 RSEM)",
+      "description": "Log-transformed mRNA expression z-scores compared to the expression distribution of all samples (RNA Seq V2 RSEM).",
+      "showProfileInAnalysisTab": true,
+      "patientLevel": false
+    },
+    {
+      "molecularProfileId": "brca_tcga_pan_can_atlas_2018_rna_seq_v2_mrna_median_all_sample_ref_normal_Zscores",
+      "studyId": "brca_tcga_pan_can_atlas_2018",
+      "molecularAlterationType": "MRNA_EXPRESSION",
+      "datatype": "Z-SCORE",
+      "name": "mRNA expression z-scores relative to normal samples (log RNA Seq V2 RSEM)",
+      "description": "Expression z-scores of tumor samples compared to the expression distribution of all log-transformed mRNA expression of adjacent normal samples in the cohort.",
+      "showProfileInAnalysisTab": true,
+      "patientLevel": false
+    }
+  ],
+  "api_base": "https://www.cbioportal.org/api",
+  "note": "Counts are before matching labels to expression samples. No exclusions applied."
+}
