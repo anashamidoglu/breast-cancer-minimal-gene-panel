@@ -80,3 +80,7 @@ The user approved the panel-selection tolerance on October 9, 2026, before panel
 - The PAM50 gene-list benchmark trains our own models against PAM50-derived labels; it does not establish superiority to the PAM50 classifier or clinical assay.
 
 Target completion: October 31, 2026.
+
+## Gene interpretation
+
+The automatic 100-gene panel overlaps PAM50 by 10 genes; 83 final genes were selected in all five outer training folds. The 500-gene panel overlaps by 31 genes, with 396 final genes selected in all five folds. Logistic and random forest share the same automatic 100-gene list because selection uses the same ANOVA ranking. See [gene interpretation](data/gene_interpretation.md) and `notebooks/08_gene_interpretation.ipynb` for frozen logistic weights and their limitations. This descriptive analysis uses training artifacts only and does not establish biological causes or cross-cohort reproducibility.

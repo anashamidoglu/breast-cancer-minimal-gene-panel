@@ -1,0 +1,80 @@
+[
+  {
+    "case_id": "logistic_automatic",
+    "genes": 100,
+    "pam50_overlap": 10,
+    "pam50_total": 50,
+    "final_genes_selected_in_all_five_folds": 83,
+    "overlap_symbols": [
+      "CCNE1",
+      "CDC20",
+      "ESR1",
+      "FOXA1",
+      "FOXC1",
+      "GPR160",
+      "MAPT",
+      "MLPH",
+      "NAT1",
+      "PGR"
+    ]
+  },
+  {
+    "case_id": "random_forest_automatic",
+    "genes": 100,
+    "pam50_overlap": 10,
+    "pam50_total": 50,
+    "final_genes_selected_in_all_five_folds": 83,
+    "overlap_symbols": [
+      "CCNE1",
+      "CDC20",
+      "ESR1",
+      "FOXA1",
+      "FOXC1",
+      "GPR160",
+      "MAPT",
+      "MLPH",
+      "NAT1",
+      "PGR"
+    ]
+  },
+  {
+    "case_id": "xgboost_automatic",
+    "genes": 500,
+    "pam50_overlap": 31,
+    "pam50_total": 50,
+    "final_genes_selected_in_all_five_folds": 396,
+    "overlap_symbols": [
+      "ANLN",
+      "BCL2",
+      "BIRC5",
+      "CCNE1",
+      "CDC20",
+      "CEP55",
+      "CXXC5",
+      "ESR1",
+      "EXO1",
+      "FOXA1",
+      "FOXC1",
+      "GPR160",
+      "KIF2C",
+      "MAPT",
+      "MELK",
+      "MIA",
+      "MLPH",
+      "MYBL2",
+      "NAT1",
+      "NDC80",
+      "NUF2",
+      "ORC6L",
+      "PGR",
+      "PHGDH",
+      "PTTG1",
+      "RRM2",
+      "SFRP1",
+      "SLC39A6",
+      "TMEM45B",
+      "UBE2C",
+      "UBE2T"
+    ]
+  }
+]

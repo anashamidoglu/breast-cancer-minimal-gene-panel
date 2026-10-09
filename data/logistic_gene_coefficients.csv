@@ -1,0 +1,601 @@
+case_id,subtype,feature_id,gene_symbol,coefficient
+logistic_automatic,Basal-like,ENTREZ_144568,A2ML1,0.0
+logistic_automatic,Basal-like,ENTREZ_18,ABAT,0.0
+logistic_automatic,Basal-like,ENTREZ_6833,ABCC8,0.0
+logistic_automatic,Basal-like,ENTREZ_36,ACADSB,0.0
+logistic_automatic,Basal-like,ENTREZ_3899,AFF3,0.0
+logistic_automatic,Basal-like,ENTREZ_10551,AGR2,-0.27977689604101874
+logistic_automatic,Basal-like,ENTREZ_155465,AGR3,0.0
+logistic_automatic,Basal-like,ENTREZ_276,AMY1A,0.35792966226161893
+logistic_automatic,Basal-like,ENTREZ_8416,ANXA9,-0.029718686821442745
+logistic_automatic,Basal-like,ENTREZ_367,AR,0.0
+logistic_automatic,Basal-like,ENTREZ_22901,ARSG,0.0
+logistic_automatic,Basal-like,ENTREZ_419,ART3,0.0
+logistic_automatic,Basal-like,ENTREZ_84002,B3GNT5,0.0
+logistic_automatic,Basal-like,ENTREZ_8537,BCAS1,-0.10841924452294015
+logistic_automatic,Basal-like,ENTREZ_283987,C17orf28,0.0
+logistic_automatic,Basal-like,ENTREZ_149563,C1orf64,0.0
+logistic_automatic,Basal-like,ENTREZ_201895,C4orf34,0.0
+logistic_automatic,Basal-like,ENTREZ_285600,C5orf36,0.0
+logistic_automatic,Basal-like,ENTREZ_80129,C6orf97,0.0
+logistic_automatic,Basal-like,ENTREZ_401546,C9orf152,0.0
+logistic_automatic,Basal-like,ENTREZ_401535,C9orf170,0.13013484844437756
+logistic_automatic,Basal-like,ENTREZ_771,CA12,0.0
+logistic_automatic,Basal-like,ENTREZ_92291,CAPN13,0.0
+logistic_automatic,Basal-like,ENTREZ_388743,CAPN8,0.0
+logistic_automatic,Basal-like,ENTREZ_202243,CCDC125,0.0
+logistic_automatic,Basal-like,ENTREZ_898,CCNE1,0.0
+logistic_automatic,Basal-like,ENTREZ_991,CDC20,0.0
+logistic_automatic,Basal-like,ENTREZ_55143,CDCA8,0.0
+logistic_automatic,Basal-like,ENTREZ_1058,CENPA,0.0
+logistic_automatic,Basal-like,ENTREZ_55839,CENPN,0.0
+logistic_automatic,Basal-like,ENTREZ_387103,CENPW,0.0
+logistic_automatic,Basal-like,ENTREZ_140578,CHODL,0.0
+logistic_automatic,Basal-like,ENTREZ_64084,CLSTN2,0.0
+logistic_automatic,Basal-like,ENTREZ_134147,CMBL,0.0
+logistic_automatic,Basal-like,ENTREZ_196993,CT62,0.0
+logistic_automatic,Basal-like,ENTREZ_203413,CXorf61,0.027352551509298925
+logistic_automatic,Basal-like,ENTREZ_1556,CYP2B7P1,0.0
+logistic_automatic,Basal-like,ENTREZ_1602,DACH1,0.0
+logistic_automatic,Basal-like,ENTREZ_123099,DEGS2,-0.05238528337823191
+logistic_automatic,Basal-like,ENTREZ_7802,DNALI1,0.0
+logistic_automatic,Basal-like,ENTREZ_2066,ERBB4,-0.13927615334205998
+logistic_automatic,Basal-like,ENTREZ_2099,ESR1,0.0
+logistic_automatic,Basal-like,ENTREZ_221061,FAM171A1,0.0
+logistic_automatic,Basal-like,ENTREZ_100129583,FAM47E,0.0
+logistic_automatic,Basal-like,ENTREZ_2203,FBP1,0.0
+logistic_automatic,Basal-like,ENTREZ_399717,GATA3-AS1,0.0
+logistic_automatic,Basal-like,ENTREZ_3169,FOXA1,-0.201468344683122
+logistic_automatic,Basal-like,ENTREZ_2296,FOXC1,0.6583587096708812
+logistic_automatic,Basal-like,ENTREZ_2305,FOXM1,0.03219553156908917
+logistic_automatic,Basal-like,ENTREZ_161835,FSIP1,0.0
+logistic_automatic,Basal-like,ENTREZ_8326,FZD9,0.18775953970953696
+logistic_automatic,Basal-like,ENTREZ_9568,GABBR2,0.12314909502880467
+logistic_automatic,Basal-like,ENTREZ_2625,GATA3,0.0
+logistic_automatic,Basal-like,ENTREZ_26996,GPR160,-0.3135540220391097
+logistic_automatic,Basal-like,ENTREZ_27202,GPR77,0.0
+logistic_automatic,Basal-like,ENTREZ_9687,GREB1,0.0
+logistic_automatic,Basal-like,ENTREZ_84072,HORMAD1,0.0
+logistic_automatic,Basal-like,ENTREZ_3475,IFRD1,0.0
+logistic_automatic,Basal-like,ENTREZ_8821,INPP4B,0.0
+logistic_automatic,Basal-like,ENTREZ_3767,KCNJ11,0.0
+logistic_automatic,Basal-like,ENTREZ_23030,KDM4B,0.0
+logistic_automatic,Basal-like,ENTREZ_3868,KRT16,0.0
+logistic_automatic,Basal-like,ENTREZ_93273,LEMD1,0.17687705084620034
+logistic_automatic,Basal-like,ENTREZ_145837,DRAIC,0.0
+logistic_automatic,Basal-like,ENTREZ_4137,MAPT,0.0
+logistic_automatic,Basal-like,ENTREZ_85377,MICALL1,0.0
+logistic_automatic,Basal-like,ENTREZ_79083,MLPH,-0.39650174640048774
+logistic_automatic,Basal-like,ENTREZ_4602,MYB,0.0
+logistic_automatic,Basal-like,ENTREZ_9,NAT1,0.0
+logistic_automatic,Basal-like,ENTREZ_115677,NOSTRIN,0.0
+logistic_automatic,Basal-like,ENTREZ_55301,OLAH,0.0616637384796323
+logistic_automatic,Basal-like,ENTREZ_23590,PDSS1,0.0
+logistic_automatic,Basal-like,ENTREZ_5241,PGR,0.0
+logistic_automatic,Basal-like,ENTREZ_81706,PPP1R14C,0.0
+logistic_automatic,Basal-like,ENTREZ_222171,PRR15,0.0
+logistic_automatic,Basal-like,ENTREZ_260429,PRSS33,0.0
+logistic_automatic,Basal-like,ENTREZ_29968,PSAT1,0.0
+logistic_automatic,Basal-like,ENTREZ_54763,ROPN1,0.0
+logistic_automatic,Basal-like,ENTREZ_152015,ROPN1B,0.0
+logistic_automatic,Basal-like,ENTREZ_57758,SCUBE2,0.0
+logistic_automatic,Basal-like,ENTREZ_135295,SFRS13B,0.0
+logistic_automatic,Basal-like,ENTREZ_54847,SIDT1,-0.026087840032166045
+logistic_automatic,Basal-like,ENTREZ_6584,SLC22A5,0.0
+logistic_automatic,Basal-like,ENTREZ_80736,SLC44A4,-0.2436518872318029
+logistic_automatic,Basal-like,ENTREZ_23428,SLC7A8,0.0
+logistic_automatic,Basal-like,ENTREZ_25803,SPDEF,-0.17454658567390688
+logistic_automatic,Basal-like,ENTREZ_79723,SUV39H2,0.023947705349903294
+logistic_automatic,Basal-like,ENTREZ_23158,TBC1D9,0.0
+logistic_automatic,Basal-like,ENTREZ_7031,TFF1,0.0
+logistic_automatic,Basal-like,ENTREZ_7033,TFF3,0.0
+logistic_automatic,Basal-like,ENTREZ_79875,THSD4,0.0
+logistic_automatic,Basal-like,ENTREZ_22974,TPX2,0.0
+logistic_automatic,Basal-like,ENTREZ_143941,TTC36,-0.2179746076465133
+logistic_automatic,Basal-like,ENTREZ_7272,TTK,0.0
+logistic_automatic,Basal-like,ENTREZ_9654,TTLL4,0.0
+logistic_automatic,Basal-like,ENTREZ_51442,VGLL1,0.0
+logistic_automatic,Basal-like,ENTREZ_7494,XBP1,0.0
+logistic_automatic,Basal-like,ENTREZ_4904,YBX1,0.0
+logistic_automatic,Basal-like,ENTREZ_51364,ZMYND10,0.0
+logistic_automatic,Basal-like,ENTREZ_79818,ZNF552,-0.2368850436999419
+logistic_automatic,HER2-enriched,ENTREZ_144568,A2ML1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_18,ABAT,0.0
+logistic_automatic,HER2-enriched,ENTREZ_6833,ABCC8,0.0
+logistic_automatic,HER2-enriched,ENTREZ_36,ACADSB,-0.13848938002069394
+logistic_automatic,HER2-enriched,ENTREZ_3899,AFF3,-0.2313707558145854
+logistic_automatic,HER2-enriched,ENTREZ_10551,AGR2,0.0
+logistic_automatic,HER2-enriched,ENTREZ_155465,AGR3,0.0
+logistic_automatic,HER2-enriched,ENTREZ_276,AMY1A,0.0
+logistic_automatic,HER2-enriched,ENTREZ_8416,ANXA9,0.0
+logistic_automatic,HER2-enriched,ENTREZ_367,AR,0.186720145499151
+logistic_automatic,HER2-enriched,ENTREZ_22901,ARSG,0.0
+logistic_automatic,HER2-enriched,ENTREZ_419,ART3,0.0
+logistic_automatic,HER2-enriched,ENTREZ_84002,B3GNT5,0.0
+logistic_automatic,HER2-enriched,ENTREZ_8537,BCAS1,0.05288670404982098
+logistic_automatic,HER2-enriched,ENTREZ_283987,C17orf28,0.0
+logistic_automatic,HER2-enriched,ENTREZ_149563,C1orf64,0.0
+logistic_automatic,HER2-enriched,ENTREZ_201895,C4orf34,0.0
+logistic_automatic,HER2-enriched,ENTREZ_285600,C5orf36,0.0
+logistic_automatic,HER2-enriched,ENTREZ_80129,C6orf97,0.0
+logistic_automatic,HER2-enriched,ENTREZ_401546,C9orf152,0.23413833193269173
+logistic_automatic,HER2-enriched,ENTREZ_401535,C9orf170,0.0
+logistic_automatic,HER2-enriched,ENTREZ_771,CA12,0.0
+logistic_automatic,HER2-enriched,ENTREZ_92291,CAPN13,0.031036308112036184
+logistic_automatic,HER2-enriched,ENTREZ_388743,CAPN8,0.0
+logistic_automatic,HER2-enriched,ENTREZ_202243,CCDC125,0.024601956946606243
+logistic_automatic,HER2-enriched,ENTREZ_898,CCNE1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_991,CDC20,0.0
+logistic_automatic,HER2-enriched,ENTREZ_55143,CDCA8,0.0
+logistic_automatic,HER2-enriched,ENTREZ_1058,CENPA,0.0
+logistic_automatic,HER2-enriched,ENTREZ_55839,CENPN,0.21760273731132418
+logistic_automatic,HER2-enriched,ENTREZ_387103,CENPW,0.0
+logistic_automatic,HER2-enriched,ENTREZ_140578,CHODL,-0.25519310627289893
+logistic_automatic,HER2-enriched,ENTREZ_64084,CLSTN2,-0.06950327989927287
+logistic_automatic,HER2-enriched,ENTREZ_134147,CMBL,0.0
+logistic_automatic,HER2-enriched,ENTREZ_196993,CT62,0.0
+logistic_automatic,HER2-enriched,ENTREZ_203413,CXorf61,-0.08806382251281762
+logistic_automatic,HER2-enriched,ENTREZ_1556,CYP2B7P1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_1602,DACH1,-0.32429972406657914
+logistic_automatic,HER2-enriched,ENTREZ_123099,DEGS2,0.0
+logistic_automatic,HER2-enriched,ENTREZ_7802,DNALI1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_2066,ERBB4,0.0
+logistic_automatic,HER2-enriched,ENTREZ_2099,ESR1,-0.8397972008902925
+logistic_automatic,HER2-enriched,ENTREZ_221061,FAM171A1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_100129583,FAM47E,0.0
+logistic_automatic,HER2-enriched,ENTREZ_2203,FBP1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_399717,GATA3-AS1,-0.5973971475963964
+logistic_automatic,HER2-enriched,ENTREZ_3169,FOXA1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_2296,FOXC1,-1.0809105281801634
+logistic_automatic,HER2-enriched,ENTREZ_2305,FOXM1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_161835,FSIP1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_8326,FZD9,0.0
+logistic_automatic,HER2-enriched,ENTREZ_9568,GABBR2,0.0
+logistic_automatic,HER2-enriched,ENTREZ_2625,GATA3,0.0
+logistic_automatic,HER2-enriched,ENTREZ_26996,GPR160,0.30028512802344565
+logistic_automatic,HER2-enriched,ENTREZ_27202,GPR77,-0.6570669672770414
+logistic_automatic,HER2-enriched,ENTREZ_9687,GREB1,-0.4047812143064999
+logistic_automatic,HER2-enriched,ENTREZ_84072,HORMAD1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_3475,IFRD1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_8821,INPP4B,0.0
+logistic_automatic,HER2-enriched,ENTREZ_3767,KCNJ11,0.0
+logistic_automatic,HER2-enriched,ENTREZ_23030,KDM4B,-0.022148606018963114
+logistic_automatic,HER2-enriched,ENTREZ_3868,KRT16,0.0
+logistic_automatic,HER2-enriched,ENTREZ_93273,LEMD1,-0.001223035666082301
+logistic_automatic,HER2-enriched,ENTREZ_145837,DRAIC,0.0
+logistic_automatic,HER2-enriched,ENTREZ_4137,MAPT,0.0
+logistic_automatic,HER2-enriched,ENTREZ_85377,MICALL1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_79083,MLPH,0.0
+logistic_automatic,HER2-enriched,ENTREZ_4602,MYB,0.0
+logistic_automatic,HER2-enriched,ENTREZ_9,NAT1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_115677,NOSTRIN,0.0
+logistic_automatic,HER2-enriched,ENTREZ_55301,OLAH,-0.1486592107331145
+logistic_automatic,HER2-enriched,ENTREZ_23590,PDSS1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_5241,PGR,0.0
+logistic_automatic,HER2-enriched,ENTREZ_81706,PPP1R14C,0.24366070616482158
+logistic_automatic,HER2-enriched,ENTREZ_222171,PRR15,0.0
+logistic_automatic,HER2-enriched,ENTREZ_260429,PRSS33,0.0
+logistic_automatic,HER2-enriched,ENTREZ_29968,PSAT1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_54763,ROPN1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_152015,ROPN1B,0.0
+logistic_automatic,HER2-enriched,ENTREZ_57758,SCUBE2,0.0
+logistic_automatic,HER2-enriched,ENTREZ_135295,SFRS13B,-0.12585441662778432
+logistic_automatic,HER2-enriched,ENTREZ_54847,SIDT1,0.49341580400772855
+logistic_automatic,HER2-enriched,ENTREZ_6584,SLC22A5,0.0
+logistic_automatic,HER2-enriched,ENTREZ_80736,SLC44A4,0.0
+logistic_automatic,HER2-enriched,ENTREZ_23428,SLC7A8,0.0
+logistic_automatic,HER2-enriched,ENTREZ_25803,SPDEF,0.5754723934815354
+logistic_automatic,HER2-enriched,ENTREZ_79723,SUV39H2,0.0
+logistic_automatic,HER2-enriched,ENTREZ_23158,TBC1D9,0.0
+logistic_automatic,HER2-enriched,ENTREZ_7031,TFF1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_7033,TFF3,0.0
+logistic_automatic,HER2-enriched,ENTREZ_79875,THSD4,0.0
+logistic_automatic,HER2-enriched,ENTREZ_22974,TPX2,0.0
+logistic_automatic,HER2-enriched,ENTREZ_143941,TTC36,0.0
+logistic_automatic,HER2-enriched,ENTREZ_7272,TTK,0.15286856963607798
+logistic_automatic,HER2-enriched,ENTREZ_9654,TTLL4,0.0
+logistic_automatic,HER2-enriched,ENTREZ_51442,VGLL1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_7494,XBP1,0.08439439731031909
+logistic_automatic,HER2-enriched,ENTREZ_4904,YBX1,0.0
+logistic_automatic,HER2-enriched,ENTREZ_51364,ZMYND10,0.0
+logistic_automatic,HER2-enriched,ENTREZ_79818,ZNF552,0.0
+logistic_automatic,Luminal A,ENTREZ_144568,A2ML1,0.0
+logistic_automatic,Luminal A,ENTREZ_18,ABAT,0.0
+logistic_automatic,Luminal A,ENTREZ_6833,ABCC8,0.0
+logistic_automatic,Luminal A,ENTREZ_36,ACADSB,0.0
+logistic_automatic,Luminal A,ENTREZ_3899,AFF3,0.0
+logistic_automatic,Luminal A,ENTREZ_10551,AGR2,0.0
+logistic_automatic,Luminal A,ENTREZ_155465,AGR3,0.031367444442257794
+logistic_automatic,Luminal A,ENTREZ_276,AMY1A,0.0
+logistic_automatic,Luminal A,ENTREZ_8416,ANXA9,0.0
+logistic_automatic,Luminal A,ENTREZ_367,AR,0.0
+logistic_automatic,Luminal A,ENTREZ_22901,ARSG,0.0
+logistic_automatic,Luminal A,ENTREZ_419,ART3,0.0
+logistic_automatic,Luminal A,ENTREZ_84002,B3GNT5,0.0
+logistic_automatic,Luminal A,ENTREZ_8537,BCAS1,0.0
+logistic_automatic,Luminal A,ENTREZ_283987,C17orf28,0.0
+logistic_automatic,Luminal A,ENTREZ_149563,C1orf64,0.27555111579060765
+logistic_automatic,Luminal A,ENTREZ_201895,C4orf34,0.0
+logistic_automatic,Luminal A,ENTREZ_285600,C5orf36,0.0
+logistic_automatic,Luminal A,ENTREZ_80129,C6orf97,0.0
+logistic_automatic,Luminal A,ENTREZ_401546,C9orf152,0.0
+logistic_automatic,Luminal A,ENTREZ_401535,C9orf170,0.0
+logistic_automatic,Luminal A,ENTREZ_771,CA12,0.0
+logistic_automatic,Luminal A,ENTREZ_92291,CAPN13,0.0
+logistic_automatic,Luminal A,ENTREZ_388743,CAPN8,0.0
+logistic_automatic,Luminal A,ENTREZ_202243,CCDC125,0.0
+logistic_automatic,Luminal A,ENTREZ_898,CCNE1,0.0
+logistic_automatic,Luminal A,ENTREZ_991,CDC20,0.0
+logistic_automatic,Luminal A,ENTREZ_55143,CDCA8,-0.036877893701396214
+logistic_automatic,Luminal A,ENTREZ_1058,CENPA,-0.14005778214350795
+logistic_automatic,Luminal A,ENTREZ_55839,CENPN,-0.36205571307691503
+logistic_automatic,Luminal A,ENTREZ_387103,CENPW,0.0
+logistic_automatic,Luminal A,ENTREZ_140578,CHODL,0.0
+logistic_automatic,Luminal A,ENTREZ_64084,CLSTN2,0.04392989549937617
+logistic_automatic,Luminal A,ENTREZ_134147,CMBL,0.0
+logistic_automatic,Luminal A,ENTREZ_196993,CT62,0.0
+logistic_automatic,Luminal A,ENTREZ_203413,CXorf61,0.0
+logistic_automatic,Luminal A,ENTREZ_1556,CYP2B7P1,0.0
+logistic_automatic,Luminal A,ENTREZ_1602,DACH1,0.11695930837292592
+logistic_automatic,Luminal A,ENTREZ_123099,DEGS2,0.0
+logistic_automatic,Luminal A,ENTREZ_7802,DNALI1,0.1154357119310273
+logistic_automatic,Luminal A,ENTREZ_2066,ERBB4,0.0050340965784484
+logistic_automatic,Luminal A,ENTREZ_2099,ESR1,0.0
+logistic_automatic,Luminal A,ENTREZ_221061,FAM171A1,0.21753185259538013
+logistic_automatic,Luminal A,ENTREZ_100129583,FAM47E,0.0
+logistic_automatic,Luminal A,ENTREZ_2203,FBP1,0.0
+logistic_automatic,Luminal A,ENTREZ_399717,GATA3-AS1,0.0
+logistic_automatic,Luminal A,ENTREZ_3169,FOXA1,0.0
+logistic_automatic,Luminal A,ENTREZ_2296,FOXC1,0.49826384228639947
+logistic_automatic,Luminal A,ENTREZ_2305,FOXM1,-0.26406499172676706
+logistic_automatic,Luminal A,ENTREZ_161835,FSIP1,0.0
+logistic_automatic,Luminal A,ENTREZ_8326,FZD9,0.0
+logistic_automatic,Luminal A,ENTREZ_9568,GABBR2,0.0
+logistic_automatic,Luminal A,ENTREZ_2625,GATA3,0.08206492238584964
+logistic_automatic,Luminal A,ENTREZ_26996,GPR160,0.0
+logistic_automatic,Luminal A,ENTREZ_27202,GPR77,0.24865321982899238
+logistic_automatic,Luminal A,ENTREZ_9687,GREB1,0.24330282359091374
+logistic_automatic,Luminal A,ENTREZ_84072,HORMAD1,0.0
+logistic_automatic,Luminal A,ENTREZ_3475,IFRD1,-0.00842851774687716
+logistic_automatic,Luminal A,ENTREZ_8821,INPP4B,0.0
+logistic_automatic,Luminal A,ENTREZ_3767,KCNJ11,0.0
+logistic_automatic,Luminal A,ENTREZ_23030,KDM4B,0.23147554718172794
+logistic_automatic,Luminal A,ENTREZ_3868,KRT16,0.445141932744652
+logistic_automatic,Luminal A,ENTREZ_93273,LEMD1,0.0
+logistic_automatic,Luminal A,ENTREZ_145837,DRAIC,0.0
+logistic_automatic,Luminal A,ENTREZ_4137,MAPT,0.34582622034449634
+logistic_automatic,Luminal A,ENTREZ_85377,MICALL1,0.0
+logistic_automatic,Luminal A,ENTREZ_79083,MLPH,0.0
+logistic_automatic,Luminal A,ENTREZ_4602,MYB,0.0
+logistic_automatic,Luminal A,ENTREZ_9,NAT1,0.12561354024835228
+logistic_automatic,Luminal A,ENTREZ_115677,NOSTRIN,0.0
+logistic_automatic,Luminal A,ENTREZ_55301,OLAH,0.0
+logistic_automatic,Luminal A,ENTREZ_23590,PDSS1,-0.30759220971342277
+logistic_automatic,Luminal A,ENTREZ_5241,PGR,0.27962299230651805
+logistic_automatic,Luminal A,ENTREZ_81706,PPP1R14C,0.3518179429448763
+logistic_automatic,Luminal A,ENTREZ_222171,PRR15,0.0
+logistic_automatic,Luminal A,ENTREZ_260429,PRSS33,0.0
+logistic_automatic,Luminal A,ENTREZ_29968,PSAT1,0.0
+logistic_automatic,Luminal A,ENTREZ_54763,ROPN1,0.0
+logistic_automatic,Luminal A,ENTREZ_152015,ROPN1B,0.0
+logistic_automatic,Luminal A,ENTREZ_57758,SCUBE2,0.0
+logistic_automatic,Luminal A,ENTREZ_135295,SFRS13B,0.0
+logistic_automatic,Luminal A,ENTREZ_54847,SIDT1,0.06717104808437976
+logistic_automatic,Luminal A,ENTREZ_6584,SLC22A5,0.0
+logistic_automatic,Luminal A,ENTREZ_80736,SLC44A4,0.3787924989343482
+logistic_automatic,Luminal A,ENTREZ_23428,SLC7A8,0.13357558798743185
+logistic_automatic,Luminal A,ENTREZ_25803,SPDEF,0.0
+logistic_automatic,Luminal A,ENTREZ_79723,SUV39H2,-0.062344626718124914
+logistic_automatic,Luminal A,ENTREZ_23158,TBC1D9,0.0
+logistic_automatic,Luminal A,ENTREZ_7031,TFF1,0.0
+logistic_automatic,Luminal A,ENTREZ_7033,TFF3,0.0
+logistic_automatic,Luminal A,ENTREZ_79875,THSD4,0.0
+logistic_automatic,Luminal A,ENTREZ_22974,TPX2,-1.1412262040039005
+logistic_automatic,Luminal A,ENTREZ_143941,TTC36,0.0
+logistic_automatic,Luminal A,ENTREZ_7272,TTK,-0.6263936460663289
+logistic_automatic,Luminal A,ENTREZ_9654,TTLL4,0.0
+logistic_automatic,Luminal A,ENTREZ_51442,VGLL1,0.0
+logistic_automatic,Luminal A,ENTREZ_7494,XBP1,0.0
+logistic_automatic,Luminal A,ENTREZ_4904,YBX1,0.0
+logistic_automatic,Luminal A,ENTREZ_51364,ZMYND10,0.0
+logistic_automatic,Luminal A,ENTREZ_79818,ZNF552,0.0
+logistic_automatic,Luminal B,ENTREZ_144568,A2ML1,0.0
+logistic_automatic,Luminal B,ENTREZ_18,ABAT,0.0
+logistic_automatic,Luminal B,ENTREZ_6833,ABCC8,0.0
+logistic_automatic,Luminal B,ENTREZ_36,ACADSB,0.0
+logistic_automatic,Luminal B,ENTREZ_3899,AFF3,0.0
+logistic_automatic,Luminal B,ENTREZ_10551,AGR2,0.0
+logistic_automatic,Luminal B,ENTREZ_155465,AGR3,0.0
+logistic_automatic,Luminal B,ENTREZ_276,AMY1A,0.0
+logistic_automatic,Luminal B,ENTREZ_8416,ANXA9,0.0
+logistic_automatic,Luminal B,ENTREZ_367,AR,0.0
+logistic_automatic,Luminal B,ENTREZ_22901,ARSG,0.0
+logistic_automatic,Luminal B,ENTREZ_419,ART3,0.0
+logistic_automatic,Luminal B,ENTREZ_84002,B3GNT5,0.0
+logistic_automatic,Luminal B,ENTREZ_8537,BCAS1,0.0
+logistic_automatic,Luminal B,ENTREZ_283987,C17orf28,0.0
+logistic_automatic,Luminal B,ENTREZ_149563,C1orf64,-0.001236866122617844
+logistic_automatic,Luminal B,ENTREZ_201895,C4orf34,0.0
+logistic_automatic,Luminal B,ENTREZ_285600,C5orf36,0.0
+logistic_automatic,Luminal B,ENTREZ_80129,C6orf97,0.26212201431022264
+logistic_automatic,Luminal B,ENTREZ_401546,C9orf152,0.0
+logistic_automatic,Luminal B,ENTREZ_401535,C9orf170,0.0
+logistic_automatic,Luminal B,ENTREZ_771,CA12,0.0
+logistic_automatic,Luminal B,ENTREZ_92291,CAPN13,0.0
+logistic_automatic,Luminal B,ENTREZ_388743,CAPN8,0.0
+logistic_automatic,Luminal B,ENTREZ_202243,CCDC125,0.0
+logistic_automatic,Luminal B,ENTREZ_898,CCNE1,0.0
+logistic_automatic,Luminal B,ENTREZ_991,CDC20,0.0
+logistic_automatic,Luminal B,ENTREZ_55143,CDCA8,0.0
+logistic_automatic,Luminal B,ENTREZ_1058,CENPA,0.8205544361384074
+logistic_automatic,Luminal B,ENTREZ_55839,CENPN,0.1877090685163655
+logistic_automatic,Luminal B,ENTREZ_387103,CENPW,0.0
+logistic_automatic,Luminal B,ENTREZ_140578,CHODL,0.0
+logistic_automatic,Luminal B,ENTREZ_64084,CLSTN2,0.0
+logistic_automatic,Luminal B,ENTREZ_134147,CMBL,0.0
+logistic_automatic,Luminal B,ENTREZ_196993,CT62,0.0
+logistic_automatic,Luminal B,ENTREZ_203413,CXorf61,0.0
+logistic_automatic,Luminal B,ENTREZ_1556,CYP2B7P1,0.20882924231956404
+logistic_automatic,Luminal B,ENTREZ_1602,DACH1,0.0
+logistic_automatic,Luminal B,ENTREZ_123099,DEGS2,0.0
+logistic_automatic,Luminal B,ENTREZ_7802,DNALI1,0.0
+logistic_automatic,Luminal B,ENTREZ_2066,ERBB4,0.0
+logistic_automatic,Luminal B,ENTREZ_2099,ESR1,0.7789725543871607
+logistic_automatic,Luminal B,ENTREZ_221061,FAM171A1,-0.15746089607109706
+logistic_automatic,Luminal B,ENTREZ_100129583,FAM47E,-0.04159513666149259
+logistic_automatic,Luminal B,ENTREZ_2203,FBP1,0.0
+logistic_automatic,Luminal B,ENTREZ_399717,GATA3-AS1,0.0
+logistic_automatic,Luminal B,ENTREZ_3169,FOXA1,0.0
+logistic_automatic,Luminal B,ENTREZ_2296,FOXC1,-0.5029363270902633
+logistic_automatic,Luminal B,ENTREZ_2305,FOXM1,0.039473540098641194
+logistic_automatic,Luminal B,ENTREZ_161835,FSIP1,0.12587869127375087
+logistic_automatic,Luminal B,ENTREZ_8326,FZD9,0.0
+logistic_automatic,Luminal B,ENTREZ_9568,GABBR2,0.0
+logistic_automatic,Luminal B,ENTREZ_2625,GATA3,0.0
+logistic_automatic,Luminal B,ENTREZ_26996,GPR160,0.0
+logistic_automatic,Luminal B,ENTREZ_27202,GPR77,0.0
+logistic_automatic,Luminal B,ENTREZ_9687,GREB1,0.0
+logistic_automatic,Luminal B,ENTREZ_84072,HORMAD1,0.0
+logistic_automatic,Luminal B,ENTREZ_3475,IFRD1,0.0
+logistic_automatic,Luminal B,ENTREZ_8821,INPP4B,0.0
+logistic_automatic,Luminal B,ENTREZ_3767,KCNJ11,0.0
+logistic_automatic,Luminal B,ENTREZ_23030,KDM4B,-0.06685959704316868
+logistic_automatic,Luminal B,ENTREZ_3868,KRT16,-0.5476799346315248
+logistic_automatic,Luminal B,ENTREZ_93273,LEMD1,0.0
+logistic_automatic,Luminal B,ENTREZ_145837,DRAIC,0.0
+logistic_automatic,Luminal B,ENTREZ_4137,MAPT,-0.1887946297399953
+logistic_automatic,Luminal B,ENTREZ_85377,MICALL1,0.0
+logistic_automatic,Luminal B,ENTREZ_79083,MLPH,0.0
+logistic_automatic,Luminal B,ENTREZ_4602,MYB,0.0
+logistic_automatic,Luminal B,ENTREZ_9,NAT1,0.0
+logistic_automatic,Luminal B,ENTREZ_115677,NOSTRIN,-0.24394257502673147
+logistic_automatic,Luminal B,ENTREZ_55301,OLAH,0.0
+logistic_automatic,Luminal B,ENTREZ_23590,PDSS1,0.17206893080597682
+logistic_automatic,Luminal B,ENTREZ_5241,PGR,0.0
+logistic_automatic,Luminal B,ENTREZ_81706,PPP1R14C,-0.9909337593086311
+logistic_automatic,Luminal B,ENTREZ_222171,PRR15,0.0
+logistic_automatic,Luminal B,ENTREZ_260429,PRSS33,0.0
+logistic_automatic,Luminal B,ENTREZ_29968,PSAT1,0.0
+logistic_automatic,Luminal B,ENTREZ_54763,ROPN1,0.0
+logistic_automatic,Luminal B,ENTREZ_152015,ROPN1B,0.0
+logistic_automatic,Luminal B,ENTREZ_57758,SCUBE2,0.0
+logistic_automatic,Luminal B,ENTREZ_135295,SFRS13B,-0.030433619282355363
+logistic_automatic,Luminal B,ENTREZ_54847,SIDT1,0.0
+logistic_automatic,Luminal B,ENTREZ_6584,SLC22A5,0.0
+logistic_automatic,Luminal B,ENTREZ_80736,SLC44A4,0.0
+logistic_automatic,Luminal B,ENTREZ_23428,SLC7A8,0.0
+logistic_automatic,Luminal B,ENTREZ_25803,SPDEF,0.0
+logistic_automatic,Luminal B,ENTREZ_79723,SUV39H2,0.0
+logistic_automatic,Luminal B,ENTREZ_23158,TBC1D9,0.0
+logistic_automatic,Luminal B,ENTREZ_7031,TFF1,0.14426423233065783
+logistic_automatic,Luminal B,ENTREZ_7033,TFF3,0.0
+logistic_automatic,Luminal B,ENTREZ_79875,THSD4,0.0
+logistic_automatic,Luminal B,ENTREZ_22974,TPX2,1.0994460415287355
+logistic_automatic,Luminal B,ENTREZ_143941,TTC36,0.0
+logistic_automatic,Luminal B,ENTREZ_7272,TTK,0.13293196980547595
+logistic_automatic,Luminal B,ENTREZ_9654,TTLL4,0.0
+logistic_automatic,Luminal B,ENTREZ_51442,VGLL1,-0.013435933071941243
+logistic_automatic,Luminal B,ENTREZ_7494,XBP1,0.0
+logistic_automatic,Luminal B,ENTREZ_4904,YBX1,0.0
+logistic_automatic,Luminal B,ENTREZ_51364,ZMYND10,0.0
+logistic_automatic,Luminal B,ENTREZ_79818,ZNF552,0.0
+logistic_pam50,Basal-like,ENTREZ_57180,ACTR3B,0.1582281392875598
+logistic_pam50,Basal-like,ENTREZ_54443,ANLN,0.0
+logistic_pam50,Basal-like,ENTREZ_573,BAG1,0.0
+logistic_pam50,Basal-like,ENTREZ_596,BCL2,0.0
+logistic_pam50,Basal-like,ENTREZ_332,BIRC5,0.0
+logistic_pam50,Basal-like,ENTREZ_644,BLVRA,-0.06767745004568063
+logistic_pam50,Basal-like,ENTREZ_891,CCNB1,0.0
+logistic_pam50,Basal-like,ENTREZ_898,CCNE1,0.0
+logistic_pam50,Basal-like,ENTREZ_991,CDC20,0.0
+logistic_pam50,Basal-like,ENTREZ_990,CDC6,0.0
+logistic_pam50,Basal-like,ENTREZ_83540,NUF2,0.0
+logistic_pam50,Basal-like,ENTREZ_1001,CDH3,0.0
+logistic_pam50,Basal-like,ENTREZ_1063,CENPF,0.0
+logistic_pam50,Basal-like,ENTREZ_55165,CEP55,0.2756094413770297
+logistic_pam50,Basal-like,ENTREZ_51523,CXXC5,-1.0472170819570423
+logistic_pam50,Basal-like,ENTREZ_1956,EGFR,0.11014303702947285
+logistic_pam50,Basal-like,ENTREZ_2064,ERBB2,-0.460133908094067
+logistic_pam50,Basal-like,ENTREZ_2099,ESR1,0.0
+logistic_pam50,Basal-like,ENTREZ_9156,EXO1,0.0
+logistic_pam50,Basal-like,ENTREZ_2264,FGFR4,0.0
+logistic_pam50,Basal-like,ENTREZ_3169,FOXA1,-0.6922539690686756
+logistic_pam50,Basal-like,ENTREZ_2296,FOXC1,1.826493106247136
+logistic_pam50,Basal-like,ENTREZ_26996,GPR160,-0.9654953672497856
+logistic_pam50,Basal-like,ENTREZ_2886,GRB7,0.0
+logistic_pam50,Basal-like,ENTREZ_11004,KIF2C,0.4347678589305607
+logistic_pam50,Basal-like,ENTREZ_10403,NDC80,0.3099010001491187
+logistic_pam50,Basal-like,ENTREZ_3861,KRT14,0.0
+logistic_pam50,Basal-like,ENTREZ_3872,KRT17,0.16386469070502063
+logistic_pam50,Basal-like,ENTREZ_3852,KRT5,0.0
+logistic_pam50,Basal-like,ENTREZ_4137,MAPT,0.0
+logistic_pam50,Basal-like,ENTREZ_4193,MDM2,0.0
+logistic_pam50,Basal-like,ENTREZ_9833,MELK,0.0
+logistic_pam50,Basal-like,ENTREZ_8190,MIA,0.08260318546499376
+logistic_pam50,Basal-like,ENTREZ_4288,MKI67,0.0
+logistic_pam50,Basal-like,ENTREZ_79083,MLPH,-0.329402498042868
+logistic_pam50,Basal-like,ENTREZ_4320,MMP11,0.0
+logistic_pam50,Basal-like,ENTREZ_4605,MYBL2,0.0
+logistic_pam50,Basal-like,ENTREZ_4609,MYC,0.0
+logistic_pam50,Basal-like,ENTREZ_9,NAT1,-0.9529379577838317
+logistic_pam50,Basal-like,ENTREZ_23594,ORC6L,0.06298358926887589
+logistic_pam50,Basal-like,ENTREZ_5241,PGR,0.0
+logistic_pam50,Basal-like,ENTREZ_26227,PHGDH,0.0
+logistic_pam50,Basal-like,ENTREZ_9232,PTTG1,0.0
+logistic_pam50,Basal-like,ENTREZ_6241,RRM2,0.0
+logistic_pam50,Basal-like,ENTREZ_6422,SFRP1,0.47852163743808296
+logistic_pam50,Basal-like,ENTREZ_25800,SLC39A6,0.0
+logistic_pam50,Basal-like,ENTREZ_120224,TMEM45B,-0.44142780862757164
+logistic_pam50,Basal-like,ENTREZ_7298,TYMS,0.0
+logistic_pam50,Basal-like,ENTREZ_11065,UBE2C,0.0
+logistic_pam50,Basal-like,ENTREZ_29089,UBE2T,0.0
+logistic_pam50,HER2-enriched,ENTREZ_57180,ACTR3B,0.0
+logistic_pam50,HER2-enriched,ENTREZ_54443,ANLN,0.7712781204733182
+logistic_pam50,HER2-enriched,ENTREZ_573,BAG1,0.0
+logistic_pam50,HER2-enriched,ENTREZ_596,BCL2,0.0
+logistic_pam50,HER2-enriched,ENTREZ_332,BIRC5,-0.538068653922895
+logistic_pam50,HER2-enriched,ENTREZ_644,BLVRA,-0.8034899786661381
+logistic_pam50,HER2-enriched,ENTREZ_891,CCNB1,0.5093075770112593
+logistic_pam50,HER2-enriched,ENTREZ_898,CCNE1,0.0
+logistic_pam50,HER2-enriched,ENTREZ_991,CDC20,0.6267256442865673
+logistic_pam50,HER2-enriched,ENTREZ_990,CDC6,0.04908203508083693
+logistic_pam50,HER2-enriched,ENTREZ_83540,NUF2,0.0
+logistic_pam50,HER2-enriched,ENTREZ_1001,CDH3,0.30711894043313265
+logistic_pam50,HER2-enriched,ENTREZ_1063,CENPF,-0.13252418892376808
+logistic_pam50,HER2-enriched,ENTREZ_55165,CEP55,0.24461765625731882
+logistic_pam50,HER2-enriched,ENTREZ_51523,CXXC5,0.0
+logistic_pam50,HER2-enriched,ENTREZ_1956,EGFR,0.0
+logistic_pam50,HER2-enriched,ENTREZ_2064,ERBB2,0.6715995975691602
+logistic_pam50,HER2-enriched,ENTREZ_2099,ESR1,-2.691720398531834
+logistic_pam50,HER2-enriched,ENTREZ_9156,EXO1,0.0
+logistic_pam50,HER2-enriched,ENTREZ_2264,FGFR4,0.6724106037688626
+logistic_pam50,HER2-enriched,ENTREZ_3169,FOXA1,0.21513087244807552
+logistic_pam50,HER2-enriched,ENTREZ_2296,FOXC1,-2.084486717869169
+logistic_pam50,HER2-enriched,ENTREZ_26996,GPR160,1.2076214773114737
+logistic_pam50,HER2-enriched,ENTREZ_2886,GRB7,0.4491138658236925
+logistic_pam50,HER2-enriched,ENTREZ_11004,KIF2C,0.0
+logistic_pam50,HER2-enriched,ENTREZ_10403,NDC80,0.0
+logistic_pam50,HER2-enriched,ENTREZ_3861,KRT14,0.0
+logistic_pam50,HER2-enriched,ENTREZ_3872,KRT17,0.0
+logistic_pam50,HER2-enriched,ENTREZ_3852,KRT5,0.4068632625723716
+logistic_pam50,HER2-enriched,ENTREZ_4137,MAPT,0.0
+logistic_pam50,HER2-enriched,ENTREZ_4193,MDM2,0.0
+logistic_pam50,HER2-enriched,ENTREZ_9833,MELK,0.0
+logistic_pam50,HER2-enriched,ENTREZ_8190,MIA,-0.43291676394225537
+logistic_pam50,HER2-enriched,ENTREZ_4288,MKI67,0.0
+logistic_pam50,HER2-enriched,ENTREZ_79083,MLPH,0.0
+logistic_pam50,HER2-enriched,ENTREZ_4320,MMP11,0.13033756242900132
+logistic_pam50,HER2-enriched,ENTREZ_4605,MYBL2,0.0
+logistic_pam50,HER2-enriched,ENTREZ_4609,MYC,-0.7701886615864021
+logistic_pam50,HER2-enriched,ENTREZ_9,NAT1,-0.4820952520008491
+logistic_pam50,HER2-enriched,ENTREZ_23594,ORC6L,0.18961634562603571
+logistic_pam50,HER2-enriched,ENTREZ_5241,PGR,0.0
+logistic_pam50,HER2-enriched,ENTREZ_26227,PHGDH,0.0
+logistic_pam50,HER2-enriched,ENTREZ_9232,PTTG1,0.0
+logistic_pam50,HER2-enriched,ENTREZ_6241,RRM2,0.8113217435521655
+logistic_pam50,HER2-enriched,ENTREZ_6422,SFRP1,0.0
+logistic_pam50,HER2-enriched,ENTREZ_25800,SLC39A6,-0.5226039554628829
+logistic_pam50,HER2-enriched,ENTREZ_120224,TMEM45B,0.91416799132596
+logistic_pam50,HER2-enriched,ENTREZ_7298,TYMS,-0.843136154943705
+logistic_pam50,HER2-enriched,ENTREZ_11065,UBE2C,0.0
+logistic_pam50,HER2-enriched,ENTREZ_29089,UBE2T,0.0
+logistic_pam50,Luminal A,ENTREZ_57180,ACTR3B,-0.29488561892295984
+logistic_pam50,Luminal A,ENTREZ_54443,ANLN,-0.5039929699512279
+logistic_pam50,Luminal A,ENTREZ_573,BAG1,0.6992231813691194
+logistic_pam50,Luminal A,ENTREZ_596,BCL2,0.5984802095546319
+logistic_pam50,Luminal A,ENTREZ_332,BIRC5,-0.641560950850933
+logistic_pam50,Luminal A,ENTREZ_644,BLVRA,0.04587889620547869
+logistic_pam50,Luminal A,ENTREZ_891,CCNB1,0.0
+logistic_pam50,Luminal A,ENTREZ_898,CCNE1,0.0
+logistic_pam50,Luminal A,ENTREZ_991,CDC20,0.0
+logistic_pam50,Luminal A,ENTREZ_990,CDC6,-0.043408086067709614
+logistic_pam50,Luminal A,ENTREZ_83540,NUF2,-0.5422113995121676
+logistic_pam50,Luminal A,ENTREZ_1001,CDH3,0.21338190176029198
+logistic_pam50,Luminal A,ENTREZ_1063,CENPF,-0.18168456865748914
+logistic_pam50,Luminal A,ENTREZ_55165,CEP55,-1.3659950919840589
+logistic_pam50,Luminal A,ENTREZ_51523,CXXC5,0.5950774713215162
+logistic_pam50,Luminal A,ENTREZ_1956,EGFR,0.40650111675073175
+logistic_pam50,Luminal A,ENTREZ_2064,ERBB2,0.0
+logistic_pam50,Luminal A,ENTREZ_2099,ESR1,1.071057878528728
+logistic_pam50,Luminal A,ENTREZ_9156,EXO1,-1.0133941242330387
+logistic_pam50,Luminal A,ENTREZ_2264,FGFR4,0.571471418810591
+logistic_pam50,Luminal A,ENTREZ_3169,FOXA1,1.7319712361899995
+logistic_pam50,Luminal A,ENTREZ_2296,FOXC1,1.9465179833549364
+logistic_pam50,Luminal A,ENTREZ_26996,GPR160,0.07622873815108488
+logistic_pam50,Luminal A,ENTREZ_2886,GRB7,0.0
+logistic_pam50,Luminal A,ENTREZ_11004,KIF2C,0.515824715974915
+logistic_pam50,Luminal A,ENTREZ_10403,NDC80,-0.8890777902567125
+logistic_pam50,Luminal A,ENTREZ_3861,KRT14,-0.26428070033356843
+logistic_pam50,Luminal A,ENTREZ_3872,KRT17,1.5047056940862957
+logistic_pam50,Luminal A,ENTREZ_3852,KRT5,0.0
+logistic_pam50,Luminal A,ENTREZ_4137,MAPT,0.8995057782490576
+logistic_pam50,Luminal A,ENTREZ_4193,MDM2,0.5193954749537602
+logistic_pam50,Luminal A,ENTREZ_9833,MELK,-0.05823264694395552
+logistic_pam50,Luminal A,ENTREZ_8190,MIA,1.474146526681979
+logistic_pam50,Luminal A,ENTREZ_4288,MKI67,0.05891642481849901
+logistic_pam50,Luminal A,ENTREZ_79083,MLPH,1.1795825779061615
+logistic_pam50,Luminal A,ENTREZ_4320,MMP11,0.7205284606788696
+logistic_pam50,Luminal A,ENTREZ_4605,MYBL2,-0.6921854455781694
+logistic_pam50,Luminal A,ENTREZ_4609,MYC,0.6415831396232053
+logistic_pam50,Luminal A,ENTREZ_9,NAT1,1.0291160353075153
+logistic_pam50,Luminal A,ENTREZ_23594,ORC6L,-0.36784853963948005
+logistic_pam50,Luminal A,ENTREZ_5241,PGR,0.6079290484538186
+logistic_pam50,Luminal A,ENTREZ_26227,PHGDH,0.3884362940188454
+logistic_pam50,Luminal A,ENTREZ_9232,PTTG1,0.0
+logistic_pam50,Luminal A,ENTREZ_6241,RRM2,-0.7191460720165765
+logistic_pam50,Luminal A,ENTREZ_6422,SFRP1,0.13911891935542026
+logistic_pam50,Luminal A,ENTREZ_25800,SLC39A6,-0.499392270392719
+logistic_pam50,Luminal A,ENTREZ_120224,TMEM45B,0.37848116694180156
+logistic_pam50,Luminal A,ENTREZ_7298,TYMS,-0.12368705525512587
+logistic_pam50,Luminal A,ENTREZ_11065,UBE2C,-1.043283899634117
+logistic_pam50,Luminal A,ENTREZ_29089,UBE2T,-0.6367109496653823
+logistic_pam50,Luminal B,ENTREZ_57180,ACTR3B,-0.47294594775630033
+logistic_pam50,Luminal B,ENTREZ_54443,ANLN,0.0
+logistic_pam50,Luminal B,ENTREZ_573,BAG1,-0.5072608267770632
+logistic_pam50,Luminal B,ENTREZ_596,BCL2,-0.22349689665066907
+logistic_pam50,Luminal B,ENTREZ_332,BIRC5,1.2199754366886049
+logistic_pam50,Luminal B,ENTREZ_644,BLVRA,0.36358782525120875
+logistic_pam50,Luminal B,ENTREZ_891,CCNB1,-0.019215383194260686
+logistic_pam50,Luminal B,ENTREZ_898,CCNE1,0.0
+logistic_pam50,Luminal B,ENTREZ_991,CDC20,-0.054194305562935335
+logistic_pam50,Luminal B,ENTREZ_990,CDC6,0.23265811099082004
+logistic_pam50,Luminal B,ENTREZ_83540,NUF2,0.5825487356881545
+logistic_pam50,Luminal B,ENTREZ_1001,CDH3,-0.5695755675008526
+logistic_pam50,Luminal B,ENTREZ_1063,CENPF,0.5510840855773655
+logistic_pam50,Luminal B,ENTREZ_55165,CEP55,0.7364908457760045
+logistic_pam50,Luminal B,ENTREZ_51523,CXXC5,-0.20010933045583848
+logistic_pam50,Luminal B,ENTREZ_1956,EGFR,-0.8944779237369312
+logistic_pam50,Luminal B,ENTREZ_2064,ERBB2,-0.027257923740918705
+logistic_pam50,Luminal B,ENTREZ_2099,ESR1,2.5736851111045858
+logistic_pam50,Luminal B,ENTREZ_9156,EXO1,0.3945828976064601
+logistic_pam50,Luminal B,ENTREZ_2264,FGFR4,-0.20205312353942706
+logistic_pam50,Luminal B,ENTREZ_3169,FOXA1,0.0
+logistic_pam50,Luminal B,ENTREZ_2296,FOXC1,-0.7715206751018366
+logistic_pam50,Luminal B,ENTREZ_26996,GPR160,0.2927941657095259
+logistic_pam50,Luminal B,ENTREZ_2886,GRB7,-0.6505229415134175
+logistic_pam50,Luminal B,ENTREZ_11004,KIF2C,0.0
+logistic_pam50,Luminal B,ENTREZ_10403,NDC80,0.6336775347655965
+logistic_pam50,Luminal B,ENTREZ_3861,KRT14,0.6518515122494007
+logistic_pam50,Luminal B,ENTREZ_3872,KRT17,-1.5064796911699625
+logistic_pam50,Luminal B,ENTREZ_3852,KRT5,0.0
+logistic_pam50,Luminal B,ENTREZ_4137,MAPT,-0.5844559001084232
+logistic_pam50,Luminal B,ENTREZ_4193,MDM2,-0.32814234936416664
+logistic_pam50,Luminal B,ENTREZ_9833,MELK,0.10275275668178427
+logistic_pam50,Luminal B,ENTREZ_8190,MIA,-1.5285574765782506
+logistic_pam50,Luminal B,ENTREZ_4288,MKI67,0.0
+logistic_pam50,Luminal B,ENTREZ_79083,MLPH,0.11193835726240008
+logistic_pam50,Luminal B,ENTREZ_4320,MMP11,0.0007280058117583749
+logistic_pam50,Luminal B,ENTREZ_4605,MYBL2,1.4556453386853765
+logistic_pam50,Luminal B,ENTREZ_4609,MYC,-0.09413851665284177
+logistic_pam50,Luminal B,ENTREZ_9,NAT1,-0.13850639884735974
+logistic_pam50,Luminal B,ENTREZ_23594,ORC6L,0.03608921022091107
+logistic_pam50,Luminal B,ENTREZ_5241,PGR,0.0
+logistic_pam50,Luminal B,ENTREZ_26227,PHGDH,-0.7321771449473269
+logistic_pam50,Luminal B,ENTREZ_9232,PTTG1,0.0
+logistic_pam50,Luminal B,ENTREZ_6241,RRM2,0.0
+logistic_pam50,Luminal B,ENTREZ_6422,SFRP1,-0.25229971072912166
+logistic_pam50,Luminal B,ENTREZ_25800,SLC39A6,0.2715177868731695
+logistic_pam50,Luminal B,ENTREZ_120224,TMEM45B,-0.24146234286029095
+logistic_pam50,Luminal B,ENTREZ_7298,TYMS,0.1438918257656104
+logistic_pam50,Luminal B,ENTREZ_11065,UBE2C,0.05404377973661823
+logistic_pam50,Luminal B,ENTREZ_29089,UBE2T,0.4356663131373952
