@@ -1,0 +1,102 @@
+[
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9295463519957398,
+    "sd_inner_balanced_accuracy": 0.013331536092548663
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.934697175035824,
+    "sd_inner_balanced_accuracy": 0.01291645963171595
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9118233203737888,
+    "sd_inner_balanced_accuracy": 0.023638035217077427
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9062577543484013,
+    "sd_inner_balanced_accuracy": 0.028809866886466643
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9222076858528551,
+    "sd_inner_balanced_accuracy": 0.026838061368492757
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9256772402972154,
+    "sd_inner_balanced_accuracy": 0.01635991159684212
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9015139664513,
+    "sd_inner_balanced_accuracy": 0.026266631110313837
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9101687043314831,
+    "sd_inner_balanced_accuracy": 0.023591524585896053
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9197224056725961,
+    "sd_inner_balanced_accuracy": 0.015189398030359617
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9122509940638098,
+    "sd_inner_balanced_accuracy": 0.009743432737429041
+  }
+]

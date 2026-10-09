@@ -12,5 +12,17 @@
     "Report fold variation and per-class recall alongside the mean.",
     "This is a practical selection criterion, not proof of clinical equivalence or statistical noninferiority."
   ],
-  "panel_size_results_generated": false
+  "panel_size_results_generated": true,
+  "selection_method": "ANOVA F-score ranking fitted within every inner and outer fitting set",
+  "evaluated_automatic_panel_sizes": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    50,
+    100,
+    500
+  ],
+  "pam50_comparison": "User approved a separate fixed published PAM50 gene-list benchmark; not the original classifier"
 }

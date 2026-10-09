@@ -1,0 +1,47 @@
+{
+  "absolute_tolerance": 0.02,
+  "selection_method": "ANOVA F-score within each inner/outer fit",
+  "selection": [
+    {
+      "model": "logistic",
+      "full_gene_reference": 0.9012807050874884,
+      "threshold": 0.8812807050874883,
+      "smallest_evaluated_panel_within_tolerance": 100,
+      "selected_panel_cv_mean": 0.8870406073791383,
+      "pam50_gene_set_cv_mean": 0.9237440568218437,
+      "selected_panel_family": "Automatically selected ANOVA panels only; PAM50 benchmark considered separately",
+      "pam50_within_full_gene_tolerance": true,
+      "interpretation": "Fold-specific panels and nested training validation; not one fixed final panel or clinical equivalence.",
+      "selected_in_all_five_outer_folds": 83,
+      "mean_pairwise_selection_jaccard": 0.8251856647091863
+    },
+    {
+      "model": "random_forest",
+      "full_gene_reference": 0.8947390440193626,
+      "threshold": 0.8747390440193625,
+      "smallest_evaluated_panel_within_tolerance": 100,
+      "selected_panel_cv_mean": 0.8857601338676522,
+      "pam50_gene_set_cv_mean": 0.9316800671737635,
+      "selected_panel_family": "Automatically selected ANOVA panels only; PAM50 benchmark considered separately",
+      "pam50_within_full_gene_tolerance": true,
+      "interpretation": "Fold-specific panels and nested training validation; not one fixed final panel or clinical equivalence.",
+      "selected_in_all_five_outer_folds": 83,
+      "mean_pairwise_selection_jaccard": 0.8251856647091863
+    },
+    {
+      "model": "xgboost",
+      "full_gene_reference": 0.9121885393654484,
+      "threshold": 0.8921885393654484,
+      "smallest_evaluated_panel_within_tolerance": 500,
+      "selected_panel_cv_mean": 0.8990934672009857,
+      "pam50_gene_set_cv_mean": 0.9214628935992248,
+      "selected_panel_family": "Automatically selected ANOVA panels only; PAM50 benchmark considered separately",
+      "pam50_within_full_gene_tolerance": true,
+      "interpretation": "Fold-specific panels and nested training validation; not one fixed final panel or clinical equivalence.",
+      "selected_in_all_five_outer_folds": 396,
+      "mean_pairwise_selection_jaccard": 0.8114857585820523
+    }
+  ],
+  "test_evaluated": false,
+  "note": "Stars are the prespecified practical elbow markers, not geometric knees or statistical noninferiority claims. Panel size was selected using training CV; independent final test evaluation remains pending."
+}

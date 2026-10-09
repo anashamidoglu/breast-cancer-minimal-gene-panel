@@ -1,0 +1,6 @@
+model,panel_size,fold,balanced_accuracy,macro_f1,best_parameters
+logistic,50,1,0.9338942307692308,0.9193657219973009,"{""model__estimator__C"": 0.1}"
+logistic,50,2,0.872337962962963,0.8722920433996383,"{""model__estimator__C"": 1.0}"
+logistic,50,3,0.9104502688172044,0.9124253841920326,"{""model__estimator__C"": 1.0}"
+logistic,50,4,0.939616935483871,0.9040041657688717,"{""model__estimator__C"": 0.1}"
+logistic,50,5,0.9624208860759493,0.9664314516129032,"{""model__estimator__C"": 1.0}"

@@ -1,0 +1,55 @@
+[
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "gene_set": "Fixed published PAM50 genes",
+    "balanced_accuracy_cv_mean": 0.9237440568218437,
+    "balanced_accuracy_cv_sd": 0.03416936754855601,
+    "macro_f1_cv_mean": 0.9149037533941493,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.9032258064516129,
+      "Luminal A": 0.924812030075188,
+      "Luminal B": 0.8987341772151899
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9972406636557669,
+      "HER2-enriched": 0.9960258436367018,
+      "Luminal A": 0.987545895551203,
+      "Luminal B": 0.9722386859150756
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        56,
+        0,
+        6
+      ],
+      [
+        0,
+        3,
+        369,
+        27
+      ],
+      [
+        0,
+        3,
+        13,
+        142
+      ]
+    ],
+    "test_evaluated": false
+  }
+]

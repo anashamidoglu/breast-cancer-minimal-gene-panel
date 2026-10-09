@@ -1,0 +1,102 @@
+[
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__min_samples_leaf": 1
+    },
+    "mean_inner_balanced_accuracy": 0.91510392106757,
+    "sd_inner_balanced_accuracy": 0.023652066197840528
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__min_samples_leaf": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9067435863235507,
+    "sd_inner_balanced_accuracy": 0.023884549602014346
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__min_samples_leaf": 1
+    },
+    "mean_inner_balanced_accuracy": 0.9289449283186771,
+    "sd_inner_balanced_accuracy": 0.022687571163641083
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__min_samples_leaf": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9365070726732743,
+    "sd_inner_balanced_accuracy": 0.012031929601344067
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__min_samples_leaf": 1
+    },
+    "mean_inner_balanced_accuracy": 0.9166594822506008,
+    "sd_inner_balanced_accuracy": 0.019542423996926274
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__min_samples_leaf": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9227667538196643,
+    "sd_inner_balanced_accuracy": 0.015757629067910554
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__min_samples_leaf": 1
+    },
+    "mean_inner_balanced_accuracy": 0.8929899527154577,
+    "sd_inner_balanced_accuracy": 0.025325626287935953
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__min_samples_leaf": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8944032357429381,
+    "sd_inner_balanced_accuracy": 0.01782852386187166
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__min_samples_leaf": 1
+    },
+    "mean_inner_balanced_accuracy": 0.9196056923205886,
+    "sd_inner_balanced_accuracy": 0.014706735231126106
+  },
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__min_samples_leaf": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9244906851458697,
+    "sd_inner_balanced_accuracy": 0.02255685096760488
+  }
+]

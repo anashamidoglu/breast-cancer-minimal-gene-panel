@@ -1,0 +1,6 @@
+model,panel_size,fold,balanced_accuracy,macro_f1,best_parameters
+xgboost,50,1,0.9386974715099715,0.9196856520385931,"{""model__max_depth"": 3}"
+xgboost,50,2,0.9261574074074074,0.9219190494961773,"{""model__max_depth"": 2}"
+xgboost,50,3,0.877116935483871,0.877922077922078,"{""model__max_depth"": 3}"
+xgboost,50,4,0.952116935483871,0.9435909920876446,"{""model__max_depth"": 3}"
+xgboost,50,5,0.913225718111003,0.8945364215337877,"{""model__max_depth"": 2}"

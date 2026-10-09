@@ -4,7 +4,21 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Bounded nested tuning reaches **90.1% balanced accuracy for L1 logistic regression, 89.5% for random forest, and 91.2% for XGBoost**, versus 25% for the dummy, using five saved outer training folds and three inner folds. No small gene panel or test performance has been evaluated. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/05_nested_model_tuning.ipynb`.
+Training-only analysis finds that **100 automatically ranked genes retain performance within 2 percentage points of the full-gene reference for logistic regression and random forest; XGBoost requires 500 among the sizes tested**. The fixed published PAM50 gene set, with 50 genes, performs better than these qualifying automatic panels in all three models. This is agreement with PAM50-derived subtype labels, not independent clinical validation.
+
+All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique candidate gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Panel evaluation uses five saved outer training folds with three inner tuning folds; gene selection and preprocessing are fitted within every fitting fold. **The final test set remains unused.** A fixed final panel has not yet been chosen. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/06_gene_panel_curves.ipynb`.
+
+![Gene-panel performance and fixed PAM50 gene-list benchmarks](figures/panel_size_curve.png)
+
+Nested training cross-validation compares automatic panels and full-gene references; squares show our models using the fixed PAM50 gene list, and stars mark the smallest tested automatic panels within the preapproved 2-point tolerance. Shading is fold standard deviation, not a confidence interval.
+
+| Model | Full-gene balanced accuracy | Qualifying automatic panel | Panel balanced accuracy | Fixed PAM50 gene-list balanced accuracy |
+| --- | ---: | ---: | ---: | ---: |
+| L1 logistic | 90.1% | 100 genes | 88.7% | 92.4% |
+| Random forest | 89.5% | 100 genes | 88.6% | 93.2% |
+| XGBoost | 91.2% | 500 genes | 89.9% | 92.1% |
+
+Scores are means across outer training folds. PAM50 gene-list models use the fixed published genes; they do not implement the original PAM50 classifier. Automatically selected genes can differ across folds; this evaluates the selection procedure rather than one final gene list. The smallest tested qualifying size is not necessarily the smallest possible panel.
 
 ![Bounded tuned model comparison on nested training cross-validation](figures/tuned_model_comparison.png)
 
@@ -38,5 +52,7 @@ The user approved the panel-selection tolerance on October 9, 2026, before panel
 - A small computational feature set is not a validated laboratory assay.
 - Source expression values were batch-normalized before download; this upstream processing cannot be refitted within our training folds.
 - Gene rows with ambiguous repeated Entrez IDs were excluded, potentially removing useful measurements.
+- Automatic ANOVA ranking evaluates genes individually and can select redundant measurements; its results do not rule out better small panels from other selection methods.
+- The PAM50 gene-list benchmark trains our own models against PAM50-derived labels; it does not establish superiority to the PAM50 classifier or clinical assay.
 
 Target completion: October 31, 2026.

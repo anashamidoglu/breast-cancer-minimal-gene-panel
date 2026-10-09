@@ -1,0 +1,6 @@
+model,panel_size,fold,balanced_accuracy,macro_f1,best_parameters
+random_forest,50,1,0.9610532407407407,0.939076544183189,"{""model__min_samples_leaf"": 1}"
+random_forest,50,2,0.9184606481481481,0.9023378582202112,"{""model__min_samples_leaf"": 3}"
+random_forest,50,3,0.8966397849462366,0.885838792932301,"{""model__min_samples_leaf"": 3}"
+random_forest,50,4,0.9344086021505376,0.940916149068323,"{""model__min_samples_leaf"": 3}"
+random_forest,50,5,0.9478380598831548,0.953583252190847,"{""model__min_samples_leaf"": 3}"

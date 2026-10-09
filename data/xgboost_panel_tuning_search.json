@@ -1,0 +1,802 @@
+[
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.5533755865320547,
+    "sd_inner_balanced_accuracy": 0.003735060882386051
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.5301507305519267,
+    "sd_inner_balanced_accuracy": 0.01406894384605326
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.544442417881652,
+    "sd_inner_balanced_accuracy": 0.022920756558582965
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.5377123886866437,
+    "sd_inner_balanced_accuracy": 0.033253275795429
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.5415365899714436,
+    "sd_inner_balanced_accuracy": 0.022103557841031785
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.5477162009119146,
+    "sd_inner_balanced_accuracy": 0.022326843761579035
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.4973477400684669,
+    "sd_inner_balanced_accuracy": 0.0133181824868072
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.5042179003417532,
+    "sd_inner_balanced_accuracy": 0.012876289194454563
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.5242194691657646,
+    "sd_inner_balanced_accuracy": 0.019435252599955592
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.5208538268558223,
+    "sd_inner_balanced_accuracy": 0.031632307497503453
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.6664595849730227,
+    "sd_inner_balanced_accuracy": 0.026274120122615482
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.676981025592414,
+    "sd_inner_balanced_accuracy": 0.01904290399067357
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7056836604699118,
+    "sd_inner_balanced_accuracy": 0.021293246138614514
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.6959009344864366,
+    "sd_inner_balanced_accuracy": 0.01836530975638617
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.6678766908743108,
+    "sd_inner_balanced_accuracy": 0.059203946409097576
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.6581666293660732,
+    "sd_inner_balanced_accuracy": 0.05562567644893117
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.6770704043393648,
+    "sd_inner_balanced_accuracy": 0.014032164339222768
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.6724545353445847,
+    "sd_inner_balanced_accuracy": 0.004544571251975186
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.6187170932438716,
+    "sd_inner_balanced_accuracy": 0.05360097581298738
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.6208318255765861,
+    "sd_inner_balanced_accuracy": 0.05335304068389879
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.79023019674389,
+    "sd_inner_balanced_accuracy": 0.017129052710975808
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7928541093401399,
+    "sd_inner_balanced_accuracy": 0.021428059691547995
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7852841874838138,
+    "sd_inner_balanced_accuracy": 0.015092573113788975
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7889404580799849,
+    "sd_inner_balanced_accuracy": 0.010511761910921992
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7599802049162747,
+    "sd_inner_balanced_accuracy": 0.03496034934838414
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7523754790195678,
+    "sd_inner_balanced_accuracy": 0.04749599003472967
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7743638445820387,
+    "sd_inner_balanced_accuracy": 0.009131254938029756
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7653002752536787,
+    "sd_inner_balanced_accuracy": 0.01718458380634743
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8066439460221163,
+    "sd_inner_balanced_accuracy": 0.024033846936208393
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7942632345803927,
+    "sd_inner_balanced_accuracy": 0.014312787019967944
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7916414512327542,
+    "sd_inner_balanced_accuracy": 0.021171838977979168
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7858502303036609,
+    "sd_inner_balanced_accuracy": 0.003843920728784899
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7963407509402938,
+    "sd_inner_balanced_accuracy": 0.030741000186616376
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8079828815208833,
+    "sd_inner_balanced_accuracy": 0.02908679593466391
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7862841157861923,
+    "sd_inner_balanced_accuracy": 0.06170134956292654
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7832988532140268,
+    "sd_inner_balanced_accuracy": 0.04036912282392085
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.7826893063264148,
+    "sd_inner_balanced_accuracy": 0.04498978985147157
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7885167836736192,
+    "sd_inner_balanced_accuracy": 0.04146588601185979
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8013282172648518,
+    "sd_inner_balanced_accuracy": 0.01637108141473154
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.7908026527805498,
+    "sd_inner_balanced_accuracy": 0.02145849637807086
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8097239119840566,
+    "sd_inner_balanced_accuracy": 0.010240019922740363
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.805815223810027,
+    "sd_inner_balanced_accuracy": 0.012205726164691236
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8095779502778281,
+    "sd_inner_balanced_accuracy": 0.024109245180038853
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8065944562130655,
+    "sd_inner_balanced_accuracy": 0.015922288490692
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8363140658658853,
+    "sd_inner_balanced_accuracy": 0.017857702479052134
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8279247998524051,
+    "sd_inner_balanced_accuracy": 0.019345514644776848
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.804173045711395,
+    "sd_inner_balanced_accuracy": 0.03679108465082682
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.800104146621028,
+    "sd_inner_balanced_accuracy": 0.04232338901246425
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8090279472675524,
+    "sd_inner_balanced_accuracy": 0.019912586101828902
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8057122055238439,
+    "sd_inner_balanced_accuracy": 0.02007418492262786
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8207503626954175,
+    "sd_inner_balanced_accuracy": 0.014632274110397256
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8265764396729667,
+    "sd_inner_balanced_accuracy": 0.017630136553661996
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8374300322291651,
+    "sd_inner_balanced_accuracy": 0.021578404633518254
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8312331932984479,
+    "sd_inner_balanced_accuracy": 0.02338327957742598
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8566414277954443,
+    "sd_inner_balanced_accuracy": 0.034958460023480895
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8644362373668365,
+    "sd_inner_balanced_accuracy": 0.030634686900724812
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8503633116529046,
+    "sd_inner_balanced_accuracy": 0.02242611226369576
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8542346509368697,
+    "sd_inner_balanced_accuracy": 0.023885062288931145
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8675172866934422,
+    "sd_inner_balanced_accuracy": 0.0071655184423975
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8600084387264649,
+    "sd_inner_balanced_accuracy": 0.015607263930712403
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8739637559261005,
+    "sd_inner_balanced_accuracy": 0.008360285433558864
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8808124073363501,
+    "sd_inner_balanced_accuracy": 0.01715720067320439
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8947464961097271,
+    "sd_inner_balanced_accuracy": 0.033272814477058085
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8972723286375303,
+    "sd_inner_balanced_accuracy": 0.040245059887648156
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8951601303057398,
+    "sd_inner_balanced_accuracy": 0.016240486209159907
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8923631681234102,
+    "sd_inner_balanced_accuracy": 0.008749669066551355
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8867590149358513,
+    "sd_inner_balanced_accuracy": 0.027506131659092922
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8901679256699562,
+    "sd_inner_balanced_accuracy": 0.020721739349691258
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8842835270754469,
+    "sd_inner_balanced_accuracy": 0.007252757632450844
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8769709447216331,
+    "sd_inner_balanced_accuracy": 0.01061415207779978
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.884478227393874,
+    "sd_inner_balanced_accuracy": 0.021968973865822864
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 1,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8691607653270513,
+    "sd_inner_balanced_accuracy": 0.00984244440219029
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8993050724645033,
+    "sd_inner_balanced_accuracy": 0.017900012913069297
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 2,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8988411415209391,
+    "sd_inner_balanced_accuracy": 0.022431567486525868
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.9012301889532041,
+    "sd_inner_balanced_accuracy": 0.005469864400444093
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 3,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8903203954754494,
+    "sd_inner_balanced_accuracy": 0.005387599419798359
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8985539950085876,
+    "sd_inner_balanced_accuracy": 0.012998615986918007
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 4,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.9018887327713232,
+    "sd_inner_balanced_accuracy": 0.0035504816844048885
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 2
+    },
+    "mean_inner_balanced_accuracy": 0.8916845988748833,
+    "sd_inner_balanced_accuracy": 0.015448384288416432
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "fold": 5,
+    "parameters": {
+      "model__max_depth": 3
+    },
+    "mean_inner_balanced_accuracy": 0.8860722728618083,
+    "sd_inner_balanced_accuracy": 0.00581061163910675
+  }
+]

@@ -1,0 +1,418 @@
+[
+  {
+    "model": "xgboost",
+    "panel_size": 1,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.5395351764311034,
+    "balanced_accuracy_cv_sd": 0.055848746094705706,
+    "macro_f1_cv_mean": 0.45004989489214997,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.5967741935483871,
+      "Luminal A": 0.19298245614035087,
+      "Luminal B": 0.4050632911392405
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9912503095409362,
+      "HER2-enriched": 0.6628125871525519,
+      "Luminal A": 0.6875346629880023,
+      "Luminal B": 0.6469984335972228
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        37,
+        13,
+        9
+      ],
+      [
+        3,
+        186,
+        77,
+        133
+      ],
+      [
+        0,
+        70,
+        24,
+        64
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 2,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.6985149405420434,
+    "balanced_accuracy_cv_sd": 0.006785275974083979,
+    "macro_f1_cv_mean": 0.6367662276295252,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.8387096774193549,
+      "Luminal A": 0.44862155388471175,
+      "Luminal B": 0.5379746835443038
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9928009622301097,
+      "HER2-enriched": 0.9389699730408105,
+      "Luminal A": 0.7665803163370611,
+      "Luminal B": 0.6840152830108802
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        52,
+        4,
+        3
+      ],
+      [
+        1,
+        36,
+        179,
+        183
+      ],
+      [
+        0,
+        9,
+        64,
+        85
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 5,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8052253492616905,
+    "balanced_accuracy_cv_sd": 0.032103437971924595,
+    "macro_f1_cv_mean": 0.7731831886243805,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9781021897810219,
+      "HER2-enriched": 0.8548387096774194,
+      "Luminal A": 0.6265664160401002,
+      "Luminal B": 0.7658227848101266
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9990920132542481,
+      "HER2-enriched": 0.9650227758668775,
+      "Luminal A": 0.8871162500087755,
+      "Luminal B": 0.8250127005630583
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        134,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        53,
+        3,
+        6
+      ],
+      [
+        0,
+        9,
+        250,
+        140
+      ],
+      [
+        0,
+        5,
+        32,
+        121
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 10,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.7967989601837602,
+    "balanced_accuracy_cv_sd": 0.050666473663779514,
+    "macro_f1_cv_mean": 0.7688556125540975,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.8387096774193549,
+      "Luminal A": 0.6616541353383458,
+      "Luminal B": 0.7215189873417721
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9991509734325437,
+      "HER2-enriched": 0.9620944501254997,
+      "Luminal A": 0.889359252472919,
+      "Luminal B": 0.8361521527454383
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        0,
+        1
+      ],
+      [
+        1,
+        52,
+        4,
+        5
+      ],
+      [
+        0,
+        10,
+        264,
+        125
+      ],
+      [
+        0,
+        5,
+        39,
+        114
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 20,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.808980852554505,
+    "balanced_accuracy_cv_sd": 0.057099101818369004,
+    "macro_f1_cv_mean": 0.7839190455974883,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9781021897810219,
+      "HER2-enriched": 0.8225806451612904,
+      "Luminal A": 0.6867167919799498,
+      "Luminal B": 0.7531645569620253
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9993278539674304,
+      "HER2-enriched": 0.9678116575253323,
+      "Luminal A": 0.9067205829700301,
+      "Luminal B": 0.8615321112569324
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        134,
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        51,
+        4,
+        5
+      ],
+      [
+        0,
+        10,
+        274,
+        115
+      ],
+      [
+        0,
+        4,
+        35,
+        119
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 50,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8510957300293509,
+    "balanced_accuracy_cv_sd": 0.03867576272253626,
+    "macro_f1_cv_mean": 0.8406631556168414,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9781021897810219,
+      "HER2-enriched": 0.8548387096774194,
+      "Luminal A": 0.8170426065162907,
+      "Luminal B": 0.759493670886076
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9996462389302265,
+      "HER2-enriched": 0.9832202286882961,
+      "Luminal A": 0.9485057180767043,
+      "Luminal B": 0.9203674696244866
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        134,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        53,
+        4,
+        4
+      ],
+      [
+        0,
+        4,
+        326,
+        69
+      ],
+      [
+        0,
+        4,
+        34,
+        120
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 100,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8754890361668638,
+    "balanced_accuracy_cv_sd": 0.023560046294330526,
+    "macro_f1_cv_mean": 0.870914671943655,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9781021897810219,
+      "HER2-enriched": 0.8387096774193549,
+      "Luminal A": 0.8847117794486216,
+      "Luminal B": 0.8037974683544303
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9992099336108392,
+      "HER2-enriched": 0.9900065073905363,
+      "Luminal A": 0.974937343358396,
+      "Luminal B": 0.9595275390542314
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        134,
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        52,
+        1,
+        7
+      ],
+      [
+        0,
+        4,
+        353,
+        42
+      ],
+      [
+        0,
+        3,
+        28,
+        127
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "xgboost",
+    "panel_size": 500,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8990934672009857,
+    "balanced_accuracy_cv_sd": 0.03498947736574017,
+    "macro_f1_cv_mean": 0.8905201936624557,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9781021897810219,
+      "HER2-enriched": 0.8387096774193549,
+      "Luminal A": 0.9047619047619048,
+      "Luminal B": 0.879746835443038
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9996226548589083,
+      "HER2-enriched": 0.9895184531003067,
+      "Luminal A": 0.9834881320949432,
+      "Luminal B": 0.9716036577621607
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        134,
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        52,
+        1,
+        8
+      ],
+      [
+        0,
+        5,
+        361,
+        33
+      ],
+      [
+        0,
+        4,
+        15,
+        139
+      ]
+    ],
+    "test_evaluated": false
+  }
+]

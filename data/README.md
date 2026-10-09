@@ -138,3 +138,36 @@ The test set remains unused. The nested tuning explanation is in `notebooks/05_n
 Completed nested results: L1 logistic regression 0.9013, random forest 0.8947, XGBoost 0.9122 mean balanced accuracy. The final training-only searches select logistic C=0.1, random-forest minimum leaf size 3, and XGBoost depth 2. Final settings are for full-feature refits and do not yet establish a gene panel. All saved outer-fold scores were verified against sample-level predictions; fitted local models reload successfully.
 
 Before panel-size results were generated, the user approved the 2 percentage-point tolerance recorded in `panel_protocol.json`. This criterion does not establish clinical equivalence or statistical noninferiority. Gene selection must still be fitted within training folds.
+
+## Gene-panel curves and the PAM50 gene-list benchmark
+
+```powershell
+.\.venv\Scripts\python.exe src/evaluate_panels.py --model logistic
+.\.venv\Scripts\python.exe src/evaluate_panels.py --model random_forest
+.\.venv\Scripts\python.exe src/evaluate_panels.py --model xgboost
+.\.venv\Scripts\python.exe src/prepare_pam50.py
+.\.venv\Scripts\python.exe src/evaluate_panels.py --model logistic --pam50
+.\.venv\Scripts\python.exe src/evaluate_panels.py --model random_forest --pam50
+.\.venv\Scripts\python.exe src/evaluate_panels.py --model xgboost --pam50
+.\.venv\Scripts\python.exe src/plot_panel_curves.py
+```
+
+Automatic panels contain 1, 2, 5, 10, 20, 50, 100, or 500 gene features. ANOVA F-score selection is inside the Pipeline after fold-local variance filtering and before logistic standardization. The score measures subtype mean differences relative to within-subtype variation. It ranks genes individually and can select redundant correlated genes; it does not optimize gene interactions. All three models use the same ranking method for comparability. Every inner and outer fitting set learns its own ranking. The same inner tuning grids, seeds, and outer folds as the full-gene references are used.
+
+The user approved the separate PAM50 gene-list benchmark during this analysis. `prepare_pam50.py` extracts all 50 genes from the published genefu `pam50` object's `centroids.map`, pins the repository commit, and records the source checksum. All 50 genes map uniquely by Entrez ID, including older symbol aliases. `pam50_gene_mapping.csv` preserves the published and expression-source symbols. Source metadata and limitations are in `pam50_reference.json`.
+
+The PAM50 benchmark restricts each model to those 50 fixed gene features, then uses identical nested training validation and tuning grids. It does not use cohort-based gene selection. It is **not the original PAM50 nearest-centroid algorithm or the Prosigna assay**. Because target labels are PAM50-derived, these scores measure agreement with that reference, not independent clinical diagnostic validity. Sources: [original PAM50 paper](https://pubmed.ncbi.nlm.nih.gov/19204204/), [genefu documentation](https://www.bioconductor.org/packages/release/bioc/manuals/genefu/man/genefu.pdf).
+
+| Model | Full-gene reference | Smallest tested qualifying automatic panel | Panel score | Fixed PAM50 50-gene score |
+| --- | ---: | ---: | ---: | ---: |
+| L1 logistic | 90.1% | 100 | 88.7% | 92.4% |
+| Random forest | 89.5% | 100 | 88.6% | 93.2% |
+| XGBoost | 91.2% | 500 | 89.9% | 92.1% |
+
+All figures are mean balanced accuracy from five outer training folds. Stars select within the automatic ANOVA panel family using the preapproved 0.02 absolute tolerance; fixed PAM50 benchmarks are reported separately and pass that full-gene tolerance for all models. The 50-gene PAM50 benchmarks outperform the qualifying automatic panels in these runs. This highlights a limitation of the automatic ranking method, not a claim of clinical superiority. Gene counts are the selected input panel sizes; L1 may set additional weights to zero.
+
+The panels vary across fitting folds: 83 of the 100 genes are shared by all five 100-gene outer refits, and 396 of the 500 genes are shared by all five 500-gene refits. This describes stability, not a final fixed list. The mean curve and tolerance rule are used for training-stage selection; they are not independent final performance estimates. A single final model/panel choice must be frozen before test evaluation.
+
+The headline figure is `figures/panel_size_curve.png`, with a vector copy at `figures/panel_size_curve.svg`. It uses a log gene-count axis, 0–1 accuracy axis, three model curves, descriptive ±1 fold-SD bands, model-colored dashed full-gene references, a dotted dummy baseline, and practical threshold stars. Lines connect evaluated sizes; intermediate sizes have not been measured. Stars are operational plateau markers rather than geometric knees. Fixed PAM50 gene-set benchmarks are squares. Reports include `panel_size_summary.csv`, `panel_selection_report.json`, and `panel_selection_stability.csv`; per-model panel reports, tuning records, and fold gene selections are also saved. Sample-level predictions remain local in ignored storage. No test evaluation has occurred.
+
+See `notebooks/06_gene_panel_curves.ipynb` for the plain-language explanation. Validation checked every outer-fold score, selected gene count, label alignment, probability sum, per-class recall, and AUROC, plus fixed PAM50 membership and the 2-point selection rule.

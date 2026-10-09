@@ -1,0 +1,418 @@
+[
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.5225852897688341,
+    "balanced_accuracy_cv_sd": 0.021833034308431646,
+    "macro_f1_cv_mean": 0.48478957771084213,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.20967741935483872,
+      "Luminal A": 0.9122807017543859,
+      "Luminal B": 0.0
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9924295131068477,
+      "HER2-enriched": 0.6669842892999907,
+      "Luminal A": 0.6994938326207676,
+      "Luminal B": 0.6537297320181195
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        1,
+        0
+      ],
+      [
+        2,
+        13,
+        47,
+        0
+      ],
+      [
+        4,
+        31,
+        364,
+        0
+      ],
+      [
+        1,
+        9,
+        148,
+        0
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.6894599082059526,
+    "balanced_accuracy_cv_sd": 0.03014016509383888,
+    "macro_f1_cv_mean": 0.6227237091638317,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9343065693430657,
+      "HER2-enriched": 0.8709677419354839,
+      "Luminal A": 0.949874686716792,
+      "Luminal B": 0.006329113924050633
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9927125219626665,
+      "HER2-enriched": 0.9599563075206842,
+      "Luminal A": 0.7609359533286999,
+      "Luminal B": 0.6922653570974979
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        128,
+        8,
+        1,
+        0
+      ],
+      [
+        1,
+        54,
+        7,
+        0
+      ],
+      [
+        1,
+        19,
+        379,
+        0
+      ],
+      [
+        0,
+        10,
+        147,
+        1
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8122629345194678,
+    "balanced_accuracy_cv_sd": 0.0413372298147601,
+    "macro_f1_cv_mean": 0.7977512874520414,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9635036496350365,
+      "HER2-enriched": 0.8709677419354839,
+      "Luminal A": 0.7543859649122807,
+      "Luminal B": 0.6645569620253164
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9986674999705198,
+      "HER2-enriched": 0.9749233057543925,
+      "Luminal A": 0.8966323371453845,
+      "Luminal B": 0.8391685364717836
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        132,
+        4,
+        1,
+        0
+      ],
+      [
+        0,
+        54,
+        3,
+        5
+      ],
+      [
+        0,
+        5,
+        301,
+        93
+      ],
+      [
+        1,
+        5,
+        47,
+        105
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8091445535214676,
+    "balanced_accuracy_cv_sd": 0.07017845775932198,
+    "macro_f1_cv_mean": 0.7914159835366834,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9635036496350365,
+      "HER2-enriched": 0.8548387096774194,
+      "Luminal A": 0.7669172932330827,
+      "Luminal B": 0.6582278481012658
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9996816150372039,
+      "HER2-enriched": 0.9738309937714977,
+      "Luminal A": 0.9020941710017341,
+      "Luminal B": 0.8425130180771347
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        132,
+        4,
+        0,
+        1
+      ],
+      [
+        0,
+        53,
+        3,
+        6
+      ],
+      [
+        0,
+        8,
+        306,
+        85
+      ],
+      [
+        1,
+        6,
+        47,
+        104
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8197826021202909,
+    "balanced_accuracy_cv_sd": 0.07425618150445919,
+    "macro_f1_cv_mean": 0.8068284458285155,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.8387096774193549,
+      "Luminal A": 0.7994987468671679,
+      "Luminal B": 0.6772151898734177
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9989151327193614,
+      "HER2-enriched": 0.9689039695082272,
+      "Luminal A": 0.9202839030348982,
+      "Luminal B": 0.8595741077854451
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        0,
+        1
+      ],
+      [
+        1,
+        52,
+        4,
+        5
+      ],
+      [
+        0,
+        6,
+        319,
+        74
+      ],
+      [
+        0,
+        7,
+        44,
+        107
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8604882472815814,
+    "balanced_accuracy_cv_sd": 0.056890686840987414,
+    "macro_f1_cv_mean": 0.8535993848552088,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9708029197080292,
+      "HER2-enriched": 0.8387096774193549,
+      "Luminal A": 0.8471177944862155,
+      "Luminal B": 0.7911392405063291
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9995047345023171,
+      "HER2-enriched": 0.9827089337175793,
+      "Luminal A": 0.9487303693407187,
+      "Luminal B": 0.9103551924135302
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        133,
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        52,
+        3,
+        7
+      ],
+      [
+        0,
+        4,
+        338,
+        57
+      ],
+      [
+        0,
+        2,
+        31,
+        125
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.8870406073791383,
+    "balanced_accuracy_cv_sd": 0.035547823452396,
+    "macro_f1_cv_mean": 0.875583738699983,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9635036496350365,
+      "HER2-enriched": 0.8548387096774194,
+      "Luminal A": 0.8796992481203008,
+      "Luminal B": 0.8544303797468354
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9957430751270592,
+      "HER2-enriched": 0.9875429952589012,
+      "Luminal A": 0.9682820496619701,
+      "Luminal B": 0.9381165064984548
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        132,
+        4,
+        0,
+        1
+      ],
+      [
+        0,
+        53,
+        2,
+        7
+      ],
+      [
+        0,
+        5,
+        351,
+        43
+      ],
+      [
+        1,
+        3,
+        19,
+        135
+      ]
+    ],
+    "test_evaluated": false
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "balanced_accuracy_cv_mean": 0.9052412726436563,
+    "balanced_accuracy_cv_sd": 0.02965521706168775,
+    "macro_f1_cv_mean": 0.8937793599985697,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9635036496350365,
+      "HER2-enriched": 0.8870967741935484,
+      "Luminal A": 0.9122807017543859,
+      "Luminal B": 0.8607594936708861
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9971109512635167,
+      "HER2-enriched": 0.9899832667100493,
+      "Luminal A": 0.9806168081267594,
+      "Luminal B": 0.9582998179585962
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        132,
+        4,
+        0,
+        1
+      ],
+      [
+        0,
+        55,
+        1,
+        6
+      ],
+      [
+        0,
+        4,
+        364,
+        31
+      ],
+      [
+        0,
+        5,
+        17,
+        136
+      ]
+    ],
+    "test_evaluated": false
+  }
+]

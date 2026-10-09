@@ -1,0 +1,1202 @@
+[
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.4730226550079491,
+    "sd_inner_balanced_accuracy": 0.0032514858116265396
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.49927088335703634,
+    "sd_inner_balanced_accuracy": 0.0032787051281766115
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.5121579251866407,
+    "sd_inner_balanced_accuracy": 0.0070086693250109005
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.47262519872813985,
+    "sd_inner_balanced_accuracy": 0.00962097022201173
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.5056679139775414,
+    "sd_inner_balanced_accuracy": 0.013874884069004952
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.5345576443366931,
+    "sd_inner_balanced_accuracy": 0.024075876817004044
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.4807555717482188,
+    "sd_inner_balanced_accuracy": 0.009219017891274477
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.4886247149041538,
+    "sd_inner_balanced_accuracy": 0.007825323874530438
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.5179059040200801,
+    "sd_inner_balanced_accuracy": 0.017385461918811643
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.4696014475855735,
+    "sd_inner_balanced_accuracy": 0.0044403072393031
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.48261549338996385,
+    "sd_inner_balanced_accuracy": 0.0028604577623444075
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.5061853728420017,
+    "sd_inner_balanced_accuracy": 0.018783172728494665
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.4706452776305718,
+    "sd_inner_balanced_accuracy": 0.009861262539401259
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.4935008497390832,
+    "sd_inner_balanced_accuracy": 0.009186479117458297
+  },
+  {
+    "model": "logistic",
+    "panel_size": 1,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.4963005075412628,
+    "sd_inner_balanced_accuracy": 0.013474531646089551
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6581803177468236,
+    "sd_inner_balanced_accuracy": 0.01641027745550403
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.6759223016537385,
+    "sd_inner_balanced_accuracy": 0.016472859246503713
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.6863984466465031,
+    "sd_inner_balanced_accuracy": 0.004663264565075306
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6972961668725786,
+    "sd_inner_balanced_accuracy": 0.005771700043860882
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7036577237212628,
+    "sd_inner_balanced_accuracy": 0.012434141747420562
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.7126391533392905,
+    "sd_inner_balanced_accuracy": 0.0045588092074858
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6475037012543365,
+    "sd_inner_balanced_accuracy": 0.071722774796362
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.6694300203416321,
+    "sd_inner_balanced_accuracy": 0.0498657158591807
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.681865832634838,
+    "sd_inner_balanced_accuracy": 0.032291899182168037
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6616139373228135,
+    "sd_inner_balanced_accuracy": 0.02302528266436648
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.6745695850347873,
+    "sd_inner_balanced_accuracy": 0.020031499301330042
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.6731656778685586,
+    "sd_inner_balanced_accuracy": 0.01342198956018925
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.5576720466836395,
+    "sd_inner_balanced_accuracy": 0.015131533482231485
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.6090530111688456,
+    "sd_inner_balanced_accuracy": 0.05095037035691398
+  },
+  {
+    "model": "logistic",
+    "panel_size": 2,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.6238213560545575,
+    "sd_inner_balanced_accuracy": 0.0316377935068263
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6908392852014361,
+    "sd_inner_balanced_accuracy": 0.011466687114545519
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7869961284908786,
+    "sd_inner_balanced_accuracy": 0.02566980542557594
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.790825264403752,
+    "sd_inner_balanced_accuracy": 0.015148605300258588
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7193700749687673,
+    "sd_inner_balanced_accuracy": 0.02332260085499941
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7963887992403168,
+    "sd_inner_balanced_accuracy": 0.0027579144140748376
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8135141528790979,
+    "sd_inner_balanced_accuracy": 0.027440275328292737
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7062967498166518,
+    "sd_inner_balanced_accuracy": 0.009049232583996052
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7469942467441978,
+    "sd_inner_balanced_accuracy": 0.03845632303965108
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.7739486265425403,
+    "sd_inner_balanced_accuracy": 0.04638155118606389
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7104627108849986,
+    "sd_inner_balanced_accuracy": 0.007534033519295262
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7903142278256633,
+    "sd_inner_balanced_accuracy": 0.021557957885201498
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.7956850771177301,
+    "sd_inner_balanced_accuracy": 0.02657981802556836
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6782348977818122,
+    "sd_inner_balanced_accuracy": 0.026873289227726152
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.809096379326141,
+    "sd_inner_balanced_accuracy": 0.031912433576018626
+  },
+  {
+    "model": "logistic",
+    "panel_size": 5,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.804877389698934,
+    "sd_inner_balanced_accuracy": 0.031228738446331953
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6956311390498936,
+    "sd_inner_balanced_accuracy": 0.01808569537953251
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.782221637065554,
+    "sd_inner_balanced_accuracy": 0.023667148672264948
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8032187899260247,
+    "sd_inner_balanced_accuracy": 0.017324174576005144
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7069015655524221,
+    "sd_inner_balanced_accuracy": 0.030286468571243105
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8130892836156068,
+    "sd_inner_balanced_accuracy": 0.0015403490614871586
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8033632889862533,
+    "sd_inner_balanced_accuracy": 0.013554189306442206
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7174623751804162,
+    "sd_inner_balanced_accuracy": 0.014944960116046789
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7759422703042983,
+    "sd_inner_balanced_accuracy": 0.035224703065700025
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.7849901943648017,
+    "sd_inner_balanced_accuracy": 0.04643378024237419
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7037703088986079,
+    "sd_inner_balanced_accuracy": 0.007323650778976195
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8127057590493599,
+    "sd_inner_balanced_accuracy": 0.018678702332636403
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8158514331202656,
+    "sd_inner_balanced_accuracy": 0.02284963377792366
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6733166524903963,
+    "sd_inner_balanced_accuracy": 0.04021347009972773
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.7925387941601754,
+    "sd_inner_balanced_accuracy": 0.032089067926416345
+  },
+  {
+    "model": "logistic",
+    "panel_size": 10,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8061692056033752,
+    "sd_inner_balanced_accuracy": 0.03168347346031135
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6792322476490574,
+    "sd_inner_balanced_accuracy": 0.007366510243419324
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8177053922581349,
+    "sd_inner_balanced_accuracy": 0.019248552809541054
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8233706819369363,
+    "sd_inner_balanced_accuracy": 0.02777576954560303
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7013558805176959,
+    "sd_inner_balanced_accuracy": 0.01861412311495619
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8277469736033755,
+    "sd_inner_balanced_accuracy": 0.0073860780580123
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8335520510689974,
+    "sd_inner_balanced_accuracy": 0.018437558579861082
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7101274843439896,
+    "sd_inner_balanced_accuracy": 0.0220982913380667
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.83965959383496,
+    "sd_inner_balanced_accuracy": 0.014019212516866929
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8587657525856996,
+    "sd_inner_balanced_accuracy": 0.01807082017835491
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6965999666919555,
+    "sd_inner_balanced_accuracy": 0.011670948094517722
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8185485892243697,
+    "sd_inner_balanced_accuracy": 0.025889279800555793
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8191844842199196,
+    "sd_inner_balanced_accuracy": 0.029606341394684797
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.6834953183845446,
+    "sd_inner_balanced_accuracy": 0.03145282066171315
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8206948041419345,
+    "sd_inner_balanced_accuracy": 0.040710283833596525
+  },
+  {
+    "model": "logistic",
+    "panel_size": 20,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8098600681285614,
+    "sd_inner_balanced_accuracy": 0.03283402572368644
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.772894882426121,
+    "sd_inner_balanced_accuracy": 0.03338993351228372
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8206487112667421,
+    "sd_inner_balanced_accuracy": 0.008667366458051069
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8282707504060401,
+    "sd_inner_balanced_accuracy": 0.024908009412192306
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7639598317972295,
+    "sd_inner_balanced_accuracy": 0.024474843865988496
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8550214160465491,
+    "sd_inner_balanced_accuracy": 0.014706676127711189
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8509635509825785,
+    "sd_inner_balanced_accuracy": 0.020702781981636685
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8449613254562417,
+    "sd_inner_balanced_accuracy": 0.03213204865037962
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.871413251304107,
+    "sd_inner_balanced_accuracy": 0.013525971457484047
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8788630865841309,
+    "sd_inner_balanced_accuracy": 0.02133867289260597
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7885973230878429,
+    "sd_inner_balanced_accuracy": 0.06413137145039088
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8488425821043082,
+    "sd_inner_balanced_accuracy": 0.02174790861248176
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8608454739140075,
+    "sd_inner_balanced_accuracy": 0.01308766335435721
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.7869692812224863,
+    "sd_inner_balanced_accuracy": 0.04382345178134037
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8577836777481253,
+    "sd_inner_balanced_accuracy": 0.02752371103118839
+  },
+  {
+    "model": "logistic",
+    "panel_size": 50,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8483042620717076,
+    "sd_inner_balanced_accuracy": 0.030338662457760963
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8394975148778361,
+    "sd_inner_balanced_accuracy": 0.04969592856009701
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8868968225383281,
+    "sd_inner_balanced_accuracy": 0.014058986480456585
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8829367302918887,
+    "sd_inner_balanced_accuracy": 0.029028013333621525
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8623080878103853,
+    "sd_inner_balanced_accuracy": 0.02898264145162453
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.893915088969163,
+    "sd_inner_balanced_accuracy": 0.01757363677879649
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8990107267828934,
+    "sd_inner_balanced_accuracy": 0.02300111622771101
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8686393594241659,
+    "sd_inner_balanced_accuracy": 0.016511464520144143
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.9099383089519737,
+    "sd_inner_balanced_accuracy": 0.0005511632430483906
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.893146137722649,
+    "sd_inner_balanced_accuracy": 0.013414603717361367
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8598172240443066,
+    "sd_inner_balanced_accuracy": 0.03523820770459819
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8872028071266822,
+    "sd_inner_balanced_accuracy": 0.009059824571542557
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8881898605678601,
+    "sd_inner_balanced_accuracy": 0.01213789843762399
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8384364607734346,
+    "sd_inner_balanced_accuracy": 0.0013592831495100187
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8851805372809748,
+    "sd_inner_balanced_accuracy": 0.023158196114094247
+  },
+  {
+    "model": "logistic",
+    "panel_size": 100,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8825648921377512,
+    "sd_inner_balanced_accuracy": 0.037656471530168184
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8139592098279292,
+    "sd_inner_balanced_accuracy": 0.025381923277223876
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8690768407720366,
+    "sd_inner_balanced_accuracy": 0.032431039900282316
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 1,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8472468435959807,
+    "sd_inner_balanced_accuracy": 0.003799196570452996
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8213997114893834,
+    "sd_inner_balanced_accuracy": 0.02450410279639761
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.9013382027365063,
+    "sd_inner_balanced_accuracy": 0.015405631080940292
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 2,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.9057786688218412,
+    "sd_inner_balanced_accuracy": 0.02299530028993659
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8427189041369781,
+    "sd_inner_balanced_accuracy": 0.029601178542492678
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8963925455183651,
+    "sd_inner_balanced_accuracy": 0.020236153130962678
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 3,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8919202782100552,
+    "sd_inner_balanced_accuracy": 0.018979454473643288
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8385515218390447,
+    "sd_inner_balanced_accuracy": 0.039922773953178434
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8937074505052823,
+    "sd_inner_balanced_accuracy": 0.014586768319160807
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 4,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8741643864899435,
+    "sd_inner_balanced_accuracy": 0.02473783035168692
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.01
+    },
+    "mean_inner_balanced_accuracy": 0.8493471694137232,
+    "sd_inner_balanced_accuracy": 0.027911016408697396
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 0.1
+    },
+    "mean_inner_balanced_accuracy": 0.8792591354809671,
+    "sd_inner_balanced_accuracy": 0.023139967562210977
+  },
+  {
+    "model": "logistic",
+    "panel_size": 500,
+    "fold": 5,
+    "parameters": {
+      "model__estimator__C": 1.0
+    },
+    "mean_inner_balanced_accuracy": 0.8845501845060357,
+    "sd_inner_balanced_accuracy": 0.01609945227482277
+  }
+]

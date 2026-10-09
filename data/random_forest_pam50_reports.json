@@ -1,0 +1,55 @@
+[
+  {
+    "model": "random_forest",
+    "panel_size": 50,
+    "classes": [
+      "Basal-like",
+      "HER2-enriched",
+      "Luminal A",
+      "Luminal B"
+    ],
+    "gene_set": "Fixed published PAM50 genes",
+    "balanced_accuracy_cv_mean": 0.9316800671737635,
+    "balanced_accuracy_cv_sd": 0.025168846690261405,
+    "macro_f1_cv_mean": 0.9243505193189743,
+    "out_of_fold_per_class_recall": {
+      "Basal-like": 0.9781021897810219,
+      "HER2-enriched": 0.9193548387096774,
+      "Luminal A": 0.9197994987468672,
+      "Luminal B": 0.9113924050632911
+    },
+    "out_of_fold_one_vs_rest_auroc": {
+      "Basal-like": 0.9997759513224768,
+      "HER2-enriched": 0.9970716742586223,
+      "Luminal A": 0.9903364854713815,
+      "Luminal B": 0.9831929215528555
+    },
+    "out_of_fold_confusion_matrix": [
+      [
+        134,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        57,
+        0,
+        5
+      ],
+      [
+        0,
+        2,
+        367,
+        30
+      ],
+      [
+        0,
+        2,
+        12,
+        144
+      ]
+    ],
+    "test_evaluated": false
+  }
+]

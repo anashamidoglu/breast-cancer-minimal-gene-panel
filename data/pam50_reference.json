@@ -1,0 +1,13 @@
+{
+  "reference": "genefu pam50 centroids.map; gene list only, not centroid classification",
+  "repository_commit": "9c9b66d1ef22cbfda1df75b626d2dbc68fb9b25c",
+  "source_url": "https://raw.githubusercontent.com/bhklab/genefu/9c9b66d1ef22cbfda1df75b626d2dbc68fb9b25c/data/pam50.rda",
+  "source_sha256": "766cbeff768d725fd1c800b793d3a0e4d8b71b3fa3d15950410ef076352e7121",
+  "original_paper": "https://pubmed.ncbi.nlm.nih.gov/19204204/",
+  "package_documentation": "https://www.bioconductor.org/packages/release/bioc/manuals/genefu/man/genefu.pdf",
+  "published_genes": 50,
+  "matched_unique_features": 50,
+  "mapping_rule": "Use published Entrez IDs, preserving original and source-expression symbols; no data-driven selection.",
+  "benchmark": "Our three models fitted on the fixed PAM50 gene set using the same nested training validation as selected panels.",
+  "limitation": "Not the original PAM50 algorithm or Prosigna assay; agreement with PAM50-derived target labels is not independent diagnostic validation."
+}
