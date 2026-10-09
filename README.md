@@ -4,7 +4,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. Initial study metadata and subtype labels have been inspected; see [data/README.md](data/README.md). The expression matrix has not been downloaded and no models have been trained. Decisions about Normal-like and missing labels are pending.
+Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. Study metadata and subtype labels have been inspected; see [data/README.md](data/README.md). With user approval, Normal-like and missing labels were excluded from the prepared labels, retaining 945 patients before expression matching. Explore the counts in `notebooks/01_inspect_subtype_labels.ipynb`. The expression matrix has not been downloaded and no models have been trained.
 
 ## Planned approach
 

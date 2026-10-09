@@ -21,7 +21,17 @@ The `SUBTYPE` field is patient-level. Before matching to expression data, its re
 | BRCA_Normal | 36 |
 | No subtype record | 103 |
 
-The study contains 1,084 patients and 1,084 samples. These are not final analysis counts: expression availability and sample matching still need checking. No exclusions have been applied.
+The study contains 1,084 patients and 1,084 samples. These are not final analysis counts: expression availability and sample matching still need checking.
+
+With user approval on October 9, 2026, we excluded the 36 Normal-like labels and 103 missing labels from the prepared label table, retaining 945 patients. Original responses remain unchanged. `data/processed/patient_labels.csv` contains retained labels; `data/processed/label_exclusions.csv` records each excluded identifier and reason. These files stay local. The tracked aggregate audit is `data/label_preparation.json`.
+
+After inspection, prepare the labels with:
+
+```powershell
+.\.venv\Scripts\python.exe src/prepare_labels.py
+```
+
+Open `notebooks/01_inspect_subtype_labels.ipynb` to see the count table and chart.
 
 Proposed expression profile: `brca_tcga_pan_can_atlas_2018_rna_seq_v2_mrna`, described by cBioPortal as batch-normalized RSEM expression from Illumina HiSeq RNASeqV2. This is already source-processed expression, not raw sequencing counts. Prefer it to the portal's precomputed cohort z-scores so our own standardization can be fitted within training folds. Source batch normalization remains a limitation to document.
 
