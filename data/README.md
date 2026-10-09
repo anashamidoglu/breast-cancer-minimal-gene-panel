@@ -44,3 +44,26 @@ To repeat the inspection from the project root:
 This retrieves metadata and subtype records only, not the expression matrix. Untouched responses go in ignored `data/raw/`; the aggregate report is `data/dataset_inspection.json`.
 
 Source: [cBioPortal study](https://www.cbioportal.org/study/summary?id=brca_tcga_pan_can_atlas_2018), [public API](https://www.cbioportal.org/api).
+
+## Expression download and matching
+
+```powershell
+.\.venv\Scripts\python.exe src/download_expression.py
+.\.venv\Scripts\python.exe src/match_expression.py
+```
+
+The downloader uses the official [cBioPortal DataHub](https://github.com/cBioPortal/datahub/tree/master/public/brca_tcga_pan_can_atlas_2018), pins a repository commit, and verifies the expression file against its Git LFS SHA-256 checksum and byte count. Source URLs and checksums are recorded in `expression_download.json`. Re-running against a changed DataHub commit may retrieve a newer snapshot; use the recorded commit and URL to recover this exact version. The portal sample mapping is retrieved separately and its checksum is also recorded.
+
+The source matrix has 20,531 measurement rows and 1,082 expression samples. All 945 approved patient labels match expression samples. Each matched patient has one primary solid tumor sample. No expression values are missing, nonfinite, or negative.
+
+Twenty-four Entrez gene IDs are repeated across 50 rows with distinct measurements. We exclude all 50 ambiguous rows based solely on identifiers, leaving **20,481 unique gene features**. No measurements are averaged. Thirteen rows lack gene symbols but have unique Entrez IDs and remain included. This conservative rule may remove potentially useful genes and is recorded as a limitation.
+
+Prepared local files:
+
+- `data/processed/expression.parquet`: 945 sample rows by 20,481 gene columns, with sample IDs as the index. Parquet is a compact table format.
+- `data/processed/sample_labels.csv`: the matching sample IDs, patient IDs, and subtype labels.
+- `data/processed/gene_annotations.csv`: each feature's Entrez ID and source gene symbol.
+- `data/processed/ambiguous_gene_annotations.csv`: the 50 excluded source annotations.
+- `data/processed/expression_exclusions.csv`: patients without expression data (currently empty).
+
+The aggregate audit is `expression_matching.json`. Original and processed patient-level files remain excluded from Git. No log transformation, scaling, variance filtering, feature selection, or model fitting has been performed. Source batch normalization was performed before we obtained the data and cannot be refitted within our training folds.

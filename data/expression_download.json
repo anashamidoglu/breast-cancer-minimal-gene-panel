@@ -1,0 +1,12 @@
+{
+  "retrieved_at_utc": "2026-10-09T15:05:31.352365+00:00",
+  "study_id": "brca_tcga_pan_can_atlas_2018",
+  "datahub_commit": "18763f8eee86d4886d7210068f745f1e509498ee",
+  "expression_url": "https://media.githubusercontent.com/media/cBioPortal/datahub/18763f8eee86d4886d7210068f745f1e509498ee/public/brca_tcga_pan_can_atlas_2018/data_mrna_seq_v2_rsem.txt",
+  "expression_sha256": "aba030e1f04a196ee6c2118ed37e777b533f7fd24ffd1bcbde908dcee33b2eb5",
+  "expression_bytes": 154654165,
+  "sample_mapping_url": "https://www.cbioportal.org/api/studies/brca_tcga_pan_can_atlas_2018/samples?projection=DETAILED&pageSize=10000",
+  "sample_mapping_sha256": "8d9afe71155955eef266536e188505da1bb1ea211de3800719e1711e3bbfec85",
+  "profile": "rna_seq_v2_mrna",
+  "source_processing": "Batch-normalized RSEM; not raw sequencing counts"
+}

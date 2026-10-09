@@ -4,7 +4,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. Study metadata and subtype labels have been inspected; see [data/README.md](data/README.md). With user approval, Normal-like and missing labels were excluded from the prepared labels, retaining 945 patients before expression matching. Explore the counts in `notebooks/01_inspect_subtype_labels.ipynb`. The expression matrix has not been downloaded and no models have been trained.
+Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. Study metadata, subtype labels, and expression availability have been checked; see [data/README.md](data/README.md). With user approval, Normal-like and missing labels were excluded. All 945 retained patients have expression data. Identifier cleanup leaves 20,481 unique gene features. Explore the counts in `notebooks/01_inspect_subtype_labels.ipynb`. No train/test split or model fitting has been performed.
 
 ## Planned approach
 
@@ -28,5 +28,7 @@ The proposed panel-selection tolerance is 2 percentage points below the full-gen
 - Results will come from one cohort, with no external validation.
 - This is an educational project, not a clinical tool.
 - A small computational feature set is not a validated laboratory assay.
+- Source expression values were batch-normalized before download; this upstream processing cannot be refitted within our training folds.
+- Gene rows with ambiguous repeated Entrez IDs were excluded, potentially removing useful measurements.
 
 Target completion: October 31, 2026.

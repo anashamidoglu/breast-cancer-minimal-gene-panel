@@ -1,0 +1,22 @@
+{
+  "source_gene_rows": 20531,
+  "source_expression_samples": 1082,
+  "approved_label_patients": 945,
+  "matched_samples_and_patients": 945,
+  "patients_without_expression": 0,
+  "retained_subtype_counts": {
+    "Luminal A": 499,
+    "Luminal B": 197,
+    "Basal-like": 171,
+    "HER2-enriched": 78
+  },
+  "ambiguous_entrez_ids": 24,
+  "ambiguous_gene_rows_excluded": 50,
+  "gene_features_retained": 20481,
+  "missing_gene_symbols_retained_with_entrez_id": 13,
+  "missing_nonfinite_or_negative_values": 0,
+  "sample_type": "Primary Solid Tumor",
+  "repeated_patients": 0,
+  "gene_rule": "Exclude all rows with ambiguous repeated Entrez IDs; retain unique IDs even when symbols are absent.",
+  "note": "Structural matching only. No transformation, variance filtering, feature selection, splitting, or model fitting."
+}
