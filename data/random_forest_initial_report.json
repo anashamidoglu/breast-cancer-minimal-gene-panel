@@ -1,0 +1,67 @@
+{
+  "model": "random_forest",
+  "evaluation": "Fixed initial settings on five saved training folds; no tuning yet",
+  "training_samples": 756,
+  "input_gene_features": 20481,
+  "classes": [
+    "Basal-like",
+    "HER2-enriched",
+    "Luminal A",
+    "Luminal B"
+  ],
+  "parameters": {
+    "class_weight": "balanced",
+    "max_depth": null,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2,
+    "n_estimators": 300,
+    "random_state": 42
+  },
+  "preprocessing": "log1p and variance threshold 1e-8 inside each fold; no standardization needed for trees",
+  "imbalance_handling": "balanced class weights",
+  "balanced_accuracy_cv_mean": 0.9000706255911186,
+  "balanced_accuracy_cv_sd": 0.03855074160764783,
+  "macro_f1_cv_mean": 0.8985107633778007,
+  "macro_f1_cv_sd": 0.03544869790154091,
+  "out_of_fold_per_class_recall": {
+    "Basal-like": 0.9781021897810219,
+    "HER2-enriched": 0.8387096774193549,
+    "Luminal A": 0.9072681704260651,
+    "Luminal B": 0.879746835443038
+  },
+  "out_of_fold_confusion_matrix": [
+    [
+      134,
+      2,
+      0,
+      1
+    ],
+    [
+      1,
+      52,
+      2,
+      7
+    ],
+    [
+      0,
+      2,
+      362,
+      35
+    ],
+    [
+      0,
+      2,
+      17,
+      139
+    ]
+  ],
+  "confusion_matrix_orientation": "Recorded labels in rows, predictions in columns, class order as listed",
+  "out_of_fold_one_vs_rest_auroc": {
+    "Basal-like": 0.999292477860453,
+    "HER2-enriched": 0.9914009482197638,
+    "Luminal A": 0.9820875718708536,
+    "Luminal B": 0.9601202319969518
+  },
+  "test_evaluated": false,
+  "note": "Preliminary full-feature model comparison, not tuned or small-panel results. Fold SD is not a confidence interval."
+}

@@ -102,3 +102,18 @@ This preliminary model uses fixed L2 regularization (`C=1`, `l1_ratio=0`), balan
 Mean training CV balanced accuracy: 0.8766, fold SD: 0.0400. Mean macro F1: 0.8694. Fold SD describes variation, not a confidence interval. Per-class recalls and one-vs-rest AUROCs are recorded in `logistic_initial_report.json`; individual fold results are in `logistic_initial_cv_folds.csv`. Sample-level predictions stay in ignored processed storage.
 
 This fixed L2 starting reference does not replace planned tuned L1/elastic-net, random forest, and XGBoost comparisons. No panel-size analysis or final test evaluation has been performed. The explanatory notebook is `notebooks/03_first_logistic_model.ipynb`; its displayed calculations and plotting code have been verified. The confusion matrix figure explicitly refers to training cross-validation.
+
+## Initial tree-model comparison
+
+```powershell
+.\.venv\Scripts\python.exe src/evaluate_trees.py
+.\.venv\Scripts\python.exe src/plot_initial_comparison.py
+```
+
+Both tree models use the same saved training folds, log1p, and fold-local variance filtering. Standardization is unnecessary for trees. Random forest starts with 300 trees, minimum leaf size 2, square-root candidate-feature sampling, and balanced class weights. XGBoost starts with 200 trees, depth 3, learning rate 0.05, histogram splits with 64 bins, and half the features considered per tree. XGBoost uses balanced sample weights computed only from the fitting fold's labels. Seed is 42; each model uses four worker threads.
+
+XGBoost's initial 300-tree, default-bin pilot was stopped because of runtime after one completed fold. The five reported folds all use the revised 200-tree, 64-bin, half-feature configuration. The incomplete pilot is not included in the comparison. These are exploratory fixed-setting results, not a tuned model selection or an unbiased final performance estimate.
+
+All source gene features remain candidate inputs after fold-local variance filtering. A random feature subset per tree is not a fixed gene panel: different trees may use different genes. No test labels or test expression rows are used. Random forest and XGBoost aggregate reports and fold tables are saved alongside the logistic report. Sample-level predictions remain local and excluded from Git.
+
+`notebooks/04_initial_model_comparison.ipynb` explains the models and displays the aggregate comparison. `figures/initial_model_comparison.png` shows mean balanced accuracy with fold standard deviations. No hyperparameter search or panel-size selection has yet been performed.
