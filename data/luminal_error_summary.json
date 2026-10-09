@@ -1,0 +1,49 @@
+{
+  "primary_case": "random_forest_pam50",
+  "evaluation": "Descriptive post-test review of saved predictions; no refitting or selection.",
+  "luminal_patients": 139,
+  "correct": 124,
+  "direct_a_b_swaps": 12,
+  "all_primary_errors": 16,
+  "per_subtype": [
+    {
+      "recorded_subtype": "Luminal A",
+      "total": 100,
+      "prediction_counts": {
+        "Basal-like": 0,
+        "HER2-enriched": 2,
+        "Luminal A": 90,
+        "Luminal B": 8
+      },
+      "median_top_two_margin_correct": 0.8738854166666665,
+      "median_top_two_margin_incorrect": 0.21205257936507924
+    },
+    {
+      "recorded_subtype": "Luminal B",
+      "total": 39,
+      "prediction_counts": {
+        "Basal-like": 0,
+        "HER2-enriched": 1,
+        "Luminal A": 4,
+        "Luminal B": 34
+      },
+      "median_top_two_margin_correct": 0.611393247683689,
+      "median_top_two_margin_incorrect": 0.1325175518925521
+    }
+  ],
+  "direct_swap_top_two_margins": [
+    0.008727453102452987,
+    0.015587301587301428,
+    0.023581349206349078,
+    0.035357323232323046,
+    0.044960317460317534,
+    0.1325175518925521,
+    0.1590869408369408,
+    0.2103849206349207,
+    0.21372023809523777,
+    0.23254365079365086,
+    0.3251987179487179,
+    0.6208609307359307
+  ],
+  "note": "Random forest probability estimates are not demonstrated to be calibrated. Margins describe model scores, not certainty about the true diagnosis. No threshold selected from these results."
+}

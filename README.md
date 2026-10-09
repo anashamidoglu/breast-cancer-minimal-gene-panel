@@ -84,3 +84,7 @@ Target completion: October 31, 2026.
 ## Gene interpretation
 
 The automatic 100-gene panel overlaps PAM50 by 10 genes; 83 final genes were selected in all five outer training folds. The 500-gene panel overlaps by 31 genes, with 396 final genes selected in all five folds. Logistic and random forest share the same automatic 100-gene list because selection uses the same ANOVA ranking. See [gene interpretation](data/gene_interpretation.md) and `notebooks/08_gene_interpretation.ipynb` for frozen logistic weights and their limitations. This descriptive analysis uses training artifacts only and does not establish biological causes or cross-cohort reproducibility.
+
+## Luminal error review
+
+The frozen primary model made 12 direct Luminal A/B swaps, accounting for 12 of its 16 total held-out errors. It correctly classified 90/100 Luminal A and 34/39 Luminal B patients. Incorrect Luminal predictions generally had smaller score margins, though some were confident errors. See [the descriptive review](data/luminal_error_review.md) and `notebooks/09_luminal_error_review.ipynb`. No model or decision threshold was adjusted using this review.
