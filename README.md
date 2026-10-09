@@ -88,3 +88,7 @@ The automatic 100-gene panel overlaps PAM50 by 10 genes; 83 final genes were sel
 ## Luminal error review
 
 The frozen primary model made 12 direct Luminal A/B swaps, accounting for 12 of its 16 total held-out errors. It correctly classified 90/100 Luminal A and 34/39 Luminal B patients. Incorrect Luminal predictions generally had smaller score margins, though some were confident errors. See [the descriptive review](data/luminal_error_review.md) and `notebooks/09_luminal_error_review.ipynb`. No model or decision threshold was adjusted using this review.
+
+## Compiled research findings
+
+Read the [research report](reports/research_findings.md) for the research question, study design, small-panel results, held-out comparison, gene interpretation, Luminal errors, and limitations.
