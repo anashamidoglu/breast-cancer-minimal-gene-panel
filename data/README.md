@@ -90,3 +90,15 @@ The split uses `train_test_split(test_size=0.20, stratify=labels['subtype'], ran
 The dummy baseline always predicts the most frequent subtype in its fitting data. It uses five training-only folds from `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)`. Each training sample receives one prediction from a model fitted without it. The baseline script does not open test labels or any expression matrix. The fold assignments are saved locally in `training_cv_folds.csv` for subsequent model comparisons.
 
 Training cross-validation balanced accuracy is 0.25, macro F1 is approximately 0.173, and each one-vs-rest AUROC is 0.50. Recall is 1.0 for Luminal A and 0.0 for the other subtypes. These are baseline results, not final test results. Reports are `baseline_report.json` and `baseline_cv_folds.csv`.
+
+## Initial all-available-gene logistic regression
+
+```powershell
+.\.venv\Scripts\python.exe src/evaluate_logistic.py
+```
+
+This preliminary model uses fixed L2 regularization (`C=1`, `l1_ratio=0`), balanced class weights, and the saved five training folds. It reads only training expression rows using a Parquet filter. Test labels are not opened. The Pipeline performs log1p, variance filtering at `1e-8` on the log scale, and standardization within each fitting fold. The filter retains 20,156–20,170 features across folds. All five solver fits converged; a convergence warning would halt the script.
+
+Mean training CV balanced accuracy: 0.8766, fold SD: 0.0400. Mean macro F1: 0.8694. Fold SD describes variation, not a confidence interval. Per-class recalls and one-vs-rest AUROCs are recorded in `logistic_initial_report.json`; individual fold results are in `logistic_initial_cv_folds.csv`. Sample-level predictions stay in ignored processed storage.
+
+This fixed L2 starting reference does not replace planned tuned L1/elastic-net, random forest, and XGBoost comparisons. No panel-size analysis or final test evaluation has been performed. The explanatory notebook is `notebooks/03_first_logistic_model.ipynb`; its displayed calculations and plotting code have been verified. The confusion matrix figure explicitly refers to training cross-validation.

@@ -4,7 +4,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Python setup is verified. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. With user approval, Normal-like and missing labels were excluded. All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. The majority-class dummy baseline reaches 25% balanced accuracy in five-fold training cross-validation. No test performance has been evaluated. See [data/README.md](data/README.md) for preparation and split details.
+Python setup is verified. With user approval, Normal-like and missing labels were excluded. All 945 retained patients have expression data; identifier cleanup leaves 20,481 unique gene features. A fixed stratified split reserves 756 samples for training and 189 for final testing. Initial all-available-gene logistic regression reaches **87.7% balanced accuracy** in five-fold training cross-validation, versus 25% for the dummy. This is a fixed L2 reference, not yet a tuned model or small gene panel. No test performance has been evaluated. See [SETUP.md](SETUP.md), [data/README.md](data/README.md), and `notebooks/03_first_logistic_model.ipynb`.
 
 ## Planned approach
 

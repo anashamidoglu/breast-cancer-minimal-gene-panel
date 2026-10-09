@@ -1,0 +1,65 @@
+{
+  "model": "Initial all-available-gene logistic regression, fixed L2 regularization",
+  "evaluation": "Five saved stratified training folds; no hyperparameter search yet",
+  "parameters": {
+    "C": 1.0,
+    "l1_ratio": 0.0,
+    "solver": "lbfgs",
+    "class_weight": "balanced",
+    "max_iter": 2000
+  },
+  "preprocessing": "log1p, variance threshold 1e-8 on log scale, StandardScaler, all inside Pipeline",
+  "training_samples": 756,
+  "input_gene_features": 20481,
+  "classes": [
+    "Basal-like",
+    "HER2-enriched",
+    "Luminal A",
+    "Luminal B"
+  ],
+  "balanced_accuracy_cv_mean": 0.8765901302525945,
+  "balanced_accuracy_cv_sd": 0.0399690439865075,
+  "macro_f1_cv_mean": 0.8694148668990241,
+  "macro_f1_cv_sd": 0.03746274406689819,
+  "out_of_fold_per_class_recall": {
+    "Basal-like": 0.9854014598540146,
+    "HER2-enriched": 0.8225806451612904,
+    "Luminal A": 0.9097744360902256,
+    "Luminal B": 0.7911392405063291
+  },
+  "out_of_fold_confusion_matrix": [
+    [
+      135,
+      2,
+      0,
+      0
+    ],
+    [
+      3,
+      51,
+      2,
+      6
+    ],
+    [
+      2,
+      5,
+      363,
+      29
+    ],
+    [
+      3,
+      6,
+      24,
+      125
+    ]
+  ],
+  "confusion_matrix_orientation": "Recorded labels in rows, predictions in columns, class order as listed",
+  "out_of_fold_one_vs_rest_auroc": {
+    "Basal-like": 0.999587278751931,
+    "HER2-enriched": 0.9849865204053174,
+    "Luminal A": 0.978517722878625,
+    "Luminal B": 0.9622475763092164
+  },
+  "test_evaluated": false,
+  "note": "Preliminary training CV result, not a tuned model or final test estimate. Fold SD is not a confidence interval. Source batch normalization predates the split."
+}
