@@ -18,7 +18,7 @@ The central comparison is the reduction from **20,481 candidate genes to automat
 
 ## Data and study design
 
-We used TCGA Breast Invasive Carcinoma, PanCancer Atlas, obtained through cBioPortal and its DataHub. The expression values are continuous, batch-normalized RNASeqV2 RSEM measurements. The study was released in 2018.
+The analysis used the TCGA Breast Invasive Carcinoma, PanCancer Atlas dataset, obtained through cBioPortal and its DataHub. The expression values are continuous, batch-normalized RNASeqV2 RSEM measurements. The study was released in 2018.
 
 Of 1,084 patient records, 945 had one of the four retained subtype labels: Luminal A (499), Luminal B (197), Basal-like (171), and HER2-enriched (78). Normal-like (36) and missing labels (103) were excluded from the four-class analysis. All retained patients had matched primary-tumor expression samples. Identifier cleanup excluded all 50 rows involved in ambiguous repeated Entrez IDs, leaving 20,481 candidate gene features. No retained expression measurements were missing, nonfinite, or negative.
 
@@ -32,11 +32,11 @@ The majority-class dummy always predicted Luminal A. Its balanced accuracy was 2
 
 The three model families were L1 one-versus-rest logistic regression, class-balanced random forest, and class-weighted XGBoost. Settings were chosen from small, bounded search grids. Five saved outer training folds assessed performance; three inner folds chose model settings within each outer fitting set. Log transformation, near-constant gene filtering, logistic scaling, supervised selection, and class weights were fitted within each fitting set.
 
-Automatic panels used ANOVA ranking, which favors genes whose average expression differs across the subtype groups relative to variation within each group. We tested 1, 2, 5, 10, 20, 50, 100, and 500 genes. The ranking was recalculated inside every inner and outer fit, preventing validation labels from influencing gene selection.
+Automatic panels used ANOVA ranking, which favors genes whose average expression differs across the subtype groups relative to variation within each group. The evaluated panel sizes were 1, 2, 5, 10, 20, 50, 100, and 500 genes. The ranking was recalculated inside every inner and outer fit, preventing validation labels from influencing gene selection.
 
-Before viewing panel-size results, we fixed this rule: choose the smallest tested automatic panel whose mean training balanced accuracy is no more than **2 absolute percentage points below** its corresponding full-gene reference.
+The panel-selection rule was specified before panel-size results were generated: select the smallest tested automatic panel whose mean training balanced accuracy is no more than **2 absolute percentage points below** its corresponding full-gene reference.
 
-For the PAM50 comparison, we matched the published fixed list by Entrez identifier and trained our same models on those 50 genes using the same validation design. **These are models using PAM50 genes, not implementations of the original PAM50 centroid classifier or Prosigna assay.**
+For the PAM50 comparison, the published fixed gene list was matched by Entrez identifier. The same three model families were trained on those 50 genes using the same validation design. **These are models using PAM50 genes, not implementations of the original PAM50 centroid classifier or Prosigna assay.**
 
 After training comparisons, the primary model and all supporting candidates were frozen. Final automatic gene lists and settings were learned from the 756 training patients only. Saved compact predictors were checked against the fitted training pipelines before evaluating the 189 test patients once. Subsequent gene and error reviews were descriptive; no model was retuned.
 
@@ -100,7 +100,7 @@ The model's top-two score margin was generally smaller for incorrect Luminal pre
 
 Luminal A and B share hormone-related biology, and separating them is a recognized subtyping challenge. NCI describes both as hormone receptor-positive, with Luminal B often showing greater cell-division activity. Clinical studies also report disagreements between routine tissue-marker classifications and PAM50. [NCI Luminal A](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/luminal-a-breast-cancer), [NCI Luminal B](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/luminal-b-breast-cancer), [clinical comparison study](https://pubmed.ncbi.nlm.nih.gov/37773555/).
 
-## What we can conclude
+## Conclusions
 
 Within this TCGA cohort, automatic panels of 100–500 genes retained strong held-out classification performance while substantially reducing the number of input measurements. A fixed 50-gene PAM50 list also supported strong performance and gave the highest training-validation score with random forest. The results support the feasibility of compact computational panels for reproducing these recorded subtype labels.
 
@@ -130,8 +130,8 @@ Dataset and PAM50 reference sources: [cBioPortal TCGA study](https://www.cbiopor
 
 Future research could validate the frozen panels in an independent cohort with compatible measurements, evaluate calibration, and study selection methods that account for correlated genes. Those are future experiments, not completed findings of this project.
 
-Additional interpretation limits apply to the findings above. Fold standard deviations are not confidence intervals, and score differences do not establish statistical superiority or equivalence. The smallest qualifying panel is the smallest among the sizes tested, not a universal minimum. We did not compare against an implementation of the original PAM50 classifier, and the supporting test winner does not replace the primary model selected before testing.
+Additional interpretation limits apply to the findings above. Fold standard deviations are not confidence intervals, and score differences do not establish statistical superiority or equivalence. The smallest qualifying panel is the smallest among the sizes tested, not a universal minimum. The study did not compare against an implementation of the original PAM50 classifier, and the supporting test winner does not replace the primary model selected before testing.
 
 Gene weights describe conditional model associations, not biological causes or validated biomarkers; correlated genes can produce unexpected coefficient signs. The PAM50 overlap counts were not subjected to an enrichment significance test. Selection consistency within training folds does not demonstrate reproducibility across independent cohorts. Gene expression and clinical receptor staining are different measurements.
 
-The Luminal error pattern is consistent with a recognized subtyping challenge, but we did not establish why individual errors occurred or demonstrate a significant directional difference. Random forest probability estimates have not been shown to be calibrated; their margins describe model scores rather than diagnostic certainty. A perfect subtype score in this holdout does not guarantee perfect future performance. The historical 2018 cohort does not establish performance in contemporary clinical populations.
+The Luminal error pattern is consistent with a recognized subtyping challenge, but the analysis did not establish why individual errors occurred or demonstrate a significant directional difference. Random forest probability estimates have not been shown to be calibrated; their margins describe model scores rather than diagnostic certainty. A perfect subtype score in this holdout does not guarantee perfect future performance. The historical 2018 cohort does not establish performance in contemporary clinical populations.
