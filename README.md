@@ -4,7 +4,7 @@ A beginner-friendly investigation of how small a gene-expression panel can repro
 
 ## Current stage
 
-Step 1: prepare the project and check the Python environment. No data have been downloaded and no models have been trained.
+Step 1: prepare the Python environment and learn the notebook format. See [SETUP.md](SETUP.md) and start with `notebooks/00_getting_started.ipynb`. No clinical data have been downloaded and no models have been trained.
 
 ## Planned approach
 

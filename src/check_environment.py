@@ -9,7 +9,7 @@ print(f"Python location: {sys.executable}")
 
 # A package is an extra set of tools that Python can use.
 # Report missing packages so we can plan setup before starting the analysis.
-packages = ["numpy", "pandas", "scikit-learn", "matplotlib", "seaborn", "jupyter", "xgboost", "streamlit"]
+packages = ["numpy", "pandas", "scikit-learn", "matplotlib", "seaborn", "jupyterlab", "xgboost", "streamlit"]
 for package in packages:
     try:
         version = importlib.metadata.version(package)
