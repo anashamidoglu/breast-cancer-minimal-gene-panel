@@ -1,6 +1,6 @@
 # Staged gene-panel experiment: development protocol
 
-Status: proposed development design; no staged-model results generated.
+Design record for the completed first staged experiment. See staged_training_findings.md for results.
 
 ## Research question
 

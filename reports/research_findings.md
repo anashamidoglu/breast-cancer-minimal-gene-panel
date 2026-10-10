@@ -1,137 +1,23 @@
-# Compact gene panels for breast cancer molecular subtype classification
+# The original gene-panel comparison
 
-Research findings • October 9, 2026
+The starting question was whether a smaller selection of genes could reproduce breast cancer subtype labels about as well as thousands of genes.
 
-## Research question
+TCGA provided 945 patients with four retained subtype labels. A fixed split reserved 756 for development and 189 for testing. Logistic regression, random forest, and XGBoost were compared using all 20,481 candidate genes, automatically selected subsets, and the fixed PAM50 gene list.
 
-How few gene-expression measurements can reproduce the four retained TCGA breast cancer molecular subtype labels while preserving balanced accuracy close to a full-gene model?
+| Model | Full-gene test score | Automatic panel | PAM50 gene-list test score |
+| --- | ---: | ---: | ---: |
+| Logistic regression | 93.7% | 92.4% / 100 genes | 92.3% |
+| Random forest | 88.7% | 90.6% / 100 genes | 92.7% |
+| XGBoost | 94.4% | 95.4% / 500 genes | 92.1% |
 
-The central comparison is the reduction from **20,481 candidate genes to automatic panels of 100–500 genes**, alongside a fixed, biologically established **50-gene PAM50 list**.
+Scores are balanced accuracy. Automatic sizes were selected from training validation before opening the test set. The primary model, random forest on PAM50 genes, was also chosen in advance.
 
-## Main findings
+![Gene count and performance](../figures/panel_size_curve.png)
 
-- The smallest tested automatic panels meeting the prespecified training-validation criterion used **100 genes for logistic regression, 100 for random forest, and 500 for XGBoost**. These reduce the input gene count by approximately **99.5%, 99.5%, and 97.6%**, respectively.
-- On the held-out test, these automatic panels achieved **92.4%, 90.6%, and 95.4% balanced accuracy**. Each was within 2 absolute percentage points of, or above, its corresponding full-gene test result.
-- The fixed PAM50 gene-list models performed especially well during training validation. Random forest on these 50 genes was selected as the primary model before test evaluation, scoring **92.7% balanced accuracy** on 189 held-out patients versus **93.2%** during training validation.
-- The strongest supporting test result was the automatic 500-gene XGBoost model at **95.4%**.
-- Twelve of the primary model's sixteen errors were direct Luminal A/B swaps. This resembles a recognized subtyping difficulty.
+The automatic panels retained strong performance with far fewer genes. PAM50 was a particularly effective compact reference during development. Most primary-model errors were between Luminal A and B: 12 of 16 errors were direct swaps.
 
-## Data and study design
+This led to a new question: instead of choosing one panel for everyone, could additional genes be reserved for uncertain cases? See [the staged findings](staged_research_conclusion.md).
 
-The analysis used the TCGA Breast Invasive Carcinoma, PanCancer Atlas dataset, obtained through cBioPortal and its DataHub. The expression values are continuous, batch-normalized RNASeqV2 RSEM measurements. The study was released in 2018.
+## Methods and limits
 
-Of 1,084 patient records, 945 had one of the four retained subtype labels: Luminal A (499), Luminal B (197), Basal-like (171), and HER2-enriched (78). Normal-like (36) and missing labels (103) were excluded from the four-class analysis. All retained patients had matched primary-tumor expression samples. Identifier cleanup excluded all 50 rows involved in ambiguous repeated Entrez IDs, leaving 20,481 candidate gene features. No retained expression measurements were missing, nonfinite, or negative.
-
-A fixed, patient-disjoint, stratified split with random seed 42 reserved 756 patients for training and 189 for final testing. Test composition was Luminal A 100, Luminal B 39, Basal-like 34, and HER2-enriched 16. No test patients were used to choose panel sizes or model settings.
-
-## Methods in plain language
-
-**Balanced accuracy** averages the percentage correctly classified within each of the four subtypes, giving each subtype equal weight. **Macro F1** averages a score that considers both missed cases and incorrect assignments for each subtype. Ordinary accuracy was reported separately because it can be dominated by the larger Luminal A group.
-
-The majority-class dummy always predicted Luminal A. Its balanced accuracy was 25%, despite ordinary test accuracy of 52.9%, illustrating why ordinary accuracy alone is insufficient.
-
-The three model families were L1 one-versus-rest logistic regression, class-balanced random forest, and class-weighted XGBoost. Settings were chosen from small, bounded search grids. Five saved outer training folds assessed performance; three inner folds chose model settings within each outer fitting set. Log transformation, near-constant gene filtering, logistic scaling, supervised selection, and class weights were fitted within each fitting set.
-
-Automatic panels used ANOVA ranking, which favors genes whose average expression differs across the subtype groups relative to variation within each group. The evaluated panel sizes were 1, 2, 5, 10, 20, 50, 100, and 500 genes. The ranking was recalculated inside every inner and outer fit, preventing validation labels from influencing gene selection.
-
-The panel-selection rule was specified before panel-size results were generated: select the smallest tested automatic panel whose mean training balanced accuracy is no more than **2 absolute percentage points below** its corresponding full-gene reference.
-
-For the PAM50 comparison, the published fixed gene list was matched by Entrez identifier. The same three model families were trained on those 50 genes using the same validation design. **These are models using PAM50 genes, not implementations of the original PAM50 centroid classifier or Prosigna assay.**
-
-After training comparisons, the primary model and all supporting candidates were frozen. Final automatic gene lists and settings were learned from the 756 training patients only. Saved compact predictors were checked against the fitted training pipelines before evaluating the 189 test patients once. Subsequent gene and error reviews were descriptive; no model was retuned.
-
-## Performance comparison
-
-Training values are means across the five outer folds. Test values come from a single fixed holdout. The primary model is random forest on the fixed PAM50 gene list.
-
-| Model | Gene set | Input genes | Training balanced accuracy | Test balanced accuracy | Test macro F1 |
-| --- | --- | ---: | ---: | ---: | ---: |
-| L1 logistic regression | Full-gene reference | 20,481 | 90.1% | 93.7% | 93.6% |
-| L1 logistic regression | Automatic ANOVA panel | 100 | 88.7% | 92.4% | 89.9% |
-| L1 logistic regression | Fixed PAM50 gene list | 50 | 92.4% | 92.3% | 91.9% |
-| Random forest | Full-gene reference | 20,481 | 89.5% | 88.7% | 88.8% |
-| Random forest | Automatic ANOVA panel | 100 | 88.6% | 90.6% | 88.7% |
-| Random forest | Fixed PAM50 gene list | 50 | 93.2% | 92.7% | 91.0% |
-| XGBoost | Full-gene reference | 20,481 | 91.2% | 94.4% | 93.9% |
-| XGBoost | Automatic ANOVA panel | 500 | 89.9% | 95.4% | 94.6% |
-| XGBoost | Fixed PAM50 gene list | 50 | 92.1% | 92.1% | 90.0% |
-| Majority-class dummy | No gene information | 0 | 25.0% | 25.0% | 17.3% |
-
-Full-gene pipelines receive 20,481 candidate features and apply their fitted near-constant filters. Automatically selected fold-specific lists can differ from the final lists selected using all training patients.
-
-![Gene count versus training-validation performance](../figures/panel_size_curve.png)
-
-The curve shows the tradeoff that motivated this project. Small panels initially lose performance; larger compact panels approach the full-gene references. Stars mark the smallest tested automatic panels meeting the rule. Squares show the fixed PAM50 benchmarks. Lines connect evaluated sizes. This remains a training-validation graph; the test was not used to generate a size-selection curve.
-
-## Primary model: where it succeeds and fails
-
-The 50-gene random forest correctly classified **173/189 patients**, giving **91.5% ordinary accuracy**, **92.7% balanced accuracy**, and **91.0% macro F1**. The balanced accuracy is higher than ordinary accuracy because it gives the smaller, well-classified subtypes equal weight.
-
-| Recorded subtype | Correct / total | Recall |
-| --- | ---: | ---: |
-| Basal-like | 34 / 34 | 100.0% |
-| HER2-enriched | 15 / 16 | 93.8% |
-| Luminal A | 90 / 100 | 90.0% |
-| Luminal B | 34 / 39 | 87.2% |
-
-![Primary held-out confusion matrix](../figures/final_test_confusion.png)
-
-## Gene selection and interpretation
-
-The final automatic 100-gene panels for logistic regression and random forest are identical because they use the same ANOVA ranking on the same training patients. They share **10 genes with PAM50**, including ESR1, PGR, FOXA1, FOXC1, CCNE1, and CDC20. This is 10% of the automatic panel and 20% of PAM50.
-
-Of the 100 final genes, **83 were selected in all five outer training folds**. The 500-gene XGBoost panel overlaps PAM50 by **31 genes**, with **396 final genes selected in every outer fold**.
-
-ESR1 and PGR encode estrogen and progesterone receptors, respectively, providing biological context for some shared genes. See [NCBI ESR1](https://www.ncbi.nlm.nih.gov/gene/2099) and [NCBI PGR](https://www.ncbi.nlm.nih.gov/gene/5241/).
-
-![Strongest logistic model weights](../figures/logistic_gene_weights.png)
-
-The supporting logistic model is easier to interpret than tree models. A positive weight raises the subtype-versus-rest score as a gene's standardized log-expression increases, holding other inputs fixed; a negative weight lowers it. FOXC1 has the largest positive Basal-like weight, while TPX2 has a strong positive Luminal B weight and negative Luminal A weight in this fitted automatic model.
-
-## Luminal A/B error analysis
-
-Of 139 Luminal patients, the primary model correctly classified 124. Eight of 100 Luminal A patients were predicted as Luminal B; four of 39 Luminal B patients were predicted as Luminal A. Three additional Luminal patients were predicted as HER2-enriched. Direct A/B swaps account for **12/16 total primary-model errors (75%)**.
-
-Error rates for the direct swaps were 8.0% for A-to-B and 10.3% for B-to-A.
-
-The model's top-two score margin was generally smaller for incorrect Luminal predictions. Median margins were 0.874 for correctly predicted Luminal A versus 0.212 for incorrectly predicted A, and 0.611 versus 0.133 for Luminal B. Five direct A/B swaps had margins below 0.05, but one had a margin of 0.621. Thus, errors included both close calls and predictions with a strong preference.
-
-![Luminal predictions and score differences](../figures/luminal_error_review.png)
-
-Luminal A and B share hormone-related biology, and separating them is a recognized subtyping challenge. NCI describes both as hormone receptor-positive, with Luminal B often showing greater cell-division activity. Clinical studies also report disagreements between routine tissue-marker classifications and PAM50. [NCI Luminal A](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/luminal-a-breast-cancer), [NCI Luminal B](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/luminal-b-breast-cancer), [clinical comparison study](https://pubmed.ncbi.nlm.nih.gov/37773555/).
-
-## Conclusions
-
-Within this TCGA cohort, automatic panels of 100–500 genes retained strong held-out classification performance while substantially reducing the number of input measurements. A fixed 50-gene PAM50 list also supported strong performance and gave the highest training-validation score with random forest. The results support the feasibility of compact computational panels for reproducing these recorded subtype labels.
-
-The automatic 100-gene panels were less accurate than the fixed PAM50 models during training validation, highlighting the value of an established reference panel.
-
-## Reproducibility and supporting artifacts
-
-The project repository is [breast-cancer-minimal-gene-panel](https://github.com/anashamidoglu/breast-cancer-minimal-gene-panel). Scripts, pinned package versions, training protocols, aggregate results, final gene lists, and explanatory notebooks are tracked. Patient-level data and model binaries remain local.
-
-Key evidence files:
-
-- [Panel protocol](../data/panel_protocol.json) and [training panel selection](../data/panel_selection_report.json)
-- [Final model freeze](../data/final_model_freeze.json), [final gene lists](../data/final_panel_genes.csv), and [held-out metrics](../data/final_test_report.json)
-- [Gene interpretation](../data/gene_interpretation.md) and [Luminal review](../data/luminal_error_review.md)
-- [Dataset preparation and provenance](../data/README.md)
-
-Dataset and PAM50 reference sources: [cBioPortal TCGA study](https://www.cbioportal.org/study/summary?id=brca_tcga_pan_can_atlas_2018), [cBioPortal DataHub](https://github.com/cBioPortal/datahub/tree/master/public/brca_tcga_pan_can_atlas_2018), [original PAM50 publication](https://pubmed.ncbi.nlm.nih.gov/19204204/), and [genefu](https://www.bioconductor.org/packages/release/bioc/html/genefu.html). Download checksums and pinned reference revisions are recorded in the project data metadata.
-
-## Limitations and future work
-
-1. **PAM50-derived target labels:** the task measures agreement with an existing molecular labeling system. The fixed PAM50 benchmark shares the biological inputs used by that system; it is not an independent diagnostic ground truth.
-2. **One cohort and limited holdout:** there is no external validation, and some subtype groups are small. No confidence intervals or formal noninferiority tests were estimated. Test rankings are descriptive and did not select a new primary model.
-3. **Upstream processing:** source batch normalization could not be refitted within training folds; transportability across laboratories and platforms remains untested.
-4. **Restricted methods:** ANOVA can retain redundant measurements; panel sizes and tuning grids were limited. Better selection methods or smaller untested panels may exist.
-5. **Laboratory feasibility:** computational gene-count reduction does not establish assay cost, sample requirements, robustness, or clinical utility. Ambiguous identifier rows were excluded, and historical gene aliases remain in source annotations.
-6. **Test set already used:** gene and error interpretation after testing is descriptive. Further optimization would require a new independent evaluation set. No causal biomarker discovery or treatment recommendation follows from these findings.
-
-Future research could validate the frozen panels in an independent cohort with compatible measurements, evaluate calibration, and study selection methods that account for correlated genes. Those are future experiments, not completed findings of this project.
-
-Additional interpretation limits apply to the findings above. Fold standard deviations are not confidence intervals, and score differences do not establish statistical superiority or equivalence. The smallest qualifying panel is the smallest among the sizes tested, not a universal minimum. The study did not compare against an implementation of the original PAM50 classifier, and the supporting test winner does not replace the primary model selected before testing.
-
-Gene weights describe conditional model associations, not biological causes or validated biomarkers; correlated genes can produce unexpected coefficient signs. The PAM50 overlap counts were not subjected to an enrichment significance test. Selection consistency within training folds does not demonstrate reproducibility across independent cohorts. Gene expression and clinical receptor staining are different measurements.
-
-The Luminal error pattern is consistent with a recognized subtyping challenge, but the analysis did not establish why individual errors occurred or demonstrate a significant directional difference. Random forest probability estimates have not been shown to be calibrated; their margins describe model scores rather than diagnostic certainty. A perfect subtype score in this holdout does not guarantee perfect future performance. The historical 2018 cohort does not establish performance in contemporary clinical populations.
+ANOVA selected genes inside each fitting fold. Five outer validation folds assessed models and three inner folds selected settings. Source log transformation, filtering, and scaling were applied within fitting subsets as appropriate. Labels were PAM50-derived, and the PAM50 comparison used the gene list rather than the original classifier. The single-cohort test does not establish clinical validity. [Detailed metrics](../data/final_test_report.json).

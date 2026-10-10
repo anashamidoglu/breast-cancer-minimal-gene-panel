@@ -1,23 +1,23 @@
-# Run the project on Windows
+# Run locally
 
-Use Python 3.12 for this project. The local environment is in `.venv/` and is excluded from Git: it can be recreated rather than uploaded.
+Python 3.12 is recommended.
 
-From the project folder in PowerShell, a new user can run:
+## Results demo
 
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe src/check_environment.py
+The demo reads public aggregate results already in the repository. No dataset download is needed.
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements-demo.txt
+streamlit run app.py
 ```
 
-To open the notebooks:
+## Full analysis
 
-```powershell
-.\.venv\Scripts\python.exe -m jupyterlab
+```bash
+pip install -r requirements.txt
 ```
 
-Open `notebooks/00_getting_started.ipynb`. Run each code cell with Shift + Enter.
-
-The first notebook uses invented practice data, not patient measurements.
-
-On the original computer, the environment was created using Codex's bundled Python 3.12.14 because the Windows Python shortcuts were unavailable. Other users should install Python 3.12 normally before running the commands above.
+See [data/README.md](data/README.md) for preparation and analysis order. Raw data, processed patient-level files, and model artifacts stay local. Analysis stages refuse to overwrite frozen or evaluated outputs; use a separate checkout with a new output directory for a fresh reproduction rather than editing the published results.

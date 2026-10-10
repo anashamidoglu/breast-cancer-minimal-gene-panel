@@ -1,5 +1,5 @@
 {
-  "decision": "User approved excluding Normal-like and missing subtype labels on October 9, 2026.",
+  "decision": "Normal-like and missing subtype labels excluded from the four-class analysis.",
   "patients_before": 1084,
   "patients_retained": 945,
   "excluded_by_reason": {

@@ -39,7 +39,7 @@ def main():
     retained.to_csv(processed / "patient_labels.csv", index=False)
     excluded.to_csv(processed / "label_exclusions.csv", index=False)
     report = {
-        "decision": "User approved excluding Normal-like and missing subtype labels on October 9, 2026.",
+        "decision": "Normal-like and missing subtype labels excluded from the four-class analysis.",
         "patients_before": len(table),
         "patients_retained": len(retained),
         "excluded_by_reason": excluded["reason"].value_counts().to_dict(),

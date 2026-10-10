@@ -1,6 +1,6 @@
 {
   "decision_date": "2026-10-09",
-  "decision": "User approved a tolerance of 2 absolute percentage points before panel-size results were generated.",
+  "decision": "Prespecified a tolerance of 2 absolute percentage points before panel-size results were generated.",
   "primary_metric": "balanced_accuracy",
   "maximum_absolute_drop": 0.02,
   "selection_rule": "Select the smallest evaluated panel with mean training cross-validation balanced accuracy at least the corresponding full-gene reference mean minus 0.02.",
@@ -24,5 +24,5 @@
     100,
     500
   ],
-  "pam50_comparison": "User approved a separate fixed published PAM50 gene-list benchmark; not the original classifier"
+  "pam50_comparison": "Prespecified a separate fixed published PAM50 gene-list benchmark; not the original classifier"
 }
