@@ -4,8 +4,6 @@ A personal data science project exploring whether breast cancer subtype classifi
 
 **Start with 20 genes. Use the full 50-gene panel when the model is uncertain.**
 
-![Staged gene measurement results](figures/portfolio_summary.png)
-
 ## The result
 
 On 916 reserved patients from the independent SCAN-B cohort, the staged approach achieved **91.9% balanced accuracy**, compared with **93.2%** when all 50 genes were used for everyone. It measured **26.4 genes per patient on average**, a **47.2% reduction**. About one in five patients needed the larger panel.
@@ -18,6 +16,12 @@ On 916 reserved patients from the independent SCAN-B cohort, the staged approach
 | Fixed full panel | 50.0 | 93.2% |
 
 The interesting finding: uncertainty helped target extra measurements to patients who benefited more than patients selected at random. Measurement needs also varied by subtype, with Luminal B and HER2-enriched cases escalated most frequently.
+
+![Accuracy versus average gene count](figures/measurement_tradeoff.png)
+
+The staged approach sits between the small and full panels: fewer measurements than the full panel, with a modest accuracy loss.
+
+![Escalation rates by subtype](figures/escalation_by_subtype.png)
 
 ## How it works
 

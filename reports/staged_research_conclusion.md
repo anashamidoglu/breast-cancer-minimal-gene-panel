@@ -2,7 +2,7 @@
 
 On **916 reserved SCAN-B patients**, starting with 20 PAM50 genes and expanding uncertain cases to 50 achieved **91.9% balanced accuracy**, versus **93.2%** using all 50 for everyone. The average was **26.4 genes per patient**, a **47.2% reduction**. Only **21.4%** needed the larger panel.
 
-![Staged measurement results](../figures/portfolio_summary.png)
+![Accuracy versus gene count](../figures/measurement_tradeoff.png)
 
 ## What the experiment showed
 
