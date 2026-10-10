@@ -34,12 +34,7 @@ Gene selection uses ANOVA; prediction uses random forests. The routing rule was 
 - **[Results](reports/staged_research_conclusion.md):** the findings and the experiments behind them.
 - **[Methods](reports/README.md):** a short guide to the technical records.
 - **[Data and reproduction](data/README.md):** sources, preparation, and analysis commands.
-- **[Run the demo](SETUP.md):** an interactive results explorer and routing illustration. No patient data or saved model files are needed.
-
-```bash
-pip install -r requirements-demo.txt
-streamlit run app.py
-```
+- **[Setup](SETUP.md):** install the environment and run the analyses.
 
 ## The experiments
 
@@ -51,4 +46,4 @@ The observed loss was 1.28 percentage points, meeting the practical 2-point targ
 
 ## Implementation
 
-Python, pandas, scikit-learn, XGBoost, matplotlib, and Streamlit. Development used AI-assisted coding. The repository includes source code, fixed protocols, aggregate results, and reproducible analysis steps. Patient-level data and model binaries are excluded from Git.
+Python, pandas, scikit-learn, XGBoost, and matplotlib. Development used AI-assisted coding. The repository includes source code, fixed protocols, aggregate results, and reproducible analysis steps. Patient-level data and model binaries are excluded from Git.

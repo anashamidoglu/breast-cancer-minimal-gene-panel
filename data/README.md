@@ -18,7 +18,7 @@ python src/develop_scanb_staged.py
 python src/evaluate_scanb_holdout.py
 ```
 
-Scripts refuse to overwrite completed stages. For a fresh reproduction, use a separate checkout and archive the published result/freeze files before execution. The results demo needs no downloads.
+Scripts refuse to overwrite completed stages. For a fresh reproduction, use a separate checkout and archive the published result/freeze files before execution.
 
 ## Other analyses
 
