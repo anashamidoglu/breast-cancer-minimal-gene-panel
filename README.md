@@ -96,3 +96,7 @@ Read the [research report](reports/research_findings.md) for the research questi
 ## Staged-panel extension
 
 The first training-only 20-to-100-gene experiment averaged 43.5 genes and achieved 86.3% balanced accuracy, versus 88.5% for 100 genes and 93.1% for fixed PAM50 genes. The staged loss of 2.24 points narrowly missed the planned 2-point target. See the [protocol](reports/staged_panel_protocol.md) and [development findings](reports/staged_training_findings.md). No new independent evaluation has been completed.
+
+## Independent staged-strategy replication
+
+On 916 fresh SCAN-B holdout patients, a frozen 20-to-50 PAM50 strategy achieved 91.9% balanced accuracy using 26.4 genes on average, versus 93.2% for all 50 genes. The 1.28-point observed loss met the practical target, but its paired-bootstrap interval crossed the 2-point boundary. See the [research conclusion](reports/staged_research_conclusion.md) for all experiments and limitations. This is within-SCAN-B training and holdout evaluation, not direct TCGA model transfer.

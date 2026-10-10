@@ -1,0 +1,64 @@
+{
+  "evaluation": "Fresh patient-disjoint SCAN-B holdout after SCAN-B development; independent-cohort strategy replication, not TCGA model transfer.",
+  "evaluated_at_utc": "2026-10-10T11:51:02.245240+00:00",
+  "freeze_sha256": "43c1ab8f53b579a53b958d1af9732d0b5d4d373b8857562856542990b6bb76a7",
+  "holdout_samples": 916,
+  "threshold": 0.45,
+  "models": {
+    "small": {
+      "balanced_accuracy": 0.8836030070913181,
+      "macro_f1": 0.8816496642880988,
+      "recall": {
+        "Basal-like": 0.9215686274509803,
+        "HER2-enriched": 0.8367346938775511,
+        "Luminal A": 0.8993963782696177,
+        "Luminal B": 0.8767123287671232
+      },
+      "correct": 815
+    },
+    "large": {
+      "balanced_accuracy": 0.9321726761320002,
+      "macro_f1": 0.9253380536712372,
+      "recall": {
+        "Basal-like": 0.9313725490196079,
+        "HER2-enriched": 0.9285714285714286,
+        "Luminal A": 0.9235412474849095,
+        "Luminal B": 0.9452054794520548
+      },
+      "correct": 852
+    },
+    "staged": {
+      "balanced_accuracy": 0.9193508003239883,
+      "macro_f1": 0.9133276882573964,
+      "recall": {
+        "Basal-like": 0.9313725490196079,
+        "HER2-enriched": 0.9081632653061225,
+        "Luminal A": 0.9154929577464789,
+        "Luminal B": 0.9223744292237442
+      },
+      "correct": 841
+    }
+  },
+  "average_genes": 26.419213973799128,
+  "escalation_fraction": 0.21397379912663755,
+  "escalated_cases": 196,
+  "difference_from_large": -0.012821875808011862,
+  "paired_stratified_bootstrap_95_interval": [
+    -0.02326417736687575,
+    -0.0036565651246027796
+  ],
+  "bootstrap_repetitions": 5000,
+  "point_estimate_target_met": true,
+  "interval_lower_bound_above_minus_2_points": false,
+  "random_escalation_balanced_accuracy_mean": 0.8944447560038873,
+  "random_escalation_balanced_accuracy_sd": 0.003713030187858021,
+  "errors_corrected": 42,
+  "errors_introduced": 16,
+  "errors_remaining": 29,
+  "escalation_by_subtype": {
+    "Basal-like": 0.058823529411764705,
+    "HER2-enriched": 0.30612244897959184,
+    "Luminal A": 0.18712273641851107,
+    "Luminal B": 0.3059360730593607
+  }
+}
