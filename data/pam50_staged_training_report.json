@@ -1,0 +1,75 @@
+{
+  "panel_family": "PAM50 subset",
+  "small_genes": 20,
+  "large_genes": 50,
+  "evaluation": "Five outer training folds with three inner folds selecting routing thresholds; fixed classifier settings.",
+  "training_samples": 756,
+  "test_used": false,
+  "external_evaluation_completed": false,
+  "models": {
+    "small": {
+      "balanced_accuracy_cv_mean": 0.8967134566524624,
+      "balanced_accuracy_cv_sd": 0.03791031706047069,
+      "macro_f1_cv_mean": 0.8875842817120301,
+      "pooled_recall": {
+        "Basal-like": 0.9781021897810219,
+        "HER2-enriched": 0.8548387096774194,
+        "Luminal A": 0.8972431077694235,
+        "Luminal B": 0.8607594936708861
+      }
+    },
+    "large": {
+      "balanced_accuracy_cv_mean": 0.9310550671737637,
+      "balanced_accuracy_cv_sd": 0.024280205621441512,
+      "macro_f1_cv_mean": 0.9224057602241137,
+      "pooled_recall": {
+        "Basal-like": 0.9781021897810219,
+        "HER2-enriched": 0.9193548387096774,
+        "Luminal A": 0.9172932330827067,
+        "Luminal B": 0.9113924050632911
+      }
+    },
+    "staged": {
+      "balanced_accuracy_cv_mean": 0.9077788574963442,
+      "balanced_accuracy_cv_sd": 0.03610930956542916,
+      "macro_f1_cv_mean": 0.8993351532522198,
+      "pooled_recall": {
+        "Basal-like": 0.9781021897810219,
+        "HER2-enriched": 0.8709677419354839,
+        "Luminal A": 0.9122807017543859,
+        "Luminal B": 0.8734177215189873
+      }
+    },
+    "pam50": {
+      "balanced_accuracy_cv_mean": 0.9310550671737637,
+      "balanced_accuracy_cv_sd": 0.024280205621441512,
+      "macro_f1_cv_mean": 0.9224057602241137,
+      "pooled_recall": {
+        "Basal-like": 0.9781021897810219,
+        "HER2-enriched": 0.9193548387096774,
+        "Luminal A": 0.9172932330827067,
+        "Luminal B": 0.9113924050632911
+      }
+    }
+  },
+  "average_genes": 22.22222222222222,
+  "escalation_fraction": 0.07407407407407407,
+  "random_escalation_balanced_accuracy_cv_mean": 0.8981853712094244,
+  "errors_corrected": 12,
+  "errors_introduced": 3,
+  "errors_remaining": 11,
+  "escalation_by_subtype": {
+    "Basal-like": 0.014598540145985401,
+    "HER2-enriched": 0.03225806451612903,
+    "Luminal A": 0.08771929824561403,
+    "Luminal B": 0.10759493670886076
+  },
+  "tolerance": 0.02,
+  "difference_from_large": -0.0232762096774195,
+  "notes": [
+    "No fresh external validation yet.",
+    "Outer tradeoff curve is descriptive and must not select a new threshold.",
+    "Random-routing SD measures variation among routing draws, not a confidence interval.",
+    "PAM50 comparator uses fixed leaf size 3; earlier PAM50 results used nested setting searches."
+  ]
+}

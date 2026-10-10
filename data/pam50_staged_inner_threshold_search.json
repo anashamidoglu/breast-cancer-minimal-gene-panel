@@ -1,0 +1,772 @@
+[
+  {
+    "fold": 1,
+    "threshold": 0.0,
+    "escalation_fraction": 0.0,
+    "balanced_accuracy": 0.8737537230148067,
+    "eligible": false
+  },
+  {
+    "fold": 1,
+    "threshold": 0.05,
+    "escalation_fraction": 0.03145695364238411,
+    "balanced_accuracy": 0.8780889471776172,
+    "eligible": false
+  },
+  {
+    "fold": 1,
+    "threshold": 0.1,
+    "escalation_fraction": 0.06291390728476821,
+    "balanced_accuracy": 0.8839746870535048,
+    "eligible": false
+  },
+  {
+    "fold": 1,
+    "threshold": 0.15,
+    "escalation_fraction": 0.08443708609271523,
+    "balanced_accuracy": 0.8906441259889536,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.2,
+    "escalation_fraction": 0.11589403973509933,
+    "balanced_accuracy": 0.8957630492113251,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.25,
+    "escalation_fraction": 0.15397350993377484,
+    "balanced_accuracy": 0.898947604120018,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.3,
+    "escalation_fraction": 0.1870860927152318,
+    "balanced_accuracy": 0.9009317311041449,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.35,
+    "escalation_fraction": 0.22350993377483444,
+    "balanced_accuracy": 0.9005150022391402,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.4,
+    "escalation_fraction": 0.26158940397350994,
+    "balanced_accuracy": 0.9052669552669552,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.45,
+    "escalation_fraction": 0.2980132450331126,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.5,
+    "escalation_fraction": 0.33112582781456956,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.55,
+    "escalation_fraction": 0.37748344370860926,
+    "balanced_accuracy": 0.9076180524456386,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.6,
+    "escalation_fraction": 0.41225165562913907,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.65,
+    "escalation_fraction": 0.43543046357615894,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.7,
+    "escalation_fraction": 0.4768211920529801,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.75,
+    "escalation_fraction": 0.5314569536423841,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.8,
+    "escalation_fraction": 0.5728476821192053,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.85,
+    "escalation_fraction": 0.6341059602649006,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.9,
+    "escalation_fraction": 0.7003311258278145,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 0.95,
+    "escalation_fraction": 0.8079470198675497,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": 1.0,
+    "escalation_fraction": 0.9735099337748344,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 1,
+    "threshold": "route_all",
+    "escalation_fraction": 1.0,
+    "balanced_accuracy": 0.9068343533860775,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.0,
+    "escalation_fraction": 0.0,
+    "balanced_accuracy": 0.8938791859481514,
+    "eligible": false
+  },
+  {
+    "fold": 2,
+    "threshold": 0.05,
+    "escalation_fraction": 0.021487603305785124,
+    "balanced_accuracy": 0.8986311389759666,
+    "eligible": false
+  },
+  {
+    "fold": 2,
+    "threshold": 0.1,
+    "escalation_fraction": 0.05454545454545454,
+    "balanced_accuracy": 0.9083830920037818,
+    "eligible": false
+  },
+  {
+    "fold": 2,
+    "threshold": 0.15,
+    "escalation_fraction": 0.07107438016528926,
+    "balanced_accuracy": 0.9083830920037818,
+    "eligible": false
+  },
+  {
+    "fold": 2,
+    "threshold": 0.2,
+    "escalation_fraction": 0.10909090909090909,
+    "balanced_accuracy": 0.9133830920037818,
+    "eligible": false
+  },
+  {
+    "fold": 2,
+    "threshold": 0.25,
+    "escalation_fraction": 0.1371900826446281,
+    "balanced_accuracy": 0.9207341891824651,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.3,
+    "escalation_fraction": 0.17024793388429751,
+    "balanced_accuracy": 0.9203672189879086,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.35,
+    "escalation_fraction": 0.19669421487603306,
+    "balanced_accuracy": 0.9223513459720356,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.4,
+    "escalation_fraction": 0.23140495867768596,
+    "balanced_accuracy": 0.9278869980594119,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.45,
+    "escalation_fraction": 0.2727272727272727,
+    "balanced_accuracy": 0.9326389510872269,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.5,
+    "escalation_fraction": 0.3140495867768595,
+    "balanced_accuracy": 0.933422650146788,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.55,
+    "escalation_fraction": 0.3537190082644628,
+    "balanced_accuracy": 0.935406777130915,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.6,
+    "escalation_fraction": 0.38181818181818183,
+    "balanced_accuracy": 0.935406777130915,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.65,
+    "escalation_fraction": 0.4231404958677686,
+    "balanced_accuracy": 0.935406777130915,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.7,
+    "escalation_fraction": 0.46611570247933887,
+    "balanced_accuracy": 0.935406777130915,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.75,
+    "escalation_fraction": 0.509090909090909,
+    "balanced_accuracy": 0.935406777130915,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.8,
+    "escalation_fraction": 0.5702479338842975,
+    "balanced_accuracy": 0.935406777130915,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.85,
+    "escalation_fraction": 0.631404958677686,
+    "balanced_accuracy": 0.9361904761904761,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.9,
+    "escalation_fraction": 0.6909090909090909,
+    "balanced_accuracy": 0.9361904761904761,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 0.95,
+    "escalation_fraction": 0.8049586776859504,
+    "balanced_accuracy": 0.9361904761904761,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": 1.0,
+    "escalation_fraction": 0.9752066115702479,
+    "balanced_accuracy": 0.9361904761904761,
+    "eligible": true
+  },
+  {
+    "fold": 2,
+    "threshold": "route_all",
+    "escalation_fraction": 1.0,
+    "balanced_accuracy": 0.9361904761904761,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.0,
+    "escalation_fraction": 0.0,
+    "balanced_accuracy": 0.8972067194650624,
+    "eligible": false
+  },
+  {
+    "fold": 3,
+    "threshold": 0.05,
+    "escalation_fraction": 0.02975206611570248,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": false
+  },
+  {
+    "fold": 3,
+    "threshold": 0.1,
+    "escalation_fraction": 0.07107438016528926,
+    "balanced_accuracy": 0.9078144256334528,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.15,
+    "escalation_fraction": 0.10743801652892562,
+    "balanced_accuracy": 0.9089992305108996,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.2,
+    "escalation_fraction": 0.12727272727272726,
+    "balanced_accuracy": 0.9149047423219232,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.25,
+    "escalation_fraction": 0.14710743801652892,
+    "balanced_accuracy": 0.9149047423219232,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.3,
+    "escalation_fraction": 0.18677685950413223,
+    "balanced_accuracy": 0.9168732462589311,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.35,
+    "escalation_fraction": 0.20991735537190082,
+    "balanced_accuracy": 0.9176569453184922,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.4,
+    "escalation_fraction": 0.24462809917355371,
+    "balanced_accuracy": 0.9219765464341835,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.45,
+    "escalation_fraction": 0.29256198347107437,
+    "balanced_accuracy": 0.9219765464341835,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.5,
+    "escalation_fraction": 0.31239669421487604,
+    "balanced_accuracy": 0.9227602454937446,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.55,
+    "escalation_fraction": 0.34049586776859503,
+    "balanced_accuracy": 0.9207917415567367,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.6,
+    "escalation_fraction": 0.37355371900826445,
+    "balanced_accuracy": 0.9215754406162979,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.65,
+    "escalation_fraction": 0.41983471074380163,
+    "balanced_accuracy": 0.9215754406162979,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.7,
+    "escalation_fraction": 0.456198347107438,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.75,
+    "escalation_fraction": 0.49421487603305786,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.8,
+    "escalation_fraction": 0.5454545454545454,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.85,
+    "escalation_fraction": 0.6132231404958678,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.9,
+    "escalation_fraction": 0.6942148760330579,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 0.95,
+    "escalation_fraction": 0.7900826446280992,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": 1.0,
+    "escalation_fraction": 0.9669421487603306,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 3,
+    "threshold": "route_all",
+    "escalation_fraction": 1.0,
+    "balanced_accuracy": 0.922359139675859,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.0,
+    "escalation_fraction": 0.0,
+    "balanced_accuracy": 0.8823369313780127,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.05,
+    "escalation_fraction": 0.02975206611570248,
+    "balanced_accuracy": 0.8881664114157942,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.1,
+    "escalation_fraction": 0.05785123966942149,
+    "balanced_accuracy": 0.8932697115910466,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.15,
+    "escalation_fraction": 0.09752066115702479,
+    "balanced_accuracy": 0.8940534106506077,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.2,
+    "escalation_fraction": 0.11900826446280992,
+    "balanced_accuracy": 0.8918056136471767,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.25,
+    "escalation_fraction": 0.14710743801652892,
+    "balanced_accuracy": 0.8960219145876156,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.3,
+    "escalation_fraction": 0.18016528925619835,
+    "balanced_accuracy": 0.8924860125314855,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.35,
+    "escalation_fraction": 0.20826446280991737,
+    "balanced_accuracy": 0.8932697115910466,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.4,
+    "escalation_fraction": 0.23305785123966943,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.45,
+    "escalation_fraction": 0.26776859504132233,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.5,
+    "escalation_fraction": 0.3090909090909091,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.55,
+    "escalation_fraction": 0.3537190082644628,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.6,
+    "escalation_fraction": 0.3851239669421488,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.65,
+    "escalation_fraction": 0.428099173553719,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.7,
+    "escalation_fraction": 0.456198347107438,
+    "balanced_accuracy": 0.8898371097101688,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.75,
+    "escalation_fraction": 0.5024793388429752,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.8,
+    "escalation_fraction": 0.5586776859504132,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.85,
+    "escalation_fraction": 0.631404958677686,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.9,
+    "escalation_fraction": 0.7107438016528925,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 0.95,
+    "escalation_fraction": 0.824793388429752,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": 1.0,
+    "escalation_fraction": 0.9702479338842975,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 4,
+    "threshold": "route_all",
+    "escalation_fraction": 1.0,
+    "balanced_accuracy": 0.8948371097101689,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.0,
+    "escalation_fraction": 0.0,
+    "balanced_accuracy": 0.8819165829210472,
+    "eligible": false
+  },
+  {
+    "fold": 5,
+    "threshold": 0.05,
+    "escalation_fraction": 0.03140495867768595,
+    "balanced_accuracy": 0.8933306277056278,
+    "eligible": false
+  },
+  {
+    "fold": 5,
+    "threshold": 0.1,
+    "escalation_fraction": 0.0743801652892562,
+    "balanced_accuracy": 0.9004238816738817,
+    "eligible": false
+  },
+  {
+    "fold": 5,
+    "threshold": 0.15,
+    "escalation_fraction": 0.09917355371900827,
+    "balanced_accuracy": 0.9094321724902082,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.2,
+    "escalation_fraction": 0.1256198347107438,
+    "balanced_accuracy": 0.9117759224902082,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.25,
+    "escalation_fraction": 0.16033057851239668,
+    "balanced_accuracy": 0.9168779633065347,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.3,
+    "escalation_fraction": 0.1933884297520661,
+    "balanced_accuracy": 0.9168779633065347,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.35,
+    "escalation_fraction": 0.21818181818181817,
+    "balanced_accuracy": 0.9215583771387342,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.4,
+    "escalation_fraction": 0.2396694214876033,
+    "balanced_accuracy": 0.9243237541228613,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.45,
+    "escalation_fraction": 0.2743801652892562,
+    "balanced_accuracy": 0.9215583771387342,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.5,
+    "escalation_fraction": 0.3074380165289256,
+    "balanced_accuracy": 0.9231208771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.55,
+    "escalation_fraction": 0.3371900826446281,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.6,
+    "escalation_fraction": 0.3685950413223141,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.65,
+    "escalation_fraction": 0.4033057851239669,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.7,
+    "escalation_fraction": 0.4413223140495868,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.75,
+    "escalation_fraction": 0.4859504132231405,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.8,
+    "escalation_fraction": 0.5454545454545454,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.85,
+    "escalation_fraction": 0.5801652892561984,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.9,
+    "escalation_fraction": 0.6595041322314049,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 0.95,
+    "escalation_fraction": 0.7636363636363637,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": 1.0,
+    "escalation_fraction": 0.9586776859504132,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  },
+  {
+    "fold": 5,
+    "threshold": "route_all",
+    "escalation_fraction": 1.0,
+    "balanced_accuracy": 0.9246833771387343,
+    "eligible": true
+  }
+]

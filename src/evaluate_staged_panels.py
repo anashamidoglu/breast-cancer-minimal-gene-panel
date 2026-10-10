@@ -1,4 +1,5 @@
 """Nested training-only assessment of the prespecified 20-to-100 gene strategy."""
+import argparse
 import json
 import hashlib
 
@@ -11,8 +12,12 @@ from sklearn.preprocessing import LabelEncoder
 from threadpoolctl import threadpool_limits
 
 from evaluate_panels import panel_specification
-from tune_models import ROOT
+from tune_models import ROOT, specification
 
+
+SMALL_COUNT = 20
+LARGE_COUNT = 100
+PAM_ONLY = False
 
 def margin(probability):
     ordered = np.sort(probability, axis=1)
@@ -20,14 +25,14 @@ def margin(probability):
 
 
 def fit_pair(x, y):
-    small, _ = panel_specification('random_forest', 20)
-    large, _ = panel_specification('random_forest', 100)
+    small, _ = panel_specification('random_forest', SMALL_COUNT)
+    large, _ = panel_specification('random_forest', LARGE_COUNT)
     for pipeline in [small, large]:
         pipeline.set_params(model__min_samples_leaf=3).fit(x, y)
     survivors = x.columns[large['variance'].get_support()]
     chosen_small = set(survivors[small['genes'].get_support()])
     chosen_large = set(survivors[large['genes'].get_support()])
-    assert chosen_small <= chosen_large and len(chosen_small) == 20 and len(chosen_large) == 100
+    assert chosen_small <= chosen_large and len(chosen_small) == SMALL_COUNT and len(chosen_large) == LARGE_COUNT
     np.testing.assert_allclose(small['genes'].scores_, large['genes'].scores_)
     return small, large
 
@@ -52,7 +57,14 @@ def choose_threshold(x, y, seed):
 
 
 def main():
-    output = ROOT / 'data/staged_training_report.json'
+    global LARGE_COUNT, PAM_ONLY
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pam50-staged', action='store_true')
+    args = parser.parse_args()
+    PAM_ONLY = args.pam50_staged
+    LARGE_COUNT = 50 if PAM_ONLY else 100
+    prefix = 'pam50_staged' if PAM_ONLY else 'staged'
+    output = ROOT / f'data/{prefix}_training_report.json'
     if output.exists():
         raise RuntimeError('Results already exist; refusing to repeat or overwrite.')
     processed = ROOT / 'data/processed'
@@ -66,6 +78,9 @@ def main():
     encoder = LabelEncoder().fit(train.subtype)
     y = encoder.transform(train.subtype)
     pam = pd.read_csv(ROOT / 'data/pam50_gene_mapping.csv').feature_id.tolist()
+    if PAM_ONLY:
+        assert len(pam) == 50 and len(set(pam)) == 50
+        x = x.loc[:, pam]
     oof = train.copy()
     scores, searches, curves = [], [], []
     for name in ['small', 'large', 'staged', 'pam50']:
@@ -79,7 +94,6 @@ def main():
         with threadpool_limits(limits=2):
             selected, inner, reference = choose_threshold(x.iloc[fit], y[fit], 42 + int(fold))
             small, large = fit_pair(x.iloc[fit], y[fit])
-            from tune_models import specification
             pam_model, _ = specification('random_forest')
             pam_model.set_params(model__min_samples_leaf=3).fit(x.iloc[fit].loc[:, pam], y[fit])
             p = small.predict_proba(x.iloc[validation])
@@ -101,7 +115,7 @@ def main():
             random_route = np.zeros(len(validation), dtype=bool)
             random_route[rng.choice(len(validation), count, replace=False)] = True
             random_scores.append(balanced_accuracy_score(y[validation], np.where(random_route, b, a)))
-        row = dict(fold=int(fold), selected_threshold=threshold, inner_large_reference=reference, inner_staged_score=selected['balanced_accuracy'], escalation_fraction=float(route.mean()), average_genes=float(20 + 80*route.mean()), random_escalation_balanced_accuracy_mean=float(np.mean(random_scores)), random_escalation_balanced_accuracy_sd=float(np.std(random_scores, ddof=1)))
+        row = dict(fold=int(fold), selected_threshold=threshold, inner_large_reference=reference, inner_staged_score=selected['balanced_accuracy'], escalation_fraction=float(route.mean()), average_genes=float(SMALL_COUNT + (LARGE_COUNT-SMALL_COUNT)*route.mean()), random_escalation_balanced_accuracy_mean=float(np.mean(random_scores)), random_escalation_balanced_accuracy_sd=float(np.std(random_scores, ddof=1)))
         for name, prediction in predictions.items():
             row[name + '_balanced_accuracy'] = float(balanced_accuracy_score(y[validation], prediction))
             row[name + '_macro_f1'] = float(f1_score(y[validation], prediction, average='macro'))
@@ -113,27 +127,27 @@ def main():
         # A descriptive outer curve, not used to select thresholds or a new model.
         for t in [round(i*.05, 2) for i in range(21)] + ['route_all']:
             mask = np.ones(len(validation), dtype=bool) if t == 'route_all' else margin(p) < t
-            curves.append(dict(fold=int(fold), threshold=t, average_genes=float(20+80*mask.mean()), balanced_accuracy=float(balanced_accuracy_score(y[validation], np.where(mask,b,a)))))
+            curves.append(dict(fold=int(fold), threshold=t, average_genes=float(SMALL_COUNT+(LARGE_COUNT-SMALL_COUNT)*mask.mean()), balanced_accuracy=float(balanced_accuracy_score(y[validation], np.where(mask,b,a)))))
         print(f"Fold {fold}: threshold={threshold}; genes={row['average_genes']:.1f}; staged={row['staged_balanced_accuracy']:.3f}; large={row['large_balanced_accuracy']:.3f}", flush=True)
     frame = pd.DataFrame(scores)
     assert not (oof.filter(like='_prediction') < 0).any().any()
-    oof.to_csv(processed / 'staged_training_oof_predictions.csv', index=False)
-    frame.to_csv(ROOT / 'data/staged_training_cv_folds.csv', index=False)
-    pd.DataFrame(curves).to_csv(ROOT / 'data/staged_training_tradeoff.csv', index=False)
-    (ROOT / 'data/staged_inner_threshold_search.json').write_text(json.dumps(searches, indent=2)+'\n')
+    oof.to_csv(processed / f'{prefix}_training_oof_predictions.csv', index=False)
+    frame.to_csv(ROOT / f'data/{prefix}_training_cv_folds.csv', index=False)
+    pd.DataFrame(curves).to_csv(ROOT / f'data/{prefix}_training_tradeoff.csv', index=False)
+    (ROOT / f'data/{prefix}_inner_threshold_search.json').write_text(json.dumps(searches, indent=2)+'\n')
     models = {}
     for name in ['small','large','staged','pam50']:
         models[name] = dict(balanced_accuracy_cv_mean=float(frame[name+'_balanced_accuracy'].mean()), balanced_accuracy_cv_sd=float(frame[name+'_balanced_accuracy'].std(ddof=1)), macro_f1_cv_mean=float(frame[name+'_macro_f1'].mean()), pooled_recall=dict(zip(encoder.classes_, recall_score(y,oof[name+'_prediction'],average=None).tolist())))
-    result = dict(evaluation='Five outer training folds with three inner folds selecting routing thresholds; fixed classifier settings.', training_samples=len(train), test_used=False, external_evaluation_completed=False, models=models, average_genes=float(20+80*oof.escalated.mean()), escalation_fraction=float(oof.escalated.mean()), random_escalation_balanced_accuracy_cv_mean=float(frame.random_escalation_balanced_accuracy_mean.mean()), errors_corrected=int(frame.errors_corrected.sum()), errors_introduced=int(frame.errors_introduced.sum()), errors_remaining=int(frame.errors_remaining.sum()), escalation_by_subtype=oof.groupby('subtype').escalated.mean().to_dict(), tolerance=.02, difference_from_large=models['staged']['balanced_accuracy_cv_mean']-models['large']['balanced_accuracy_cv_mean'], notes=['No fresh external validation yet.', 'Outer tradeoff curve is descriptive and must not select a new threshold.', 'Random-routing SD measures variation among routing draws, not a confidence interval.', 'PAM50 comparator uses fixed leaf size 3; earlier PAM50 results used nested setting searches.'])
+    result = dict(panel_family='PAM50 subset' if PAM_ONLY else 'All-gene ANOVA', small_genes=SMALL_COUNT, large_genes=LARGE_COUNT, evaluation='Five outer training folds with three inner folds selecting routing thresholds; fixed classifier settings.', training_samples=len(train), test_used=False, external_evaluation_completed=False, models=models, average_genes=float(SMALL_COUNT+(LARGE_COUNT-SMALL_COUNT)*oof.escalated.mean()), escalation_fraction=float(oof.escalated.mean()), random_escalation_balanced_accuracy_cv_mean=float(frame.random_escalation_balanced_accuracy_mean.mean()), errors_corrected=int(frame.errors_corrected.sum()), errors_introduced=int(frame.errors_introduced.sum()), errors_remaining=int(frame.errors_remaining.sum()), escalation_by_subtype=oof.groupby('subtype').escalated.mean().to_dict(), tolerance=.02, difference_from_large=models['staged']['balanced_accuracy_cv_mean']-models['large']['balanced_accuracy_cv_mean'], notes=['No fresh external validation yet.', 'Outer tradeoff curve is descriptive and must not select a new threshold.', 'Random-routing SD measures variation among routing draws, not a confidence interval.', 'PAM50 comparator uses fixed leaf size 3; earlier PAM50 results used nested setting searches.'])
     output.write_text(json.dumps(result, indent=2)+'\n')
     fig, ax = plt.subplots(figsize=(8,5))
     curve = pd.DataFrame(curves).groupby('threshold',sort=False)[['average_genes','balanced_accuracy']].mean().sort_values('average_genes')
     ax.plot(curve.average_genes,curve.balanced_accuracy,color='#999999',label='Descriptive threshold curve')
-    for name,count,color in [('small',20,'#4477AA'),('large',100,'#228833'),('pam50',50,'#AA3377'),('staged',result['average_genes'],'#CC6677')]:
+    for name,count,color in [('small',SMALL_COUNT,'#4477AA'),('large',LARGE_COUNT,'#228833'),('pam50',50,'#AA3377'),('staged',result['average_genes'],'#CC6677')]:
         ax.scatter(count,models[name]['balanced_accuracy_cv_mean'],color=color,s=70,label=name)
     ax.scatter(result['average_genes'],result['random_escalation_balanced_accuracy_cv_mean'],marker='x',color='black',label='Random escalation, equal burden')
-    ax.set(xlim=(15,105),ylim=(0,1),xlabel='Average distinct genes per patient',ylabel='Mean outer-fold balanced accuracy',title='Training-only staged panel evaluation')
-    ax.legend(loc='lower right');fig.tight_layout();fig.savefig(ROOT/'figures/staged_training_tradeoff.png',dpi=180);fig.savefig(ROOT/'figures/staged_training_tradeoff.svg');plt.close(fig)
+    ax.set(xlim=(15,LARGE_COUNT+5),ylim=(0,1),xlabel='Average distinct genes per patient',ylabel='Mean outer-fold balanced accuracy',title='Training-only staged panel evaluation')
+    ax.legend(loc='lower right');fig.tight_layout();fig.savefig(ROOT/f'figures/{prefix}_training_tradeoff.png',dpi=180);fig.savefig(ROOT/f'figures/{prefix}_training_tradeoff.svg');plt.close(fig)
     print(json.dumps(result,indent=2),flush=True)
 
 
