@@ -1,0 +1,13 @@
+{
+  "required_genes": 50,
+  "mapped_genes": 50,
+  "primary_samples": 3273,
+  "source_rows": 30865,
+  "expression_transform": "Source log2(FPKM + 0.1); no further log transform.",
+  "aliases": {
+    "ORC6L": "ORC6"
+  },
+  "source_sha256": "3c717baf7960e1f1477a72744a399a42fabba113c9e7ecb3d55997574d7e9732",
+  "finite": true,
+  "model_performance_inspected": false
+}

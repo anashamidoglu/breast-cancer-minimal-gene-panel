@@ -1,0 +1,19 @@
+{
+  "frozen_at_utc": "2026-10-10T11:50:33.365008+00:00",
+  "threshold": 0.45,
+  "artifact": "data\\processed\\scanb\\staged_models.joblib",
+  "artifact_sha256": "001d8744eb6125220f5b857cd92223125f20dd016824341f11c088abee847688",
+  "small_genes": 20,
+  "large_genes": 50,
+  "inner_margin": 0.01,
+  "final_margin": 0.02,
+  "membership_sha256": {
+    "metadata.csv": "3a396c475bf27ec09242cd89e552994b27c7553b1635f9329ef6edfb97eeadae",
+    "development_labels.csv": "21fa7bcf7544f50a7ca2a69d047f0b79ceb8fd9b84a78267cf6a79e3655d2f18",
+    "holdout_labels.csv": "e02353674fe0d00809766ea28a30cd95e1c549b3fa5376c891437fdfb63d1ca4"
+  },
+  "expression_mapping_sha256": "f447337b5069f3cac62ab6513157880da17289781e4cc876d761fb7ff4471074",
+  "expression_artifact_sha256": "d1544758a45fbc808f2bcf69a0ca5739c55097fda7e07ae5cb70ded5b8f4a5a3",
+  "protocol_sha256": "62abb155324846069c13370e82a6e933ca89da03f7133e8e1bada89786457742",
+  "holdout_evaluated": false
+}

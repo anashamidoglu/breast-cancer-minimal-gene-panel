@@ -1,0 +1,25 @@
+{
+  "development_samples": 2136,
+  "models": {
+    "small": {
+      "balanced_accuracy_cv_mean": 0.8776536937517891,
+      "balanced_accuracy_cv_sd": 0.017293798257099712
+    },
+    "large": {
+      "balanced_accuracy_cv_mean": 0.9283747180435646,
+      "balanced_accuracy_cv_sd": 0.013924384561465901
+    },
+    "staged": {
+      "balanced_accuracy_cv_mean": 0.921677061969641,
+      "balanced_accuracy_cv_sd": 0.011867605525340469
+    }
+  },
+  "mean_fold_average_genes": 27.304000963032678,
+  "final_rule": {
+    "threshold": 0.45,
+    "escalation_fraction": 0.2565543071161049,
+    "balanced_accuracy": 0.9188700117941042,
+    "eligible": true
+  },
+  "holdout_used": false
+}
