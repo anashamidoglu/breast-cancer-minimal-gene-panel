@@ -8,9 +8,11 @@ Raw data, patient-level outputs, and model binaries stay local. Download and spl
 
 ## Reproduce SCAN-B
 
-Use Python 3.12 and `requirements.txt`. Download the official `GSE96058_family.soft.gz` from the GEO `soft/` directory into `data/raw/scanb/` first.
+Use Python 3.12 and install `requirements.txt` first. Create a separate workspace that contains source code, protocols, source-version pins, and the published PAM50 gene list, without the completed model/results files:
 
 ```bash
+python src/create_reproduction_workspace.py
+cd reproductions/fresh-run
 python src/download_scanb.py
 python src/prepare_scanb_metadata.py
 python src/prepare_scanb_expression.py
@@ -18,7 +20,9 @@ python src/develop_scanb_staged.py
 python src/evaluate_scanb_holdout.py
 ```
 
-Scripts refuse to overwrite completed stages. For a fresh reproduction, use a separate checkout and archive the published result/freeze files before execution.
+The downloader fetches both official expression and SOFT metadata, checking them against the recorded source checksums. The expression download is approximately 564 MB. Model development takes substantially longer than viewing the saved results. Use the same activated Python environment after changing directories.
+
+The workspace is ignored by Git. An existing destination is never overwritten; choose another with `--destination reproductions/another-run`. Membership hashes in the copied split report are checked during metadata preparation. Final model serialization/checksums can vary by platform or dependency versions even when seeds and metrics match.
 
 ## Other analyses
 

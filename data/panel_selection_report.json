@@ -43,5 +43,5 @@
     }
   ],
   "test_evaluated": false,
-  "note": "Stars are the prespecified practical elbow markers, not geometric knees or statistical noninferiority claims. Panel size was selected using training CV; independent final test evaluation remains pending."
+  "note": "Stars are the prespecified practical elbow markers, not geometric knees or statistical noninferiority claims. Panel size was selected using training CV; held-out results are recorded separately in final_test_report.json."
 }

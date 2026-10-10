@@ -93,7 +93,7 @@ def main():
     (ROOT/'data/scanb_threshold_search.json').write_text(json.dumps(searches,indent=2)+'\n')
     report=dict(development_samples=len(labels),models={name:dict(balanced_accuracy_cv_mean=float(frame[name+'_balanced_accuracy'].mean()),balanced_accuracy_cv_sd=float(frame[name+'_balanced_accuracy'].std(ddof=1))) for name in ['small','large','staged']},mean_fold_average_genes=float(frame.average_genes.mean()),final_rule=rule,holdout_used=False)
     (ROOT/'data/scanb_development_report.json').write_text(json.dumps(report,indent=2)+'\n')
-    freeze=dict(frozen_at_utc=datetime.now(timezone.utc).isoformat(),threshold=rule['threshold'],artifact=str(artifact.relative_to(ROOT)),artifact_sha256=sha(artifact),small_genes=20,large_genes=50,inner_margin=.01,final_margin=.02,membership_sha256=split['membership_sha256'],expression_mapping_sha256=sha(ROOT/'data/scanb_pam50_mapping.csv'),expression_artifact_sha256=sha(directory/'pam50_expression.parquet'),protocol_sha256=sha(ROOT/'reports/scanb_replication_protocol.md'),holdout_evaluated=False)
+    freeze=dict(frozen_at_utc=datetime.now(timezone.utc).isoformat(),threshold=rule['threshold'],artifact=artifact.relative_to(ROOT).as_posix(),artifact_sha256=sha(artifact),small_genes=20,large_genes=50,inner_margin=.01,final_margin=.02,membership_sha256=split['membership_sha256'],expression_mapping_sha256=sha(ROOT/'data/scanb_pam50_mapping.csv'),expression_artifact_sha256=sha(directory/'pam50_expression.parquet'),protocol_sha256=sha(ROOT/'reports/scanb_replication_protocol.md'),holdout_evaluated=False)
     freeze_path.write_text(json.dumps(freeze,indent=2)+'\n')
     print(json.dumps(report,indent=2),flush=True)
 

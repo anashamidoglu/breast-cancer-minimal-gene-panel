@@ -12,15 +12,23 @@ from inspect_dataset import ROOT
 
 def main():
     raw = ROOT / "data" / "raw"
-    response = requests.get("https://api.github.com/repos/bhklab/genefu", timeout=60)
-    response.raise_for_status()
-    branch = response.json()["default_branch"]
-    response = requests.get(f"https://api.github.com/repos/bhklab/genefu/commits/{branch}", timeout=60)
-    response.raise_for_status()
-    commit = response.json()["sha"]
+    raw.mkdir(parents=True, exist_ok=True)
+    manifest_path = ROOT / "data/pam50_reference.json"
+    recorded = json.loads(manifest_path.read_text()) if manifest_path.exists() else None
+    if recorded:
+        commit = recorded["repository_commit"]
+    else:
+        response = requests.get("https://api.github.com/repos/bhklab/genefu", timeout=60)
+        response.raise_for_status()
+        branch = response.json()["default_branch"]
+        response = requests.get(f"https://api.github.com/repos/bhklab/genefu/commits/{branch}", timeout=60)
+        response.raise_for_status()
+        commit = response.json()["sha"]
     url = f"https://raw.githubusercontent.com/bhklab/genefu/{commit}/data/pam50.rda"
     response = requests.get(url, timeout=60)
     response.raise_for_status()
+    if recorded and hashlib.sha256(response.content).hexdigest() != recorded["source_sha256"]:
+        raise ValueError("PAM50 reference checksum differs from the recorded source.")
     path = raw / "pam50_reference.rda"
     path.write_bytes(response.content)
     reference = rdata.read_rda(path)["pam50"]

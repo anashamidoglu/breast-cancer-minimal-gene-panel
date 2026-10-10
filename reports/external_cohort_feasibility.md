@@ -1,4 +1,6 @@
-# Independent cohort feasibility: initial audit
+# Independent cohort feasibility: historical initial audit
+
+This note records the assessment before SCAN-B preparation. That work is now complete: all 50 genes were mapped, technical replicates were excluded, and the strategy was retrained within SCAN-B and tested on 916 reserved cases. See the [completed findings](staged_research_conclusion.md) and [frozen protocol](scanb_replication_protocol.md). The prospective statements below describe the original planning stage.
 
 SCAN-B GSE96058 is a promising independent RNA-seq candidate. The official GEO record reports 3,273 cases plus 136 technical replicates (3,409 profiles), PAM50 subtyping, and a 564.3 MB compressed transformed gene-expression file. Source: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96058
 

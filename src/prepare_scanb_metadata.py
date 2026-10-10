@@ -11,6 +11,10 @@ from tune_models import ROOT
 
 def main():
     source = ROOT / 'data/raw/scanb/GSE96058_family.soft.gz'
+    record = ROOT / 'data/scanb_split_report.json'
+    recorded = json.loads(record.read_text()) if record.exists() else None
+    if recorded and hashlib.sha256(source.read_bytes()).hexdigest() != recorded['source_sha256']:
+        raise ValueError('SOFT metadata differs from the recorded snapshot.')
     text = gzip.decompress(source.read_bytes()).decode()
     rows = []
     for block in text.split('^SAMPLE = ')[1:]:
@@ -40,11 +44,13 @@ def main():
     assert len(retained) == 3052
     development, holdout = train_test_split(retained, test_size=.30, stratify=retained.subtype, random_state=20261010)
     directory = ROOT / 'data/processed/scanb'
-    directory.mkdir(exist_ok=True)
+    directory.mkdir(parents=True, exist_ok=True)
     checksums = {}
     for name, frame in [('metadata.csv', metadata), ('development_labels.csv', development.sort_values('sampleId')), ('holdout_labels.csv', holdout.sort_values('sampleId'))]:
         path = directory / name
         data = frame.to_csv(index=False).encode()
+        if recorded and hashlib.sha256(data).hexdigest() != recorded['membership_sha256'][name]:
+            raise RuntimeError('Reproduced metadata or split differs from the published membership.')
         if path.exists() and path.read_bytes() != data:
             raise RuntimeError('Refusing to change frozen SCAN-B metadata or split.')
         path.write_bytes(data)

@@ -12,6 +12,13 @@ from tune_models import ROOT
 
 def main():
     source = ROOT / 'data/raw/scanb/GSE96058_gene_expression_3273_samples_and_136_replicates_transformed.csv.gz'
+    directory = ROOT / 'data/processed/scanb'
+    if (directory / 'pam50_expression.parquet').exists():
+        raise RuntimeError('Expression already prepared; use an isolated reproduction workspace.')
+    expected = json.loads((ROOT / 'data/scanb_download.json').read_text())['sha256']
+    with source.open('rb') as stream:
+        if hashlib.file_digest(stream, 'sha256').hexdigest() != expected:
+            raise ValueError('SCAN-B expression checksum differs from the recorded source.')
     reference = pd.read_csv(ROOT / 'data/pam50_gene_mapping.csv')
     aliases = {'ORC6L': 'ORC6'}
     candidates = {row.feature_id: set([row.Hugo_Symbol, row.pam50_source_symbol, aliases.get(row.Hugo_Symbol, row.Hugo_Symbol)]) for row in reference.itertuples()}

@@ -17,6 +17,7 @@ def main():
     if output.exists():raise RuntimeError('Holdout already evaluated; inspect saved results.')
     plan_path=ROOT/'data/scanb_model_freeze.json';plan=json.loads(plan_path.read_text())
     directory=ROOT/'data/processed/scanb'
+    assert sha(ROOT/'data/scanb_pam50_mapping.csv')==plan['expression_mapping_sha256']
     assert sha(ROOT/plan['artifact'])==plan['artifact_sha256']
     assert sha(directory/'pam50_expression.parquet')==plan['expression_artifact_sha256']
     assert sha(ROOT/'reports/scanb_replication_protocol.md')==plan['protocol_sha256']
@@ -27,6 +28,9 @@ def main():
     x=pd.read_parquet(directory/'pam50_expression.parquet',filters=[('sampleId','in',labels.sampleId.tolist())]).loc[labels.sampleId,saved['feature_ids']]
     with threadpool_limits(limits=2):
         p=saved['small'].predict_proba(x);a=p.argmax(axis=1);b=saved['large'].predict(x).astype(int)
+    assert np.isfinite(p).all()
+    np.testing.assert_array_equal(saved['small'].classes_,np.arange(len(classes)))
+    np.testing.assert_array_equal(saved['large'].classes_,np.arange(len(classes)))
     np.testing.assert_allclose(p.sum(axis=1),1)
     threshold=plan['threshold'];route=np.ones(len(y),dtype=bool) if threshold=='route_all' else margin(p)<threshold
     staged=np.where(route,b,a)

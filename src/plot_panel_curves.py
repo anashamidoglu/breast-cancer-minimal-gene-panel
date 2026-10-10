@@ -89,7 +89,7 @@ def main():
                 Line2D([0], [0], marker="s", markersize=7, markerfacecolor="white", color="#666666", linestyle="None", label="Fixed PAM50 gene-set benchmark")]
     ax.legend(handles=handles, loc="lower right", fontsize=9, framealpha=0.95)
     fig.text(0.5, 0.02, "Five outer training folds; selection and tuning inside fitting folds. Shading: mean ± fold SD, not confidence intervals.\n"
-             "Squares use our models on the PAM50 gene list; they are not the original PAM50 classifier. Test set unused.\n"
+             "Squares use the fitted models on the PAM50 gene list, not the original PAM50 classifier. Training validation only.\n"
              "Smallest qualifying automatic panels: L1 logistic 100 genes; random forest 100 genes; XGBoost 500 genes.",
              ha="center", va="bottom", fontsize=9)
     fig.tight_layout(rect=(0, 0.10, 1, 1))
@@ -100,7 +100,7 @@ def main():
     pd.DataFrame(stability_rows).to_csv(ROOT / "data" / "panel_selection_stability.csv", index=False)
     report = {"absolute_tolerance": tolerance, "selection_method": "ANOVA F-score within each inner/outer fit",
               "selection": choices, "test_evaluated": False,
-              "note": "Stars are the prespecified practical elbow markers, not geometric knees or statistical noninferiority claims. Panel size was selected using training CV; independent final test evaluation remains pending."}
+              "note": "Stars are the prespecified practical elbow markers, not geometric knees or statistical noninferiority claims. Panel size was selected using training CV; held-out results are recorded separately in final_test_report.json."}
     (ROOT / "data" / "panel_selection_report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
 

@@ -15,7 +15,7 @@ On 916 reserved patients from the independent SCAN-B cohort, the staged approach
 | Uncertainty-based escalation | 26.4 | 91.9% |
 | Fixed full panel | 50.0 | 93.2% |
 
-The interesting finding: uncertainty helped target extra measurements to patients who benefited more than patients selected at random. Measurement needs also varied by subtype, with Luminal B and HER2-enriched cases escalated most frequently.
+The interesting finding: uncertainty helped target extra measurements to patients who benefited more than patients selected at random. Escalation rates also varied by subtype, with Luminal B and HER2-enriched cases escalated most frequently.
 
 ![Accuracy versus average gene count](figures/measurement_tradeoff.png)
 

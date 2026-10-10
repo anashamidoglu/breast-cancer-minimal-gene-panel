@@ -62,17 +62,17 @@ def main():
                 np.testing.assert_allclose(compact.predict_proba(x.loc[:, chosen]), fitted.predict_proba(inputs), atol=1e-12)
             artifact = processed / f'{case_id}_final_model.joblib'
             joblib.dump(dict(pipeline=compact, feature_ids=chosen.tolist(), class_names=encoder.classes_.tolist(), training_membership_sha256=sha(train_path)), artifact)
-            cases.append(dict(case_id=case_id, model=name, family=family, genes=k, artifact=str(artifact.relative_to(ROOT)), artifact_sha256=sha(artifact), parameters=search.best_params_, training_cv_balanced_accuracy=selection['pam50_gene_set_cv_mean' if family == 'pam50' else 'selected_panel_cv_mean']))
+            cases.append(dict(case_id=case_id, model=name, family=family, genes=k, artifact=artifact.relative_to(ROOT).as_posix(), artifact_sha256=sha(artifact), parameters=search.best_params_, training_cv_balanced_accuracy=selection['pam50_gene_set_cv_mean' if family == 'pam50' else 'selected_panel_cv_mean']))
             searches.extend(search_rows(search, case_id))
             genes.extend(dict(case_id=case_id, feature_id=f, gene_symbol=None if pd.isna(annotations.loc[f, 'Hugo_Symbol']) else annotations.loc[f, 'Hugo_Symbol']) for f in chosen)
         artifact = processed / f'{name}_tuned_full_feature_model.joblib'
         saved = joblib.load(artifact)
         assert saved['training_membership_sha256'] == sha(train_path)
-        cases.append(dict(case_id=f'{name}_full', model=name, family='full', genes=len(saved['feature_ids']), artifact=str(artifact.relative_to(ROOT)), artifact_sha256=sha(artifact), training_cv_balanced_accuracy=selection['full_gene_reference']))
+        cases.append(dict(case_id=f'{name}_full', model=name, family='full', genes=len(saved['feature_ids']), artifact=artifact.relative_to(ROOT).as_posix(), artifact_sha256=sha(artifact), training_cv_balanced_accuracy=selection['full_gene_reference']))
     dummy = DummyClassifier(strategy='most_frequent').fit(np.zeros((len(y), 1)), y)
     artifact = processed / 'dummy_final_model.joblib'
     joblib.dump(dict(pipeline=dummy, feature_ids=[], class_names=encoder.classes_.tolist(), training_membership_sha256=sha(train_path)), artifact)
-    cases.append(dict(case_id='dummy', model='dummy', family='dummy', genes=0, artifact=str(artifact.relative_to(ROOT)), artifact_sha256=sha(artifact), training_cv_balanced_accuracy=0.25))
+    cases.append(dict(case_id='dummy', model='dummy', family='dummy', genes=0, artifact=artifact.relative_to(ROOT).as_posix(), artifact_sha256=sha(artifact), training_cv_balanced_accuracy=0.25))
     pd.DataFrame(genes).to_csv(ROOT / 'data/final_panel_genes.csv', index=False)
     (ROOT / 'data/final_training_search.json').write_text(json.dumps(searches, indent=2) + '\n')
     plan = dict(frozen_at_utc=datetime.now(timezone.utc).isoformat(), primary_case='random_forest_pam50', primary_reason='Highest nested training balanced accuracy, with a fixed 50-gene panel.', comparison_policy='All comparisons are descriptive; test results cannot change the primary model or settings.', training_samples=len(train), membership_sha256=split['membership_sha256'], classes=encoder.classes_.tolist(), cases=cases, test_opened=False)

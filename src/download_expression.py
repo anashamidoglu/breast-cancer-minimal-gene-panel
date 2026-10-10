@@ -13,9 +13,13 @@ from inspect_dataset import API, ROOT, STUDY_ID
 def main():
     raw = ROOT / "data" / "raw"
     raw.mkdir(parents=True, exist_ok=True)
-    response = requests.get("https://api.github.com/repos/cBioPortal/datahub/commits/master", timeout=60)
-    response.raise_for_status()
-    commit = response.json()["sha"]
+    manifest_path = ROOT / "data/expression_download.json"
+    if manifest_path.exists():
+        commit = json.loads(manifest_path.read_text())["datahub_commit"]
+    else:
+        response = requests.get("https://api.github.com/repos/cBioPortal/datahub/commits/master", timeout=60)
+        response.raise_for_status()
+        commit = response.json()["sha"]
     folder = f"public/{STUDY_ID}"
     source = f"https://raw.githubusercontent.com/cBioPortal/datahub/{commit}/{folder}"
     metadata = requests.get(f"{source}/meta_mrna_seq_v2_rsem.txt", timeout=60)
