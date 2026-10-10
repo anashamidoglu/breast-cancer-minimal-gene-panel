@@ -1,0 +1,33 @@
+{
+  "source": "GSE96058 official SOFT metadata",
+  "patient_key": "Canonical primary sample title; technical replicate suffix removed. BioSample IDs differ for replicate records.",
+  "source_sha256": "11e5ecb7488b70e4702298839997987d986cffe2af39ffa977231f13b42420f3",
+  "profiles": 3409,
+  "technical_replicates_excluded": 136,
+  "primary_cases": 3273,
+  "normal_like_excluded": 221,
+  "retained_cases": 3052,
+  "development_cases": 2136,
+  "fresh_holdout_cases": 916,
+  "development_counts": {
+    "Luminal A": 1160,
+    "Luminal B": 510,
+    "Basal-like": 237,
+    "HER2-enriched": 229
+  },
+  "holdout_counts": {
+    "Luminal A": 497,
+    "Luminal B": 219,
+    "Basal-like": 102,
+    "HER2-enriched": 98
+  },
+  "seed": 20261010,
+  "holdout_fraction": 0.3,
+  "membership_sha256": {
+    "metadata.csv": "3a396c475bf27ec09242cd89e552994b27c7553b1635f9329ef6edfb97eeadae",
+    "development_labels.csv": "21fa7bcf7544f50a7ca2a69d047f0b79ceb8fd9b84a78267cf6a79e3655d2f18",
+    "holdout_labels.csv": "e02353674fe0d00809766ea28a30cd95e1c549b3fa5376c891437fdfb63d1ca4"
+  },
+  "model_performance_inspected": false,
+  "evaluation_scope": "Independent-cohort replication after within-cohort training, not direct TCGA model transport."
+}
