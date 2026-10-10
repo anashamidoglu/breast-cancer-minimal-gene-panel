@@ -92,3 +92,7 @@ The frozen primary model made 12 direct Luminal A/B swaps, accounting for 12 of 
 ## Compiled research findings
 
 Read the [research report](reports/research_findings.md) for the research question, study design, small-panel results, held-out comparison, gene interpretation, Luminal errors, and limitations.
+
+## Staged-panel extension
+
+The first training-only 20-to-100-gene experiment averaged 43.5 genes and achieved 86.3% balanced accuracy, versus 88.5% for 100 genes and 93.1% for fixed PAM50 genes. The staged loss of 2.24 points narrowly missed the planned 2-point target. See the [protocol](reports/staged_panel_protocol.md) and [development findings](reports/staged_training_findings.md). No new independent evaluation has been completed.
